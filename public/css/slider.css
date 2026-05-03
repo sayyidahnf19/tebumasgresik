@@ -1,0 +1,123 @@
+/* Slider Styles */
+.slider-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 10px 0;
+  overflow: visible;
+}
+
+.category-info h4 {
+  color: #333;
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+}
+
+.category-info p {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  margin-bottom: 10px !important;
+}
+
+.slider_container {
+  display: flex;
+  overflow-x: auto;
+  gap: 15px;
+  padding: 8px 0;
+  scroll-behavior: smooth;
+  flex: 1;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  scroll-padding-right: 20px;
+  overflow-y: visible;
+}
+
+.slider_container::-webkit-scrollbar {
+  display: none;
+}
+
+.slider_container * {
+  scroll-behavior: auto;
+}
+
+.item {
+  flex: 0 0 31%;
+  min-width: 250px;
+  scroll-snap-align: start;
+  transition: all 0.3s ease;
+  overflow: visible;
+}
+
+.img-box {
+  position: relative;
+  overflow: visible;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 280px;
+  padding: 15px;
+}
+
+.img-box img {
+  width: 100%;
+  height: auto;
+  max-height: 250px;
+  border-radius: 60% 60% 10% 10% / 60% 60% 20% 20%;
+  box-shadow: none;
+  object-fit: contain;
+  transition: all 0.3s ease;
+}
+
+/* Wave Animation - Zigzag Pattern */
+@keyframes wave-up {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-30px);
+  }
+}
+
+@keyframes wave-down {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(30px);
+  }
+}
+
+.slider_container.wave-mode .item:nth-child(odd) .img-box img {
+  animation: wave-up 0.8s ease-in-out forwards;
+}
+
+.slider_container.wave-mode .item:nth-child(even) .img-box img {
+  animation: wave-down 0.8s ease-in-out forwards;
+}
+
+.slider-btn {
+  background-color: #FFD700;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.slider-btn:hover {
+  background-color: #FFC700;
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.slider-btn:active {
+  transform: scale(0.95);
+}
