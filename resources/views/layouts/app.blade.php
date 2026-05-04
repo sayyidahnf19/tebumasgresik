@@ -28,6 +28,7 @@
     <!-- ===============================================-->
     <link href="{{ asset('css/theme.css') }}" rel="stylesheet" />
     <link href="{{ asset('css/slider.css') }}" rel="stylesheet" />
+    <link href="{{ asset('css/responsive.css') }}" rel="stylesheet" />
 
     <style>
         .navbar.fixed-top {
@@ -37,6 +38,23 @@
             right: 0 !important;
             width: 100% !important;
             z-index: 9999 !important;
+        }
+        
+        main.main {
+            padding-top: clamp(60px, 8vw, 100px) !important;
+        }
+        
+        /* Mobile adjustments */
+        @media (max-width: 767px) {
+            main.main {
+                padding-top: clamp(50px, 7vw, 80px) !important;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            main.main {
+                padding-top: clamp(45px, 6vw, 70px) !important;
+            }
         }
     </style>
 

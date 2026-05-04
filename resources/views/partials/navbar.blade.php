@@ -1,7 +1,7 @@
-<nav class="navbar navbar-expand-lg navbar-light fixed-top py-5 d-block" data-navbar-on-scroll="data-navbar-on-scroll">
+<nav class="navbar navbar-expand-lg navbar-light fixed-top py-5 d-block" data-navbar-on-scroll="data-navbar-on-scroll" style="padding-top: clamp(0.5rem, 2vw, 1.5rem) !important; padding-bottom: clamp(0.5rem, 2vw, 1.5rem) !important;">
     <div class="container">
         <a class="navbar-brand" href="{{ route('home') }}">
-            <img src="{{ asset('img/LogoTM.png') }}" height="60" alt="logo" />
+            <img src="{{ asset('img/LogoTM.png') }}" style="height: clamp(35px, 8vw, 70px); width: auto;" alt="logo" />
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>

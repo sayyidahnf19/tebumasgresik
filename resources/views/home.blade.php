@@ -6,7 +6,7 @@
 
 <!-- ============================================-->
 <!-- <section> Hero Section ============================-->
-<section style="padding-top: 7rem;">
+<section style="padding-top: 0;">
     <div class="bg-holder" style="background-image:url({{ asset('img/hero/hero-bg.svg') }})">
     </div>
 

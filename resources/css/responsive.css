@@ -292,47 +292,13 @@
   }
 
   /* Services - Keep 3 Columns */
-  /* Services Section - maintain 3 columns */
   .row.g-4 {
-    gap: 0.1rem !important;
+    gap: 0.4rem !important;
   }
 
   .row.g-4 > .col-lg-4 {
-    flex: 0 0 calc(33.333% - 0.067rem) !important;
-    max-width: calc(33.333% - 0.067rem) !important;
-  }
-
-  .row.g-4 > .col-lg-4 > div > div[style*="height: 200px"] {
-    height: 60px !important;
-    margin-bottom: 0.1rem !important;
-  }
-
-  .row.g-4 > .col-lg-4 > div > div[style*="padding: 24px"] {
-    padding: 4px !important;
-    margin-top: 0.1rem !important;
-  }
-
-  .row.g-4 > .col-lg-4 h4[style*="font-size: 1.25rem"] {
-    font-size: 0.65rem !important;
-    margin: 0 0 0.1rem 0 !important;
-  }
-
-  .row.g-4 > .col-lg-4 p[style*="font-size: 0.9rem"] {
-    font-size: 0.55rem !important;
-    margin: 0 0 0.1rem 0 !important;
-    line-height: 1.2 !important;
-  }
-
-  .row.g-4 > .col-lg-4 a[style*="padding: 11px"] {
-    padding: 3px !important;
-    font-size: 0.55rem !important;
-    margin-top: 0.1rem !important;
-  }
-
-  .row.g-4 > .col-lg-4 span[style*="padding: 4px 10px"] {
-    padding: 2px 4px !important;
-    font-size: 0.5rem !important;
-    margin-bottom: 0.05rem !important;
+    flex: 0 0 calc(33.333% - 0.27rem) !important;
+    max-width: calc(33.333% - 0.27rem) !important;
   }
 
   .row.g-4 > .col-lg-4 > div > div[style*="height: 200px"] {
@@ -534,36 +500,74 @@
 
   .row.align-items-center {
     gap: 0.2rem !important;
+    flex-wrap: nowrap !important;
+  }
+
+  /* Force hero columns to stay side-by-side on mobile */
+  .col-md-5.col-lg-6,
+  .col-md-7.col-lg-6 {
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+  }
+
+  /* Remove Bootstrap padding utilities */
+  .pt-7 {
+    padding-top: 0 !important;
+  }
+
+  .py-6 {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  /* Override Bootstrap margin utilities */
+  .mb-3 {
+    margin-bottom: 0.2rem !important;
+  }
+
+  .mb-4 {
+    margin-bottom: 0.2rem !important;
+  }
+
+  .mb-0 {
+    margin-bottom: 0 !important;
   }
 
   .hero-img {
     max-width: 35% !important;
     margin: 0 !important;
+    padding: 0 !important;
   }
 
   .hero-title {
     font-size: 0.95rem !important;
-    margin-bottom: 0.2rem !important;
-    line-height: 1.2;
+    margin-bottom: 0rem !important;
+    line-height: 1.15;
+    padding: 0 !important;
   }
 
   h4.fw-bold.text-danger {
     font-size: 0.65rem !important;
-    margin-bottom: 0.2rem !important;
+    margin-bottom: 0.1rem !important;
+    margin-top: 0 !important;
   }
 
   .row.align-items-center p {
     font-size: 0.65rem !important;
-    margin-bottom: 0.2rem !important;
-    line-height: 1.3;
+    margin-bottom: 0.1rem !important;
+    margin-top: 0 !important;
+    line-height: 1.2;
+    padding: 0 !important;
   }
 
   .btn-lg {
     padding: 0.3rem 0.5rem !important;
     font-size: 0.65rem !important;
+    margin-bottom: 0.1rem !important;
   }
 
   /* Keep 3 columns for services */
+  /* Services Section - maintain 3 columns */
   .row.g-4 {
     gap: 0.1rem !important;
   }
@@ -594,23 +598,56 @@
     line-height: 1.2 !important;
   }
 
-  .row.g-4 > .col-lg-4 span[style*="padding: 4px 10px"] {
-    padding: 2px 4px !important;
-    font-size: 0.5rem !important;
-    margin-bottom: 0.05rem !important;
-  }
-
   .row.g-4 > .col-lg-4 a[style*="padding: 11px"] {
     padding: 3px !important;
     font-size: 0.55rem !important;
     margin-top: 0.1rem !important;
   }
 
-  .row.g-4 > .col-lg-4 > div > div[style*="top: 12px"] {
-    top: 4px !important;
-    right: 4px !important;
-    padding: 1px 4px !important;
+  .row.g-4 > .col-lg-4 span[style*="padding: 4px 10px"] {
+    padding: 2px 4px !important;
     font-size: 0.5rem !important;
+    margin-bottom: 0.05rem !important;
+  }
+
+  .row.g-4 > .col-lg-4 > div > div[style*="height: 200px"] {
+    height: 75px !important;
+  }
+
+  .row.g-4 > .col-lg-4 > div > div[style*="padding: 24px"] {
+    padding: 5px !important;
+    margin-top: 2px !important;
+    border-radius: 6px !important;
+  }
+
+  .row.g-4 > .col-lg-4 h4[style*="font-size: 1.25rem"] {
+    font-size: 0.7rem !important;
+    margin: 0 0 1px 0 !important;
+    line-height: 1.1;
+  }
+
+  .row.g-4 > .col-lg-4 p[style*="font-size: 0.9rem"] {
+    font-size: 0.5rem !important;
+    margin-bottom: 1px !important;
+    display: none;
+  }
+
+  .row.g-4 > .col-lg-4 span[style*="padding: 4px 10px"] {
+    padding: 1px 2px !important;
+    font-size: 0.45rem !important;
+    display: none;
+  }
+
+  .row.g-4 > .col-lg-4 a[style*="padding: 11px"] {
+    padding: 3px !important;
+    font-size: 0.5rem !important;
+  }
+
+  .row.g-4 > .col-lg-4 > div > div[style*="top: 12px"] {
+    top: 3px !important;
+    right: 3px !important;
+    padding: 1px 2px !important;
+    font-size: 0.45rem !important;
   }
 
   h2 {
@@ -1073,30 +1110,5 @@
 
   .mb-5 {
     margin-bottom: 0.75rem !important;
-  }
-}
-
-@media (max-width: 480px) {}
-
-@media (max-width: 420px) {
-  .User_option a {
-    margin-left: 15px;
-  }
-
-  .User_option a span {
-    display: none;
-  }
-
-  .slider_section {
-    padding-bottom: 82%;
-  }
-
-}
-
-@media (max-width: 376px) {}
-
-@media (min-width: 1200px) {
-  .container {
-    max-width: 1170px;
   }
 }
