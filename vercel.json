@@ -10,9 +10,7 @@
   },
   "functions": {
     "api/index.php": {
-      "runtime": "php-8.2",
-      "memory": 1024,
-      "timeout": 60
+      "runtime": "php-8.2"
     }
   },
   "routes": [
