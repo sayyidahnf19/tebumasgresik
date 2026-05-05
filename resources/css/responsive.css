@@ -106,18 +106,18 @@
     font-size: 0.9rem !important;
   }
 
-  /* Services */
+  /* Services - 2 Columns on Tablet */
   .row.g-4 {
-    gap: 1.5rem !important;
+    gap: 1.2rem !important;
   }
 
   .row.g-4 > .col-lg-4 {
-    flex: 0 0 calc(33.333% - 1rem) !important;
-    max-width: calc(33.333% - 1rem) !important;
+    flex: 0 0 calc(50% - 0.6rem) !important;
+    max-width: calc(50% - 0.6rem) !important;
   }
 
   .row.g-4 > .col-lg-4 > div > div[style*="height: 200px"] {
-    height: 160px !important;
+    height: 180px !important;
   }
 
   .row.g-4 > .col-lg-4 > div > div[style*="padding: 24px"] {
@@ -130,11 +130,15 @@
 
   .row.g-4 > .col-lg-4 p[style*="font-size: 0.9rem"] {
     font-size: 0.8rem !important;
+    display: block !important;
+    line-height: 1.5 !important;
+    max-height: none !important;
   }
 
   .row.g-4 > .col-lg-4 span[style*="padding: 4px 10px"] {
     padding: 4px 8px !important;
     font-size: 0.7rem !important;
+    display: inline-block !important;
   }
 
   .row.g-4 > .col-lg-4 a[style*="padding: 11px"] {
@@ -235,18 +239,18 @@
   }
 
   section[style*="padding-top: 0"] {
-    padding: 0.6rem 0 !important;
+    padding: 1.5rem 0 !important;
     min-height: auto !important;
   }
 
   .container {
-    padding-left: 0.3rem !important;
-    padding-right: 0.3rem !important;
+    padding-left: 0.75rem !important;
+    padding-right: 0.75rem !important;
   }
 
   .row.align-items-center {
     flex-direction: column-reverse;
-    gap: 0.5rem !important;
+    gap: 1rem !important;
   }
 
   .col-md-5,
@@ -257,7 +261,7 @@
   }
 
   .hero-img {
-    max-width: 50% !important;
+    max-width: 55% !important;
     width: 100% !important;
     margin: 0 auto !important;
   }
@@ -265,76 +269,126 @@
   .hero-title {
     font-size: 1.5rem !important;
     margin-bottom: 0.8rem !important;
+    line-height: 1.3;
   }
 
   h4.fw-bold.text-danger {
     font-size: 0.85rem !important;
+    margin-bottom: 0.5rem !important;
   }
 
   .row.align-items-center p {
-    font-size: 0.8rem !important;
-    margin-bottom: 0.4rem !important;
+    font-size: 0.85rem !important;
+    margin-bottom: 0.6rem !important;
+    line-height: 1.5;
   }
 
   .btn-lg {
-    padding: 0.4rem 0.8rem !important;
-    font-size: 0.85rem !important;
-    width: 100% !important;
-    margin-bottom: 0.2rem !important;
+    padding: 0.7rem 1.2rem !important;
+    font-size: 0.9rem !important;
+    width: auto !important;
+    margin-bottom: 0.5rem !important;
+    margin-right: 0.5rem !important;
   }
 
   .me-md-4 {
-    margin-right: 0 !important;
+    margin-right: 0.5rem !important;
   }
 
   .mb-md-0 {
     margin-bottom: 0.5rem !important;
   }
 
-  /* Services - Keep 3 Columns */
+  /* Services - 2 Columns */
   .row.g-4 {
-    gap: 0.4rem !important;
+    gap: 1rem !important;
   }
 
   .row.g-4 > .col-lg-4 {
-    flex: 0 0 calc(33.333% - 0.27rem) !important;
-    max-width: calc(33.333% - 0.27rem) !important;
+    flex: 0 0 calc(50% - 0.5rem) !important;
+    max-width: calc(50% - 0.5rem) !important;
   }
 
   .row.g-4 > .col-lg-4 > div > div[style*="height: 200px"] {
-    height: 110px !important;
+    height: 140px !important;
   }
 
   .row.g-4 > .col-lg-4 > div > div[style*="padding: 24px"] {
-    padding: 10px !important;
-    margin-top: 6px !important;
+    padding: 14px !important;
+    margin-top: 8px !important;
+    min-height: auto !important;
   }
 
   .row.g-4 > .col-lg-4 h4[style*="font-size: 1.25rem"] {
-    font-size: 0.85rem !important;
-    margin-bottom: 3px !important;
+    font-size: 1rem !important;
+    margin-bottom: 8px !important;
   }
 
   .row.g-4 > .col-lg-4 p[style*="font-size: 0.9rem"] {
-    font-size: 0.65rem !important;
-    line-height: 1.3;
+    font-size: 0.78rem !important;
+    line-height: 1.5;
+    display: block !important;
+    max-height: none !important;
+    margin-bottom: 10px !important;
+    visibility: visible !important;
+    opacity: 1 !important;
   }
 
   .row.g-4 > .col-lg-4 span[style*="padding: 4px 10px"] {
-    padding: 2px 5px !important;
-    font-size: 0.55rem !important;
+    padding: 3px 6px !important;
+    font-size: 0.65rem !important;
+    display: inline-block !important;
+    margin-right: 3px !important;
+    margin-bottom: 3px !important;
   }
 
   .row.g-4 > .col-lg-4 a[style*="padding: 11px"] {
-    padding: 5px !important;
-    font-size: 0.65rem !important;
+    padding: 7px !important;
+    font-size: 0.75rem !important;
   }
 
   .row.g-4 > .col-lg-4 > div > div[style*="top: 12px"] {
-    top: 5px !important;
-    right: 5px !important;
-    padding: 2px 5px !important;
-    font-size: 0.55rem !important;
+    top: 8px !important;
+    right: 8px !important;
+    padding: 3px 6px !important;
+    font-size: 0.65rem !important;
+  }
+
+  /* About Section - Responsive Layout */
+  .row.align-items-stretch.g-4 > .col-lg-4 {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    margin-bottom: 20px !important;
+  }
+
+  .row.align-items-stretch.g-4 > .col-lg-4 > div[style*="padding: 30px"] {
+    padding: 16px 0 !important;
+  }
+
+  .row.align-items-stretch.g-4 > .col-lg-4 > div[style*="padding: 30px"] h3 {
+    font-size: 1.3rem !important;
+    margin-bottom: 12px !important;
+  }
+
+  .row.align-items-stretch.g-4 > .col-lg-4 > div[style*="padding: 30px"] p {
+    font-size: 0.9rem !important;
+    line-height: 1.6 !important;
+    margin-bottom: 12px !important;
+  }
+
+  /* About Section Stats Grid */
+  .row.align-items-stretch.g-4 > .col-lg-4 > div > .row.g-4 {
+    gap: 8px !important;
+  }
+
+  .row.align-items-stretch.g-4 > .col-lg-4 > div > .row.g-4 > div {
+    flex: 0 0 calc(50% - 4px) !important;
+    max-width: calc(50% - 4px) !important;
+    padding: 14px 10px !important;
+  }
+
+  .row.align-items-stretch.g-4 > .col-lg-4 > div > .row.g-4 > div > div[style*="font-size: 1.8rem"] {
+    font-size: 1.5rem !important;
   }
 
   h2 {
@@ -343,6 +397,36 @@
 
   h3 {
     font-size: 1.2rem !important;
+  }
+
+  /* CTA Section - Tablet */
+  section[style*="background: linear-gradient(135deg, #D97060"] {
+    padding: 60px 0 !important;
+  }
+
+  section[style*="background: linear-gradient(135deg, #D97060"] h2 {
+    font-size: 2rem !important;
+    margin-bottom: 16px !important;
+  }
+
+  section[style*="background: linear-gradient(135deg, #D97060"] > div > div > p {
+    font-size: 0.95rem !important;
+    margin-bottom: 28px !important;
+  }
+
+  /* CTA Buttons - Keep horizontal on tablet */
+  section[style*="background: linear-gradient(135deg, #D97060"] > div > div > div[style*="display: flex"] {
+    flex-direction: row !important;
+    gap: 16px !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+  }
+
+  .cta-btn-primary,
+  .cta-btn-secondary {
+    padding: 14px 32px !important;
+    font-size: 0.9rem !important;
+    width: auto !important;
   }
 
   /* Tentang Kami Section */
@@ -428,20 +512,33 @@
   }
 
   .hero-img {
-    max-width: 45% !important;
+    max-width: 50% !important;
   }
 
   .hero-title {
     font-size: 1.3rem !important;
+    margin-bottom: 0.6rem !important;
   }
 
+  .row.align-items-center p {
+    font-size: 0.85rem !important;
+    line-height: 1.4;
+  }
+
+  .btn-lg {
+    padding: 0.6rem 1rem !important;
+    font-size: 0.85rem !important;
+    width: auto !important;
+  }
+
+  /* Services - 2 Columns on Mobile Medium */
   .row.g-4 {
-    gap: 1rem !important;
+    gap: 0.8rem !important;
   }
 
   .row.g-4 > .col-lg-4 {
-    flex: 0 0 calc(33.333% - 0.67rem) !important;
-    max-width: calc(33.333% - 0.67rem) !important;
+    flex: 0 0 calc(50% - 0.4rem) !important;
+    max-width: calc(50% - 0.4rem) !important;
   }
 
   .row.g-4 > .col-lg-4 > div > div[style*="height: 200px"] {
@@ -449,21 +546,41 @@
   }
 
   .row.g-4 > .col-lg-4 > div > div[style*="padding: 24px"] {
-    padding: 14px !important;
-    margin-top: 10px !important;
+    padding: 12px !important;
+    margin-top: 8px !important;
   }
 
   .row.g-4 > .col-lg-4 h4[style*="font-size: 1.25rem"] {
     font-size: 0.95rem !important;
+    margin-bottom: 5px !important;
   }
 
   .row.g-4 > .col-lg-4 p[style*="font-size: 0.9rem"] {
     font-size: 0.7rem !important;
+    line-height: 1.4;
+    display: block !important;
+    max-height: none !important;
+    margin-bottom: 5px !important;
+  }
+
+  .row.g-4 > .col-lg-4 span[style*="padding: 4px 10px"] {
+    padding: 2px 5px !important;
+    font-size: 0.6rem !important;
+    display: inline-block !important;
+    margin-right: 2px !important;
+    margin-bottom: 2px !important;
   }
 
   .row.g-4 > .col-lg-4 a[style*="padding: 11px"] {
-    padding: 7px !important;
+    padding: 6px !important;
     font-size: 0.7rem !important;
+  }
+
+  .row.g-4 > .col-lg-4 > div > div[style*="top: 12px"] {
+    top: 6px !important;
+    right: 6px !important;
+    padding: 2px 5px !important;
+    font-size: 0.6rem !important;
   }
 }
 
@@ -489,44 +606,42 @@
   }
 
   section[style*="padding-top: 0"] {
-    padding: 0.3rem 0 !important;
+    padding: 1rem 0 !important;
     min-height: auto !important;
   }
 
   .container {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
+    padding-left: 0.75rem !important;
+    padding-right: 0.75rem !important;
   }
 
   .row.align-items-center {
-    gap: 0.2rem !important;
-    flex-wrap: nowrap !important;
+    gap: 0.5rem !important;
+    flex-wrap: wrap !important;
   }
 
-  /* Force hero columns to stay side-by-side on mobile */
+  /* Hero layout - stack on very small screens */
   .col-md-5.col-lg-6,
   .col-md-7.col-lg-6 {
-    flex: 0 0 50% !important;
-    max-width: 50% !important;
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
   }
 
-  /* Remove Bootstrap padding utilities */
   .pt-7 {
     padding-top: 0 !important;
   }
 
   .py-6 {
-    padding-top: 0 !important;
-    padding-bottom: 0 !important;
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
   }
 
-  /* Override Bootstrap margin utilities */
   .mb-3 {
-    margin-bottom: 0.2rem !important;
+    margin-bottom: 0.3rem !important;
   }
 
   .mb-4 {
-    margin-bottom: 0.2rem !important;
+    margin-bottom: 0.4rem !important;
   }
 
   .mb-0 {
@@ -534,128 +649,158 @@
   }
 
   .hero-img {
-    max-width: 35% !important;
-    margin: 0 !important;
+    max-width: 60% !important;
+    margin: 0 auto !important;
     padding: 0 !important;
   }
 
   .hero-title {
-    font-size: 0.95rem !important;
-    margin-bottom: 0rem !important;
-    line-height: 1.15;
-    padding: 0 !important;
-  }
-
-  h4.fw-bold.text-danger {
-    font-size: 0.65rem !important;
-    margin-bottom: 0.1rem !important;
-    margin-top: 0 !important;
-  }
-
-  .row.align-items-center p {
-    font-size: 0.65rem !important;
-    margin-bottom: 0.1rem !important;
-    margin-top: 0 !important;
+    font-size: 1.1rem !important;
+    margin-bottom: 0.4rem !important;
     line-height: 1.2;
     padding: 0 !important;
   }
 
-  .btn-lg {
-    padding: 0.3rem 0.5rem !important;
-    font-size: 0.65rem !important;
-    margin-bottom: 0.1rem !important;
+  h4.fw-bold.text-danger {
+    font-size: 0.75rem !important;
+    margin-bottom: 0.2rem !important;
+    margin-top: 0 !important;
   }
 
-  /* Keep 3 columns for services */
-  /* Services Section - maintain 3 columns */
+  .row.align-items-center p {
+    font-size: 0.75rem !important;
+    margin-bottom: 0.3rem !important;
+    margin-top: 0 !important;
+    line-height: 1.3;
+    padding: 0 !important;
+  }
+
+  .btn-lg {
+    padding: 0.5rem 0.8rem !important;
+    font-size: 0.75rem !important;
+    margin-bottom: 0.3rem !important;
+    width: auto !important;
+  }
+
+  .me-md-4 {
+    margin-right: 0 !important;
+  }
+
+  /* Services - 2 Columns on Mobile */
   .row.g-4 {
-    gap: 0.1rem !important;
+    gap: 0.6rem !important;
   }
 
   .row.g-4 > .col-lg-4 {
-    flex: 0 0 calc(33.333% - 0.067rem) !important;
-    max-width: calc(33.333% - 0.067rem) !important;
+    flex: 0 0 calc(50% - 0.3rem) !important;
+    max-width: calc(50% - 0.3rem) !important;
   }
 
   .row.g-4 > .col-lg-4 > div > div[style*="height: 200px"] {
-    height: 60px !important;
-    margin-bottom: 0.1rem !important;
+    height: 100px !important;
+    margin-bottom: 0.4rem !important;
   }
 
   .row.g-4 > .col-lg-4 > div > div[style*="padding: 24px"] {
-    padding: 4px !important;
-    margin-top: 0.1rem !important;
+    padding: 10px !important;
+    margin-top: 0 !important;
+    border-radius: 8px !important;
+    min-height: auto !important;
   }
 
   .row.g-4 > .col-lg-4 h4[style*="font-size: 1.25rem"] {
-    font-size: 0.65rem !important;
-    margin: 0 0 0.1rem 0 !important;
+    font-size: 0.85rem !important;
+    margin: 0 0 4px 0 !important;
+    line-height: 1.1;
+    font-weight: 800;
   }
 
   .row.g-4 > .col-lg-4 p[style*="font-size: 0.9rem"] {
-    font-size: 0.55rem !important;
-    margin: 0 0 0.1rem 0 !important;
-    line-height: 1.2 !important;
-  }
-
-  .row.g-4 > .col-lg-4 a[style*="padding: 11px"] {
-    padding: 3px !important;
-    font-size: 0.55rem !important;
-    margin-top: 0.1rem !important;
+    font-size: 0.7rem !important;
+    margin-bottom: 8px !important;
+    display: block !important;
+    line-height: 1.4 !important;
+    max-height: none !important;
+    visibility: visible !important;
+    opacity: 1 !important;
   }
 
   .row.g-4 > .col-lg-4 span[style*="padding: 4px 10px"] {
     padding: 2px 4px !important;
-    font-size: 0.5rem !important;
-    margin-bottom: 0.05rem !important;
-  }
-
-  .row.g-4 > .col-lg-4 > div > div[style*="height: 200px"] {
-    height: 75px !important;
-  }
-
-  .row.g-4 > .col-lg-4 > div > div[style*="padding: 24px"] {
-    padding: 5px !important;
-    margin-top: 2px !important;
-    border-radius: 6px !important;
-  }
-
-  .row.g-4 > .col-lg-4 h4[style*="font-size: 1.25rem"] {
-    font-size: 0.7rem !important;
-    margin: 0 0 1px 0 !important;
-    line-height: 1.1;
-  }
-
-  .row.g-4 > .col-lg-4 p[style*="font-size: 0.9rem"] {
-    font-size: 0.5rem !important;
-    margin-bottom: 1px !important;
-    display: none;
-  }
-
-  .row.g-4 > .col-lg-4 span[style*="padding: 4px 10px"] {
-    padding: 1px 2px !important;
-    font-size: 0.45rem !important;
-    display: none;
+    font-size: 0.55rem !important;
+    display: inline-block !important;
+    margin-right: 2px !important;
+    margin-bottom: 2px !important;
   }
 
   .row.g-4 > .col-lg-4 a[style*="padding: 11px"] {
-    padding: 3px !important;
-    font-size: 0.5rem !important;
+    padding: 5px !important;
+    font-size: 0.65rem !important;
+    margin-top: 2px !important;
   }
 
   .row.g-4 > .col-lg-4 > div > div[style*="top: 12px"] {
-    top: 3px !important;
-    right: 3px !important;
-    padding: 1px 2px !important;
-    font-size: 0.45rem !important;
+    top: 4px !important;
+    right: 4px !important;
+    padding: 2px 4px !important;
+    font-size: 0.55rem !important;
+  }
+
+  /* About Section Mobile Small */
+  .row.align-items-stretch.g-4 > .col-lg-4 {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    margin-bottom: 18px !important;
+  }
+
+  .row.align-items-stretch.g-4 > .col-lg-4 > div[style*="padding: 30px"] {
+    padding: 12px 0 !important;
+  }
+
+  .row.align-items-stretch.g-4 > .col-lg-4 > div[style*="padding: 30px"] h3 {
+    font-size: 1.1rem !important;
+    margin-bottom: 10px !important;
+    line-height: 1.3;
+  }
+
+  .row.align-items-stretch.g-4 > .col-lg-4 > div[style*="padding: 30px"] p {
+    font-size: 0.8rem !important;
+    line-height: 1.5 !important;
+    margin-bottom: 10px !important;
+  }
+
+  .row.align-items-stretch.g-4 > .col-lg-4 > div[style*="padding: 30px"] .btn {
+    padding: 10px 20px !important;
+    font-size: 0.8rem !important;
+  }
+
+  /* About Section Stats - Grid Layout */
+  .row.align-items-stretch.g-4 > .col-lg-4 > div > .row.g-4 {
+    gap: 6px !important;
+  }
+
+  .row.align-items-stretch.g-4 > .col-lg-4 > div > .row.g-4 > div {
+    flex: 0 0 calc(50% - 3px) !important;
+    max-width: calc(50% - 3px) !important;
+    padding: 10px 8px !important;
+  }
+
+  .row.align-items-stretch.g-4 > .col-lg-4 > div > .row.g-4 > div > div[style*="font-size: 1.8rem"] {
+    font-size: 1.3rem !important;
+    margin-bottom: 2px !important;
+  }
+
+  .row.align-items-stretch.g-4 > .col-lg-4 > div > .row.g-4 > div > div[style*="font-size: 0.75rem"] {
+    font-size: 0.65rem !important;
+    letter-spacing: 0.3px !important;
   }
 
   h2 {
-    font-size: 1.4rem !important;
+    font-size: 1.3rem !important;
   }
 
   h3 {
-    font-size: 1.1rem !important;
+    font-size: 1rem !important;
   }
 
   h5 {
@@ -748,11 +893,18 @@
     margin-bottom: 20px !important;
   }
 
+  /* CTA Buttons Container - Stack vertically on mobile */
+  section[style*="background: linear-gradient(135deg, #D97060"] > div > div > div[style*="display: flex"] {
+    flex-direction: column !important;
+    gap: 12px !important;
+  }
+
   /* CTA Buttons */
   .cta-btn-primary,
   .cta-btn-secondary {
     padding: 12px 24px !important;
     font-size: 0.85rem !important;
+    width: 100% !important;
   }
 
   /* Destination/Keunggulan Cards */
@@ -815,17 +967,18 @@
   }
 
   .hero-img {
-    max-width: 35% !important;
+    max-width: 65% !important;
   }
 
   .hero-title {
     font-size: 1rem !important;
-    margin-bottom: 0.5rem !important;
+    margin-bottom: 0.3rem !important;
   }
 
   .row.align-items-center p {
     font-size: 0.7rem !important;
-    margin-bottom: 0.75rem !important;
+    margin-bottom: 0.3rem !important;
+    line-height: 1.3;
   }
 
   .btn-lg {
@@ -833,13 +986,14 @@
     font-size: 0.7rem !important;
   }
 
+  /* Services - 2 Columns on Extra Small Mobile */
   .row.g-4 {
-    gap: 0.6rem !important;
+    gap: 0.5rem !important;
   }
 
   .row.g-4 > .col-lg-4 {
-    flex: 0 0 calc(33.333% - 0.4rem) !important;
-    max-width: calc(33.333% - 0.4rem) !important;
+    flex: 0 0 calc(50% - 0.25rem) !important;
+    max-width: calc(50% - 0.25rem) !important;
   }
 
   .row.g-4 > .col-lg-4 > div > div[style*="height: 200px"] {
@@ -847,26 +1001,32 @@
   }
 
   .row.g-4 > .col-lg-4 > div > div[style*="padding: 24px"] {
-    padding: 10px !important;
-    margin-top: 6px !important;
+    padding: 8px !important;
+    margin-top: 4px !important;
   }
 
   .row.g-4 > .col-lg-4 h4[style*="font-size: 1.25rem"] {
     font-size: 0.8rem !important;
-    margin: 0 0 4px 0 !important;
+    margin: 0 0 2px 0 !important;
   }
 
   .row.g-4 > .col-lg-4 p[style*="font-size: 0.9rem"] {
     font-size: 0.6rem !important;
-    display: none;
+    display: block !important;
+    margin-bottom: 3px !important;
+    line-height: 1.3;
   }
 
   .row.g-4 > .col-lg-4 span[style*="padding: 4px 10px"] {
-    display: none;
+    display: inline-block !important;
+    padding: 1px 3px !important;
+    font-size: 0.5rem !important;
+    margin-right: 1px !important;
+    margin-bottom: 1px !important;
   }
 
   .row.g-4 > .col-lg-4 a[style*="padding: 11px"] {
-    padding: 5px !important;
+    padding: 4px !important;
     font-size: 0.6rem !important;
   }
 
@@ -904,6 +1064,7 @@
     font-size: 0.65rem !important;
   }
 
+  /* CTA Section - Extra Small Mobile */
   section[style*="background: linear-gradient(135deg, #D97060"] {
     padding: 35px 0 !important;
   }
@@ -916,10 +1077,17 @@
     font-size: 0.8rem !important;
   }
 
+  /* CTA Buttons - Full width stacked on extra small */
+  section[style*="background: linear-gradient(135deg, #D97060"] > div > div > div[style*="display: flex"] {
+    flex-direction: column !important;
+    gap: 10px !important;
+  }
+
   .cta-btn-primary,
   .cta-btn-secondary {
     padding: 10px 20px !important;
     font-size: 0.75rem !important;
+    width: 100% !important;
   }
 
   .col-sm-6 {
@@ -990,6 +1158,153 @@
   .col-lg-8 {
     flex: 0 0 100% !important;
     max-width: 100% !important;
+  }
+}
+
+/* ============================================
+   SMALL MOBILE (425px and below)
+   ============================================ */
+@media (max-width: 425px) {
+  :root {
+    font-size: 11.5px;
+  }
+
+  main.main {
+    padding-top: clamp(30px, 5vw, 50px) !important;
+  }
+
+  .container {
+    padding-left: 0.75rem !important;
+    padding-right: 0.75rem !important;
+  }
+
+  /* Hero Section */
+  .hero-title {
+    font-size: 1rem !important;
+    line-height: 1.2;
+  }
+
+  .hero-img {
+    max-width: 65% !important;
+  }
+
+  .btn-lg {
+    padding: 0.45rem 0.8rem !important;
+    font-size: 0.7rem !important;
+    width: auto !important;
+  }
+
+  /* CTA Section - Full width buttons */
+  section[style*="background: linear-gradient(135deg, #D97060"] {
+    padding: 30px 0 !important;
+  }
+
+  section[style*="background: linear-gradient(135deg, #D97060"] h2 {
+    font-size: 1.3rem !important;
+    margin-bottom: 12px !important;
+  }
+
+  section[style*="background: linear-gradient(135deg, #D97060"] > div > div > p {
+    font-size: 0.78rem !important;
+    margin-bottom: 18px !important;
+    max-width: 100% !important;
+  }
+
+  /* CTA Buttons - Stack vertically with full width */
+  section[style*="background: linear-gradient(135deg, #D97060"] > div > div > div[style*="display: flex"] {
+    flex-direction: column !important;
+    gap: 10px !important;
+    padding: 0 12px !important;
+  }
+
+  .cta-btn-primary,
+  .cta-btn-secondary {
+    padding: 10px 16px !important;
+    font-size: 0.7rem !important;
+    width: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .cta-btn-primary span,
+  .cta-btn-secondary span {
+    font-size: 1rem !important;
+  }
+
+  /* Contact cards */
+  .row.g-4 > .col-lg-4 {
+    margin-bottom: 16px !important;
+  }
+
+  .row.g-4 > .col-lg-4 > div > div {
+    padding: 20px !important;
+  }
+
+  /* Stats */
+  .row.g-3 > .col-lg-3 > div {
+    padding: 10px 8px !important;
+  }
+
+  .row.g-3 > .col-lg-3 > div > div[style*="font-size: 2.2rem"] {
+    font-size: 1.3rem !important;
+  }
+
+  /* About Section 425px and below */
+  .row.align-items-stretch.g-4 > .col-lg-4 {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    margin-bottom: 16px !important;
+  }
+
+  .row.align-items-stretch.g-4 > .col-lg-4 > div[style*="padding: 30px"] {
+    padding: 10px 0 !important;
+  }
+
+  .row.align-items-stretch.g-4 > .col-lg-4 > div[style*="padding: 30px"] h3 {
+    font-size: 1rem !important;
+    margin-bottom: 8px !important;
+    line-height: 1.2;
+  }
+
+  .row.align-items-stretch.g-4 > .col-lg-4 > div[style*="padding: 30px"] p {
+    font-size: 0.78rem !important;
+    line-height: 1.4 !important;
+    margin-bottom: 8px !important;
+  }
+
+  .row.align-items-stretch.g-4 > .col-lg-4 > div[style*="padding: 30px"] .btn {
+    padding: 8px 16px !important;
+    font-size: 0.75rem !important;
+  }
+
+  /* About Section Stats - 50/50 grid */
+  .row.align-items-stretch.g-4 > .col-lg-4 > div > .row.g-4 {
+    gap: 4px !important;
+  }
+
+  .row.align-items-stretch.g-4 > .col-lg-4 > div > .row.g-4 > div {
+    flex: 0 0 calc(50% - 2px) !important;
+    max-width: calc(50% - 2px) !important;
+    padding: 8px 6px !important;
+  }
+
+  .row.align-items-stretch.g-4 > .col-lg-4 > div > .row.g-4 > div > div[style*="font-size: 1.8rem"] {
+    font-size: 1.2rem !important;
+    margin-bottom: 1px !important;
+  }
+
+  .row.align-items-stretch.g-4 > .col-lg-4 > div > .row.g-4 > div > div[style*="font-size: 0.75rem"] {
+    font-size: 0.6rem !important;
+    letter-spacing: 0.2px !important;
+  }
+
+  h2 {
+    font-size: 1.1rem !important;
+  }
+
+  h3 {
+    font-size: 0.9rem !important;
   }
 }
 
