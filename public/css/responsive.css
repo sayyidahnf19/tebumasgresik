@@ -3,6 +3,109 @@
    Keep layout same, just reduce sizes proportionally
    ============================================ */
 
+/* Hero Section - Position image to right corner (Desktop only) */
+@media (min-width: 769px) {
+  .col-md-5.col-lg-6.order-0.order-md-1.text-end {
+    display: flex !important;
+    justify-content: flex-end !important;
+    align-items: center !important;
+    padding-right: 1rem !important;
+  }
+}
+
+.hero-img {
+  display: block !important;
+  margin: 0 !important;
+}
+
+/* ============================================
+   NAVBAR FIX - Show menu items on all screen sizes
+   ============================================ */
+/* Desktop - Show navbar menu */
+@media (min-width: 992px) {
+  .navbar-collapse {
+    display: flex !important;
+    visibility: visible !important;
+  }
+
+  .navbar-collapse.collapse {
+    display: flex !important;
+  }
+
+  .navbar-nav {
+    flex-direction: row !important;
+  }
+
+  .navbar-nav .nav-link {
+    display: block !important;
+    padding: 0.5rem 1rem !important;
+    color: #212832 !important;
+    font-weight: 500;
+  }
+
+  .navbar-nav .nav-link:hover {
+    color: #DF6951 !important;
+  }
+
+  .navbar-toggler {
+    display: none !important;
+  }
+}
+
+/* Tablet/Mobile - Show menu only when toggled */
+@media (max-width: 991px) {
+  .navbar-collapse {
+    display: none !important;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 1.5rem 1rem !important;
+    margin-top: 0.5rem;
+    position: relative;
+    z-index: 1000;
+  }
+
+  .navbar-collapse.show {
+    display: block !important;
+    visibility: visible !important;
+  }
+
+  .navbar-nav {
+    flex-direction: column !important;
+    gap: 0.5rem !important;
+  }
+
+  .navbar-nav .nav-link {
+    display: block !important;
+    padding: 1rem 0 !important;
+    color: #212832 !important;
+    font-size: 1rem !important;
+    font-weight: 500;
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  .navbar-nav .nav-link:last-child {
+    border-bottom: none;
+  }
+
+  .navbar-nav .nav-link:hover,
+  .navbar-nav .nav-link:focus {
+    color: #DF6951 !important;
+    background-color: rgba(223, 105, 81, 0.05);
+    padding-left: 1rem;
+  }
+
+  .navbar-toggler {
+    display: block !important;
+    border: none;
+    padding: 0.25rem 0.75rem;
+  }
+
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23212832' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  }
+}
+
+
 /* ============================================
    TABLET (Medium) - 1024px to 991px
    ============================================ */
@@ -14,15 +117,26 @@
 
   /* Hero Section */
   section[style*="padding-top: 0"] {
-    min-height: calc(100vh - 80px) !important;
+    min-height: auto !important;
+    padding: 3rem 0 !important;
   }
 
   .hero-img {
-    max-width: 55% !important;
+    max-width: 100% !important;
+    width: auto !important;
+    height: auto !important;
+  }
+
+  .col-md-5.col-lg-6.order-0.order-md-1.text-end {
+    display: flex !important;
+    justify-content: flex-end !important;
+    align-items: center !important;
+    padding-right: 2rem !important;
   }
 
   .hero-title {
     font-size: 1.8rem !important;
+    margin-bottom: 1.5rem !important;
   }
 
   h4.fw-bold.text-danger {
@@ -256,15 +370,22 @@
     text-align: center !important;
   }
 
+  .col-md-5.col-lg-6.order-0.order-md-1.text-end {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
   .hero-img {
     max-width: 50% !important;
     width: 100% !important;
     margin: 0 auto !important;
+    display: block !important;
   }
 
   .hero-title {
     font-size: 1.5rem !important;
-    margin-bottom: 0.8rem !important;
+    margin-bottom: 1.5rem !important;
   }
 
   h4.fw-bold.text-danger {
@@ -543,7 +664,7 @@
 
   .hero-title {
     font-size: 0.95rem !important;
-    margin-bottom: 0.2rem !important;
+    margin-bottom: 1rem !important;
     line-height: 1.2;
   }
 
@@ -783,7 +904,7 @@
 
   .hero-title {
     font-size: 1rem !important;
-    margin-bottom: 0.5rem !important;
+    margin-bottom: 1rem !important;
   }
 
   .row.align-items-center p {
@@ -821,7 +942,7 @@
 
   .row.g-4 > .col-lg-4 p[style*="font-size: 0.9rem"] {
     font-size: 0.6rem !important;
-    display: none;
+    display: block !important;
   }
 
   .row.g-4 > .col-lg-4 span[style*="padding: 4px 10px"] {
@@ -957,25 +1078,9 @@
 }
 
 /* ============================================
-   NAVBAR & FOOTER RESPONSIVE
+   FOOTER & LINKS RESPONSIVE (768px and below)
    ============================================ */
 @media (max-width: 768px) {
-  .navbar-collapse {
-    background-color: #f8f9fa;
-    border-radius: 8px;
-    padding: 0.75rem;
-    margin-top: 0.25rem;
-  }
-
-  .nav-link {
-    padding: 0.5rem 0.4rem !important;
-    font-size: 0.9rem;
-  }
-
-  .nav-link:hover {
-    color: #DF6951 !important;
-  }
-
   .info_section .info_links ul {
     display: flex;
     flex-direction: column;
@@ -986,14 +1091,11 @@
     display: inline-block;
     margin-bottom: 10px;
     font-size: 0.9rem;
+    color: #212832 !important;
   }
 }
 
 @media (max-width: 480px) {
-  .nav-link {
-    font-size: 0.8rem;
-  }
-
   .info_section .info_links a {
     font-size: 0.75rem;
   }

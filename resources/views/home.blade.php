@@ -13,7 +13,7 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-md-5 col-lg-6 order-0 order-md-1 text-end">
-                <img class="pt-7 pt-md-0 hero-img" src="{{ asset('img/hero/hero-img.png') }}" alt="hero-header" style="max-width: 60%; width: auto; height: auto;" />
+                <img class="pt-7 pt-md-0 hero-img " src="{{ asset('img/hero/hero-img.png') }}" alt="hero-header" style="max-width: 60%; width: auto; height: auto;" />
             </div>
             <div class="col-md-7 col-lg-6 text-md-start text-center py-6">
                 <h4 class="fw-bold text-danger mb-3">{{ $heroTitle ?? 'Produsen Songkok Berkualitas dari Gresik' }}</h4>
