@@ -27,9 +27,7 @@
     <!-- ===============================================-->
     <!--    Stylesheets-->
     <!-- ===============================================-->
-    <link href="{{ asset('css/theme.css') }}?v=1" rel="stylesheet" />
     <link href="{{ asset('css/slider.css') }}?v=1" rel="stylesheet" />
-    <link href="{{ asset('css/responsive.css') }}?v=1" rel="stylesheet" />
 
     <style>
         .navbar.fixed-top {
