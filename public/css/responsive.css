@@ -918,40 +918,47 @@
   }
 
   .row.g-4 {
-    gap: 0.6rem !important;
+    gap: 1rem !important;
   }
 
   .row.g-4 > .col-lg-4 {
-    flex: 0 0 calc(33.333% - 0.4rem) !important;
-    max-width: calc(33.333% - 0.4rem) !important;
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
   }
 
   .row.g-4 > .col-lg-4 > div > div[style*="height: 200px"] {
-    height: 90px !important;
+    height: 150px !important;
   }
 
   .row.g-4 > .col-lg-4 > div > div[style*="padding: 24px"] {
-    padding: 10px !important;
-    margin-top: 6px !important;
+    padding: 16px !important;
+    margin-top: 10px !important;
+    border-radius: 12px !important;
   }
 
   .row.g-4 > .col-lg-4 h4[style*="font-size: 1.25rem"] {
-    font-size: 0.8rem !important;
-    margin: 0 0 4px 0 !important;
+    font-size: 1rem !important;
+    font-weight: 700 !important;
+    margin: 0 0 10px 0 !important;
   }
 
   .row.g-4 > .col-lg-4 p[style*="font-size: 0.9rem"] {
-    font-size: 0.6rem !important;
-    display: block !important;;
+    font-size: 0.85rem !important;
+    line-height: 1.5 !important;
+    display: block !important;
+    margin: 0 0 12px 0 !important;
   }
 
   .row.g-4 > .col-lg-4 span[style*="padding: 4px 10px"] {
-    display: none;
+    display: inline-block !important;
+    font-size: 0.75rem !important;
+    padding: 4px 8px !important;
   }
 
   .row.g-4 > .col-lg-4 a[style*="padding: 11px"] {
-    padding: 5px !important;
-    font-size: 0.6rem !important;
+    padding: 10px !important;
+    font-size: 0.85rem !important;
+    font-weight: 600 !important;
   }
 
   h2 {
