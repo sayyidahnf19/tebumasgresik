@@ -4,41 +4,6 @@
    ============================================ */
 
 /* ============================================
-   NAVBAR FIX - DESKTOP DISPLAY
-   Ensure navbar items visible on lg screens
-   ============================================ */
-@media (min-width: 992px) {
-  .navbar-collapse {
-    display: flex !important;
-  }
-
-  .navbar-collapse.collapse {
-    display: flex !important;
-  }
-
-  .navbar-nav {
-    display: flex !important;
-  }
-
-  .nav-item {
-    display: list-item !important;
-    visibility: visible !important;
-  }
-
-  .nav-link {
-    display: inline-block !important;
-    visibility: visible !important;
-  }
-
-  /* Hero Image - Desktop Positioning */
-  .hero-img {
-    width: auto !important;
-    max-width: 60% !important;
-    margin-left: 0 !important;
-  }
-}
-
-/* ============================================
    TABLET (Medium) - 1024px to 991px
    ============================================ */
 @media (max-width: 1024px) {
