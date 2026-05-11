@@ -469,14 +469,13 @@
 
   /* Services - 3 Columns */
   .row.g-4 {
-    gap: 1rem !important;
+    gap: 1rem;
   }
 
   .row.g-4 > .col-lg-4,
-  .row.g-4 > .col-md-6,
-  .row.g-4 > [class*="col-"] {
-    flex: 0 0 calc(33.333% - 0.67rem) !important;
-    max-width: calc(33.333% - 0.67rem) !important;
+  .row.g-4 > .col-md-6 {
+    flex: 0 0 calc(33.333% - 0.67rem);
+    max-width: calc(33.333% - 0.67rem);
   }
 
   .row.g-4 > .col-lg-4 > div > div[style*="height: 200px"] {
@@ -618,10 +617,9 @@
 
   /* Services - 3 Columns */
   .row.g-4 > .col-lg-4,
-  .row.g-4 > .col-md-6,
-  .row.g-4 > [class*="col-"] {
-    flex: 0 0 calc(33.333% - 0.5rem) !important;
-    max-width: calc(33.333% - 0.5rem) !important;
+  .row.g-4 > .col-md-6 {
+    flex: 0 0 calc(33.333% - 0.5rem);
+    max-width: calc(33.333% - 0.5rem);
   }
 
   .row.g-4 > .col-lg-4 > div > div[style*="height: 200px"] {

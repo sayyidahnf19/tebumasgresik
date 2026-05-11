@@ -64,7 +64,7 @@
                 <!-- Info Box (White Container) -->
                 <div style="background: white; border-radius: 16px; box-shadow: 0 8px 24px rgba(217,112,96,0.08); transition: all 0.4s ease; padding: 24px; margin-top: 15px; position: relative; z-index: 1;" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 16px 40px rgba(217,112,96,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 24px rgba(217,112,96,0.08)'">
                     <h4 style="font-size: 1.25rem; font-weight: 800; color: #1a1a1a; margin: 0 0 12px 0;">Songkok Non AC</h4>
-                    <p style="font-size: 0.9rem; color: #666; line-height: 1.6; margin: 0 0 16px 0;">
+                    <p style="font-size: 0.9rem; color: #666; line-height: 1.6; margin: 0 0 16px 0; text-align: justify;">
                         <strong>Solid & Polos</strong><br>
                         Tanpa ventilasi, full hitam dengan desain sederhana dan elegan. Cocok untuk tampilan formal, acara resmi, dan penggunaan sehari-hari yang mencari kemudahan.
                     </p>
@@ -88,7 +88,7 @@
                 <!-- Info Box (White Container) -->
                 <div style="background: white; border-radius: 16px; box-shadow: 0 8px 24px rgba(217,112,96,0.08); transition: all 0.4s ease; padding: 24px; margin-top: 15px; position: relative; z-index: 1;" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 16px 40px rgba(217,112,96,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 24px rgba(217,112,96,0.08)'">
                     <h4 style="font-size: 1.25rem; font-weight: 800; color: #1a1a1a; margin: 0 0 12px 0;">Songkok AC</h4>
-                    <p style="font-size: 0.9rem; color: #666; line-height: 1.6; margin: 0 0 16px 0;">
+                    <p style="font-size: 0.9rem; color: #666; line-height: 1.6; margin: 0 0 16px 0; text-align: justify;">
                         <strong>Ventilasi Standar</strong><br>
                         Terdapat lubang jaring di 2 ujung (atas & bawah) untuk sirkulasi udara. Nyaman untuk aktivitas harian, ibadah, dan iklim tropis yang lebih adem.
                     </p>
@@ -112,7 +112,7 @@
                 <!-- Info Box (White Container) -->
                 <div style="background: white; border-radius: 16px; box-shadow: 0 8px 24px rgba(217,112,96,0.08); transition: all 0.4s ease; padding: 24px; margin-top: 15px; position: relative; z-index: 1;" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 16px 40px rgba(217,112,96,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 24px rgba(217,112,96,0.08)'">
                     <h4 style="font-size: 1.25rem; font-weight: 800; color: #1a1a1a; margin: 0 0 12px 0;">Songkok Full AC</h4>
-                    <p style="font-size: 0.9rem; color: #666; line-height: 1.6; margin: 0 0 16px 0;">
+                    <p style="font-size: 0.9rem; color: #666; line-height: 1.6; margin: 0 0 16px 0; text-align: justify;">
                         <strong>Ventilasi Maksimal</strong><br>
                         Seluruh permukaan kepala adalah jaring untuk sirkulasi udara penuh. Paling nyaman dan adem, ideal untuk aktivitas outdoor dan iklim panas.
                     </p>
@@ -252,7 +252,7 @@
         <div class="row">
             <div class="col-lg-3 col-sm-6 mb-6">
               <div class="card service-card shadow-hover rounded-3 text-center align-items-center">
-                <div class="card-body p-xxl-5 p-4"> <img src="{{ asset('img/dest/Jht.png') }}" width="75" alt="Service" />
+                <div class="card-body p-xxl-5 p-4"> <img src="{{ asset('img/dest/Jht.png') }}" width="75" alt="Service" class="d-block mx-auto mb-3" />
                   <h4 class="mb-3">Jahitan Rapi & Handmade</h4>
                   <p class="mb-0 fw-medium">Setiap songkok dibuat secara handmade dengan jahitan rapi dan teliti sehingga lebih awet dan nyaman digunakan.</p>
                 </div>
@@ -260,7 +260,7 @@
             </div>
             <div class="col-lg-3 col-sm-6 mb-6">
               <div class="card service-card shadow-hover rounded-3 text-center align-items-center">
-                <div class="card-body p-xxl-5 p-4"> <img src="{{ asset('img/dest/Nyaman.png') }}" width="75" alt="Service" />
+                <div class="card-body p-xxl-5 p-4"> <img src="{{ asset('img/dest/Nyaman.png') }}" width="75" alt="Service" class="d-block mx-auto mb-3" />
                   <h4 class="mb-3">Nyaman Digunakan Seharian</h4>
                   <p class="mb-0 fw-medium">Ringan, pas di kepala, dan tetap nyaman untuk ibadah maupun aktivitas sehari-hari.</p>
                 </div>
@@ -268,7 +268,7 @@
             </div>
             <div class="col-lg-3 col-sm-6 mb-6">
               <div class="card service-card shadow-hover rounded-3 text-center align-items-center">
-                <div class="card-body p-xxl-5 p-4"> <img src="{{ asset('img/dest/Elegan.png') }}" width="75" alt="Service" />
+                <div class="card-body p-xxl-5 p-4"> <img src="{{ asset('img/dest/Elegan.png') }}" width="75" alt="Service" class="d-block mx-auto mb-3" />
                   <h4 class="mb-3">Desain Sederhana dan Elegan</h4>
                   <p class="mb-0 fw-medium">Tampilan yang tidak berlebihan dan tetap cocok digunakan di berbagai acara.</p>
                 </div>
@@ -276,7 +276,7 @@
             </div>
             <div class="col-lg-3 col-sm-6 mb-6">
               <div class="card service-card shadow-hover rounded-3 text-center align-items-center">
-                <div class="card-body p-xxl-5 p-4"> <img src="{{ asset('img/dest/Pres.png') }}" width="75" alt="Service" />
+                <div class="card-body p-xxl-5 p-4"> <img src="{{ asset('img/dest/Pres.png') }}" width="75" alt="Service" class="d-block mx-auto mb-3" />
                   <h4 class="mb-3">Ukuran Lengkap dan Presisi</h4>
                   <p class="mb-0 fw-medium">Tersedia berbagai ukuran yang pas sehingga lebih nyaman saat digunakan.</p>
                 </div>
@@ -341,7 +341,7 @@
         <!-- Trust Features + Images Section -->
         <div class="row align-items-center g-4" style="margin-bottom: 40px;">
             <!-- Left: Features -->
-            <div class="col-lg-4">
+            <div class="col-12 col-md-6 col-lg-4">
                 <div style="display: flex; flex-direction: column; gap: 12px;">
                     <h4 style="font-size: 1.2rem; font-weight: 800; color: #1a1a1a; margin-bottom: 4px;">Komitmen Kami</h4>
                     
@@ -375,33 +375,33 @@
             </div>
 
             <!-- Right: Images (3 Columns) -->
-            <div class="col-lg-8">
-                <div class="row g-3">
+            <div class="col-12 col-md-6 col-lg-8">
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
                     <!-- Image 1 - Packing -->
-                    <div class="col-lg-4 col-sm-6">
-                        <div style="position: relative; border-radius: 12px; overflow: hidden; box-shadow: 0 12px 35px rgba(217,112,96,0.1); transition: all 0.4s ease; height: 240px;" onmouseover="this.style.transform='scale(1.03)'; this.style.boxShadow='0 16px 45px rgba(217,112,96,0.18)'" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 12px 35px rgba(217,112,96,0.1)'">
+                    <div class="col">
+                        <div style="position: relative; display: flex; align-items: center; justify-content: center; border-radius: 12px; overflow: hidden; box-shadow: 0 12px 35px rgba(217,112,96,0.1); transition: all 0.4s ease; aspect-ratio: 1 / 1;" onmouseover="this.style.transform='scale(1.03)'; this.style.boxShadow='0 16px 45px rgba(217,112,96,0.18)'" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 12px 35px rgba(217,112,96,0.1)'">
                             <img src="{{ asset('img/category/pkg.png') }}" alt="Proses Packing" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-                            <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.6), transparent); padding: 16px; color: white;">
+                            <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.6), transparent); padding: 16px; color: white; text-align: center;">
                                 <p style="font-weight: 700; margin: 0; font-size: 0.9rem;">Proses Packing</p>
                             </div>
                         </div>
                     </div>
 
                     <!-- Image 2 - Tumpukan Paket -->
-                    <div class="col-lg-4 col-sm-6">
-                        <div style="position: relative; border-radius: 12px; overflow: hidden; box-shadow: 0 12px 35px rgba(217,112,96,0.1); transition: all 0.4s ease; height: 240px;" onmouseover="this.style.transform='scale(1.03)'; this.style.boxShadow='0 16px 45px rgba(217,112,96,0.18)'" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 12px 35px rgba(217,112,96,0.1)'">
+                    <div class="col">
+                        <div style="position: relative; display: flex; align-items: center; justify-content: center; border-radius: 12px; overflow: hidden; box-shadow: 0 12px 35px rgba(217,112,96,0.1); transition: all 0.4s ease; aspect-ratio: 1 / 1;" onmouseover="this.style.transform='scale(1.03)'; this.style.boxShadow='0 16px 45px rgba(217,112,96,0.18)'" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 12px 35px rgba(217,112,96,0.1)'">
                             <img src="{{ asset('img/category/kir.jpeg') }}" alt="Tumpukan Paket" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-                            <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.6), transparent); padding: 16px; color: white;">
+                            <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.6), transparent); padding: 16px; color: white; text-align: center;">
                                 <p style="font-weight: 700; margin: 0; font-size: 0.9rem;">Siap Pengiriman</p>
                             </div>
                         </div>
                     </div>
 
                     <!-- Image 3 - Kiriman -->
-                    <div class="col-lg-4 col-sm-6">
-                        <div style="position: relative; border-radius: 12px; overflow: hidden; box-shadow: 0 12px 35px rgba(217,112,96,0.1); transition: all 0.4s ease; height: 240px;" onmouseover="this.style.transform='scale(1.03)'; this.style.boxShadow='0 16px 45px rgba(217,112,96,0.18)'" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 12px 35px rgba(217,112,96,0.1)'">
+                    <div class="col">
+                        <div style="position: relative; display: flex; align-items: center; justify-content: center; border-radius: 12px; overflow: hidden; box-shadow: 0 12px 35px rgba(217,112,96,0.1); transition: all 0.4s ease; aspect-ratio: 1 / 1;" onmouseover="this.style.transform='scale(1.03)'; this.style.boxShadow='0 16px 45px rgba(217,112,96,0.18)'" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 12px 35px rgba(217,112,96,0.1)'">
                             <img src="{{ asset('img/category/kirim.jpeg') }}" alt="Produk Terkirim" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-                            <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.6), transparent); padding: 16px; color: white;">
+                            <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.6), transparent); padding: 16px; color: white; text-align: center;">
                                 <p style="font-weight: 700; margin: 0; font-size: 0.9rem;">Produk Tersampaikan</p>
                             </div>
                         </div>
