@@ -55,6 +55,30 @@
                 padding-top: clamp(45px, 6vw, 70px) !important;
             }
         }
+
+        @media (min-width: 768px) and (max-width: 991.98px) {
+            .trust-image-card {
+                min-height: 180px !important;
+                max-height: 220px !important;
+                aspect-ratio: 4 / 3 !important;
+            }
+        }
+
+        @media (max-width: 767.98px) {
+            .trust-image-card {
+                min-height: 200px !important;
+                max-height: 240px !important;
+                aspect-ratio: 4 / 3 !important;
+            }
+        }
+
+        @media (max-width: 575.98px) {
+            .trust-image-card {
+                min-height: 160px !important;
+                max-height: 200px !important;
+                aspect-ratio: 4 / 3 !important;
+            }
+        }
     </style>
 
     @stack('styles')

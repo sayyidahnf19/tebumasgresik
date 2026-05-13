@@ -143,7 +143,7 @@
         <!-- Content Row - 3 Columns Professional Design -->
         <div class="row align-items-stretch g-4">
             <!-- Column 1: Left Image with Decorative Elements -->
-            <div class="col-lg-4">
+            <div class="col-12 col-md-6 col-lg-4">
                 <div style="position: relative; height: 100%; display: flex; align-items: center;">
                     <!-- Decorative Background -->
                     <div style="position: absolute; top: -40px; left: -40px; width: 130%; height: 130%; background: linear-gradient(135deg, rgba(217,112,96,0.1) 0%, rgba(217,112,96,0.02) 100%); border-radius: 30px; z-index: -1;"></div>
@@ -163,7 +163,7 @@
             </div>
 
             <!-- Column 2: Center Text with Professional Design -->
-            <div class="col-lg-4">
+            <div class="col-12 col-md-6 col-lg-4">
                 <div style="padding: 30px 25px; height: 100%; display: flex; flex-direction: column; justify-content: center;">
                     <!-- Main Title -->
                     <h3 style="font-size: 2rem; font-weight: 900; color: #1a1a1a; line-height: 1.25; margin-bottom: 24px; word-break: break-word;">Kualitas Premium Sejak 1993</h3>
@@ -191,7 +191,7 @@
             </div>
 
             <!-- Column 3: Right Image with Professional Content -->
-            <div class="col-lg-4">
+            <div class="col-12 col-md-6 col-lg-4">
                 <div style="display: flex; flex-direction: column; gap: 20px; height: 100%; justify-content: flex-start;">
                     <!-- Main Image - No Background -->
                     <div style="border-radius: 20px; overflow: hidden; box-shadow: 0 20px 60px rgba(217,112,96,0.15); transition: all 0.4s ease;">
@@ -341,7 +341,7 @@
         <!-- Trust Features + Images Section -->
         <div class="row align-items-center g-4" style="margin-bottom: 40px;">
             <!-- Left: Features -->
-            <div class="col-12 col-md-6 col-lg-4">
+            <div class="col-12 col-md-4">
                 <div style="display: flex; flex-direction: column; gap: 12px;">
                     <h4 style="font-size: 1.2rem; font-weight: 800; color: #1a1a1a; margin-bottom: 4px;">Komitmen Kami</h4>
                     
@@ -375,11 +375,11 @@
             </div>
 
             <!-- Right: Images (3 Columns) -->
-            <div class="col-12 col-md-6 col-lg-8">
-                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
+            <div class="col-12 col-md-8">
+                <div class="row g-3">
                     <!-- Image 1 - Packing -->
-                    <div class="col">
-                        <div style="position: relative; display: flex; align-items: center; justify-content: center; border-radius: 12px; overflow: hidden; box-shadow: 0 12px 35px rgba(217,112,96,0.1); transition: all 0.4s ease; aspect-ratio: 1 / 1;" onmouseover="this.style.transform='scale(1.03)'; this.style.boxShadow='0 16px 45px rgba(217,112,96,0.18)'" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 12px 35px rgba(217,112,96,0.1)'">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="trust-image-card" style="position: relative; display: flex; align-items: center; justify-content: center; border-radius: 12px; overflow: hidden; box-shadow: 0 12px 35px rgba(217,112,96,0.1); transition: all 0.4s ease; aspect-ratio: 1 / 1;" onmouseover="this.style.transform='scale(1.03)'; this.style.boxShadow='0 16px 45px rgba(217,112,96,0.18)'" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 12px 35px rgba(217,112,96,0.1)'">
                             <img src="{{ asset('img/category/pkg.png') }}" alt="Proses Packing" style="width: 100%; height: 100%; object-fit: cover; display: block;">
                             <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.6), transparent); padding: 16px; color: white; text-align: center;">
                                 <p style="font-weight: 700; margin: 0; font-size: 0.9rem;">Proses Packing</p>
@@ -388,8 +388,8 @@
                     </div>
 
                     <!-- Image 2 - Tumpukan Paket -->
-                    <div class="col">
-                        <div style="position: relative; display: flex; align-items: center; justify-content: center; border-radius: 12px; overflow: hidden; box-shadow: 0 12px 35px rgba(217,112,96,0.1); transition: all 0.4s ease; aspect-ratio: 1 / 1;" onmouseover="this.style.transform='scale(1.03)'; this.style.boxShadow='0 16px 45px rgba(217,112,96,0.18)'" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 12px 35px rgba(217,112,96,0.1)'">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="trust-image-card" style="position: relative; display: flex; align-items: center; justify-content: center; border-radius: 12px; overflow: hidden; box-shadow: 0 12px 35px rgba(217,112,96,0.1); transition: all 0.4s ease; aspect-ratio: 1 / 1;" onmouseover="this.style.transform='scale(1.03)'; this.style.boxShadow='0 16px 45px rgba(217,112,96,0.18)'" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 12px 35px rgba(217,112,96,0.1)'">
                             <img src="{{ asset('img/category/kir.jpeg') }}" alt="Tumpukan Paket" style="width: 100%; height: 100%; object-fit: cover; display: block;">
                             <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.6), transparent); padding: 16px; color: white; text-align: center;">
                                 <p style="font-weight: 700; margin: 0; font-size: 0.9rem;">Siap Pengiriman</p>
@@ -398,8 +398,8 @@
                     </div>
 
                     <!-- Image 3 - Kiriman -->
-                    <div class="col">
-                        <div style="position: relative; display: flex; align-items: center; justify-content: center; border-radius: 12px; overflow: hidden; box-shadow: 0 12px 35px rgba(217,112,96,0.1); transition: all 0.4s ease; aspect-ratio: 1 / 1;" onmouseover="this.style.transform='scale(1.03)'; this.style.boxShadow='0 16px 45px rgba(217,112,96,0.18)'" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 12px 35px rgba(217,112,96,0.1)'">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="trust-image-card" style="position: relative; display: flex; align-items: center; justify-content: center; border-radius: 12px; overflow: hidden; box-shadow: 0 12px 35px rgba(217,112,96,0.1); transition: all 0.4s ease; aspect-ratio: 1 / 1;" onmouseover="this.style.transform='scale(1.03)'; this.style.boxShadow='0 16px 45px rgba(217,112,96,0.18)'" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 12px 35px rgba(217,112,96,0.1)'">
                             <img src="{{ asset('img/category/kirim.jpeg') }}" alt="Produk Terkirim" style="width: 100%; height: 100%; object-fit: cover; display: block;">
                             <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.6), transparent); padding: 16px; color: white; text-align: center;">
                                 <p style="font-weight: 700; margin: 0; font-size: 0.9rem;">Produk Tersampaikan</p>
@@ -487,18 +487,87 @@
             box-shadow: 0 20px 50px rgba(0,0,0,0.3);
             border-color: #f5f5f5;
         }
+
+        .cta-home-section {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .cta-home-section h2 {
+            font-size: 2.8rem;
+        }
+
+        .cta-home-section p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto 32px;
+        }
+
+        .cta-home-section .cta-buttons {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        @media (max-width: 991.98px) {
+            .cta-home-section {
+                margin-bottom: 60px;
+            }
+            .cta-home-section h2 {
+                font-size: 2.4rem;
+            }
+            .cta-home-section p {
+                font-size: 1rem;
+                max-width: 600px;
+            }
+            .cta-home-section .cta-btn-primary,
+            .cta-home-section .cta-btn-secondary {
+                padding: 14px 30px;
+                font-size: 0.95rem;
+            }
+            .cta-home-section .cta-btn-primary span,
+            .cta-home-section .cta-btn-secondary span {
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 767.98px) {
+            .cta-home-section {
+                margin-bottom: 50px;
+            }
+            .cta-home-section h2 {
+                font-size: 2rem;
+            }
+            .cta-home-section p {
+                font-size: 0.95rem;
+                max-width: 100%;
+            }
+            .cta-home-section .cta-btn-primary,
+            .cta-home-section .cta-btn-secondary {
+                padding: 12px 24px;
+                font-size: 0.9rem;
+            }
+            .cta-home-section .cta-buttons {
+                gap: 12px;
+            }
+            .cta-home-section .cta-btn-primary span,
+            .cta-home-section .cta-btn-secondary span {
+                font-size: 1rem;
+            }
+        }
     </style>
     <div style="position: absolute; top: -100px; right: -100px; width: 400px; height: 400px; background: rgba(255,255,255,0.1); border-radius: 50%; z-index: 1; animation: float-slow 8s ease-in-out infinite;"></div>
     <div style="position: absolute; bottom: -50px; left: -50px; width: 300px; height: 300px; background: rgba(255,255,255,0.08); border-radius: 50%; z-index: 1; animation: float-slow 10s ease-in-out infinite;"></div>
     
     <div class="container" style="position: relative; z-index: 2;">
         <!-- Main CTA Section -->
-        <div style="text-align: center; margin-bottom: 80px;">
-            <h2 style="font-size: 2.8rem; font-weight: 900; color: white; line-height: 1.2; margin-bottom: 16px; animation: slide-in-left 0.6s ease-out;">Dapatkan Songkok Premium Pilihan Anda</h2>
-            <p style="font-size: 1.1rem; color: rgba(255,255,255,0.95); max-width: 700px; margin: 0 auto 32px; line-height: 1.7; animation: slide-in-right 0.6s ease-out 0.1s both;">Miliki koleksi songkok terlengkap dengan kualitas terbaik dari Tebu Mas Gresik. Proses cepat, harga bersaing, dan pelayanan terpercaya untuk kebutuhan Anda.</p>
+        <div class="cta-home-section">
+            <h2 style="font-weight: 900; color: white; line-height: 1.2; margin-bottom: 16px; animation: slide-in-left 0.6s ease-out;">Dapatkan Songkok Premium Pilihan Anda</h2>
+            <p style="color: rgba(255,255,255,0.95); line-height: 1.7; animation: slide-in-right 0.6s ease-out 0.1s both;">Miliki koleksi songkok terlengkap dengan kualitas terbaik dari Tebu Mas Gresik. Proses cepat, harga bersaing, dan pelayanan terpercaya untuk kebutuhan Anda.</p>
             
             <!-- CTA Buttons with Enhanced Interactivity -->
-            <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
+            <div class="cta-buttons">
                 <a href="https://wa.me/6281234567890" target="_blank" class="cta-btn-primary">
                     <span style="font-size: 1.3rem;">💬</span>
                     <span>Chat WhatsApp</span>
@@ -513,7 +582,7 @@
         <!-- Contact & Lokasi Section with Interactive Elements -->
         <div class="row g-4" style="margin-top: 60px;">
             <!-- Contact Information -->
-            <div class="col-lg-4">
+            <div class="col-12 col-lg-4">
                 <div style="background: rgba(255,255,255,0.95); padding: 40px 30px; border-radius: 16px; box-shadow: 0 20px 60px rgba(0,0,0,0.15); height: 100%; display: flex; flex-direction: column; transition: all 0.4s ease; animation: slide-in-left 0.6s ease-out 0.2s both;" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 30px 80px rgba(0,0,0,0.25)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 20px 60px rgba(0,0,0,0.15)'">
                     <h3 style="font-size: 1.3rem; font-weight: 800; color: #1a1a1a; margin-bottom: 28px; text-align: center;">Hubungi Kami</h3>
                     
@@ -550,7 +619,7 @@
             </div>
             
             <!-- Maps & Alamat -->
-            <div class="col-lg-8" style="animation: slide-in-right 0.6s ease-out 0.3s both;">
+            <div class="col-12 col-lg-8" style="animation: slide-in-right 0.6s ease-out 0.3s both;">
                 <!-- Alamat Card with Interactive Hover -->
                 <div style="background: rgba(255,255,255,0.95); padding: 30px; border-radius: 16px; margin-bottom: 20px; box-shadow: 0 8px 24px rgba(0,0,0,0.1); transition: all 0.4s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 16px 40px rgba(0,0,0,0.2)'; this.style.borderLeft='5px solid #D97060'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 24px rgba(0,0,0,0.1)'; this.style.borderLeft='5px solid transparent'">
                     <div style="display: flex; align-items: flex-start; gap: 16px;">
