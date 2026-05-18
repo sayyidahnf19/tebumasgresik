@@ -22,3 +22,8 @@
 Homestead.json
 Homestead.yaml
 Thumbs.db
+/.vercel
+/storage/logs
+/storage/framework/cache
+/storage/framework/sessions
+/storage/framework/views
