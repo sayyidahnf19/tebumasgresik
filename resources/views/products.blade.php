@@ -95,7 +95,7 @@
             </div>
             
             <!-- Right: Details & Purchase Panel -->
-            <div style="width: 380px; background: #FAFAFA; overflow-y: auto; display: flex; flex-direction: column; border-left: 1px solid #E0E0E0;">
+            <div class="modal-detail-panel" style="width: 380px; background: #FAFAFA; overflow-y: auto; display: flex; flex-direction: column; border-left: 1px solid #E0E0E0;">
                 <!-- Content Scroll Area -->
                 <div class="modal-body" style="flex: 1; padding: 32px 30px; overflow-y: auto;">
                     <!-- Product Title & Description -->
@@ -505,13 +505,30 @@ input[type="radio"]:disabled {
         width: 100% !important;
         height: auto !important;
         flex-direction: column !important;
+        overflow: visible !important;
+        gap: 0 !important;
     }
-    #modalDetail .modal-content .modal-body {
-        padding: 20px !important;
-        max-height: 50vh !important;
+    #modalDetail .modal-content .modal-detail-panel {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        border-left: none !important;
+        border-top: 1px solid #E0E0E0 !important;
+        max-height: none !important;
+        overflow: visible !important;
+    }
+    #modalDetail .modal-content .modal-detail-panel .modal-body {
+        flex: 1 1 auto !important;
+        min-height: 0 !important;
+        overflow: visible !important;
+        padding-bottom: 0 !important;
     }
     #modalDetail .modal-content .modal-footer {
         padding: 12px 16px !important;
+        position: relative !important;
+        bottom: auto !important;
+        background: #FAFAFA !important;
+        z-index: auto !important;
     }
 }
 
@@ -619,28 +636,70 @@ input[type="radio"]:disabled {
     }
     #modalDetail .modal-content {
         flex-direction: column !important;
+        max-height: calc(100vh - 20px) !important;
+        min-height: 0 !important;
+        overflow: hidden !important;
     }
     #modalDetail .modal-content .modal-body-wrapper {
         width: 100% !important;
-        height: auto !important;
+        flex: 1 1 auto !important;
+        min-height: 0 !important;
+        overflow: visible !important;
         flex-direction: column !important;
     }
-    #modalDetail .modal-content .modal-header {
-        padding: 10px 12px !important;
+    #modalDetail .modal-content .modal-detail-panel {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        border-left: none !important;
+        border-top: 1px solid #E0E0E0 !important;
+        flex: 1 1 auto !important;
+        max-height: calc(100vh - 160px) !important;
+        overflow: hidden !important;
     }
-    #modalDetail .modal-content .modal-header h2 {
-        font-size: 0.85rem !important;
-    }
-    #modalDetail .modal-content .modal-body {
-        padding: 16px !important;
-        max-height: 50vh !important;
+    #modalDetail .modal-content .modal-detail-panel .modal-body {
+        flex: 1 1 auto !important;
+        min-height: 0 !important;
+        overflow-y: auto !important;
+        padding-bottom: 90px !important;
     }
     #modalDetail .modal-content .modal-footer {
         padding: 10px 14px !important;
+        position: sticky !important;
+        bottom: 0 !important;
+        display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: space-between !important;
+        gap: 10px !important;
+        background: #FAFAFA !important;
+        z-index: 10 !important;
     }
     #modalDetail .modal-content .modal-footer button {
-        padding: 8px !important;
+        padding: 8px 10px !important;
         font-size: 0.75rem !important;
+        flex: 1 1 0 !important;
+        min-width: 0 !important;
+    }
+    #modalDetail .modal-content .modal-footer button:first-child {
+        max-width: none !important;
+    }
+    #modalDetail .modal-content .modal-body-wrapper {
+        gap: 0 !important;
+    }
+    #modalImage {
+        font-size: 110px !important;
+    }
+    #prevBtn,
+    #nextBtn {
+        width: 34px !important;
+        height: 34px !important;
+        font-size: 1rem !important;
+    }
+    #prevBtn {
+        left: 10px !important;
+    }
+    #nextBtn {
+        right: 10px !important;
     }
 }
 </style>
@@ -746,9 +805,6 @@ function generateProducts() {
         </div>
         `;
         
-        // Grid tinggi 7-10
-        html += `<div class="col-12"><div class="row g-4" style="contain: layout;">`;
-        
         for (let tinggi = 7; tinggi <= 10; tinggi++) {
             // Filter berdasarkan search tinggi
             if (tinggiCari && parseInt(tinggiCari) !== tinggi) {
@@ -759,7 +815,7 @@ function generateProducts() {
             const kodiPrice = formatCurrency(produk.hargaKodi);
             
             html += `
-            <div class="col-lg-3 col-md-4 col-6" style="contain: layout;">
+            <div class="col-6 col-md-4 col-lg-3" style="contain: layout;">
                 <div class="product-card" style="--card-color: ${produk.color}">
                     <div class="product-card__header" style="background-image: url('${produk.image}'); background-size: cover; background-position: center; background-repeat: no-repeat;">
                         <span class="product-card__badge">Stok 50+</span>
@@ -784,7 +840,6 @@ function generateProducts() {
             `;
         }
         
-        html += `</div></div>`;
     });
     
     const grid = document.getElementById('productsGrid');

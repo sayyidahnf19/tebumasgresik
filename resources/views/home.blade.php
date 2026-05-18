@@ -6,24 +6,24 @@
 
 <!-- ============================================-->
 <!-- <section> Hero Section ============================-->
-<section style="padding-top: 0;">
+<section style="padding-top: 0; padding-bottom: 1.5rem;">
     <div class="bg-holder" style="background-image:url({{ asset('img/hero/hero-bg.svg') }})">
     </div>
 
     <div class="container">
-        <div class="row align-items-center">
-            <div class="col-md-5 col-lg-6 order-0 order-md-1 text-end">
-                <img class="pt-7 pt-md-0 hero-img " src="{{ asset('img/hero/hero-img.png') }}" alt="hero-header" style="max-width: 60%; width: auto; height: auto;" />
+        <div class="row align-items-start justify-content-between gx-0 gy-4">
+            <div class="col-12 col-md-5 col-lg-6 order-0 order-md-1 text-center text-md-end px-0 px-md-3">
+                <img class="hero-img" src="{{ asset('img/hero/prod.gif') }}" alt="hero-header" style="width: 100%; max-width: 420px; height: auto; margin: 0 auto;" />
             </div>
-            <div class="col-md-7 col-lg-6 text-md-start text-center py-6">
+            <div class="col-12 col-md-7 col-lg-6 text-md-start text-center py-4 pe-md-5">
                 <h4 class="fw-bold text-danger mb-3">{{ $heroTitle ?? 'Produsen Songkok Berkualitas dari Gresik' }}</h4>
                 <h3 class="hero-title">{{ $heroSubtitle ?? 'Songkok Premium, Untuk Ibadah & Acara Resmi' }}</h3>
-                <p class="mb-4 fw-medium">{{ $heroDescription ?? 'Tebu Mas menyediakan songkok AC, non AC, dan full AC.' }}<br class="d-none d-xl-block" />
-                {{ $heroDescriptionCont ?? 'Dengan bahan pilihan dan jahitan rapi' }}<br class="d-none d-xl-block" />
+                <p class="mb-4 fw-medium">{{ $heroDescription ?? 'Tebu Mas menyediakan songkok AC, non AC, dan full AC.' }}
+                {{ $heroDescriptionCont ?? 'Dengan bahan pilihan dan jahitan rapi' }}
                 {{ $heroDescriptionEnd ?? 'Cocok untuk penggunaan harian maupun acara resmi.' }}</p>
-                <div class="text-center text-md-start">
-                    <a class="btn btn-primary btn-lg me-md-4 mb-3 mb-md-0 border-0 primary-btn-shadow" href="{{ route('products') }}" role="button">Lihat Product</a>
-                    <a class="btn btn-outline-primary btn-lg mb-3 mb-md-0" href="#tentang-kami" role="button">Tentang Kami</a>
+                <div class="d-flex flex-column flex-sm-row justify-content-center justify-content-md-start gap-3">
+                    <a class="btn btn-primary btn-lg border-0 primary-btn-shadow" href="{{ route('products') }}" role="button">Lihat Product</a>
+                    <a class="btn btn-outline-primary btn-lg" href="#tentang-kami" role="button">Tentang Kami</a>
                 </div>
 
                     <!-- Modal -->
