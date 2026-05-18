@@ -270,13 +270,7 @@ var navbarInit = function navbarInit() {
   var DataKey = {
     NAVBAR_ON_SCROLL: 'navbar-light-on-scroll'
   };
-  var navbar = document.querySelector(Selector.NAVBAR); // responsive nav collapsed
-
-  navbar.addEventListener('click', function (e) {
-    if (e.target.classList.contains('nav-link') && window.innerWidth < utils.getBreakpoint(navbar)) {
-      navbar.querySelector(Selector.NAVBAR_TOGGLER).click();
-    }
-  });
+  var navbar = document.querySelector(Selector.NAVBAR);
 
   if (navbar) {
     var windowHeight = window.innerHeight;
@@ -340,6 +334,12 @@ var navbarInit = function navbarInit() {
       !html.scrollTop && (navbar.style.backgroundImage = 'none');
     });
     navbarCollapse.addEventListener(Events.HIDDEN_BS_COLLAPSE, function () {// navbar.style.transition = 'none';
+    });
+
+    document.addEventListener('click', function (event) {
+      if (!navbar.contains(event.target) && utils.hasClass(navbarCollapse, 'show')) {
+        navbar.querySelector(Selector.NAVBAR_TOGGLER).click();
+      }
     });
   }
 };
