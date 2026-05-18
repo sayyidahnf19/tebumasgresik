@@ -30,7 +30,7 @@
                     <div class="modal fade" id="popupVideo" tabindex="-1" aria-labelledby="popupVideo" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered modal-lg">
                             <div class="modal-content">
-                                <iframe class="rounded" style="width:100%;max-height:500px;" height="500px" src="https://www.youtube.com/embed/_lhdhL4UDIo" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"></iframe>
+                                <iframe id="popupVideoIframe" class="rounded" style="width:100%;max-height:500px;" height="500px" src="" data-src="https://www.youtube.com/embed/_lhdhL4UDIo" title="YouTube video player" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"></iframe>
                             </div>
                         </div>
                     </div>
@@ -57,7 +57,7 @@
             <div class="col-lg-4 col-md-6">
                 <!-- Image Container (Floating) -->
                 <div style="height: 200px; display: flex; align-items: center; justify-content: center; position: relative; z-index: 5;">
-                    <img src="{{ asset('img/category/prodlm.png') }}" alt="Songkok Non AC" style="width: 100%; height: 100%; object-fit: contain; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" />
+                    <img src="{{ asset('img/category/prodlm.png') }}" alt="Songkok Non AC" loading="lazy" style="width: 100%; height: 100%; object-fit: contain; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" />
                     <div style="position: absolute; top: 12px; right: 12px; background: #D97060; color: white; padding: 6px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 800; z-index: 10;">POLOS</div>
                 </div>
 
@@ -81,7 +81,7 @@
             <div class="col-lg-4 col-md-6">
                 <!-- Image Container (Floating) -->
                 <div style="height: 200px; display: flex; align-items: center; justify-content: center; position: relative; z-index: 5;">
-                    <img src="{{ asset('img/category/ac.png') }}" alt="Songkok AC" style="width: 100%; height: 100%; object-fit: contain; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" />
+                    <img src="{{ asset('img/category/ac.png') }}" alt="Songkok AC" loading="lazy" style="width: 100%; height: 100%; object-fit: contain; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" />
                     <div style="position: absolute; top: 12px; right: 12px; background: #D97060; color: white; padding: 6px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 800; z-index: 10;">SEDANG</div>
                 </div>
 
@@ -105,7 +105,7 @@
             <div class="col-lg-4 col-md-6">
                 <!-- Image Container (Floating) -->
                 <div style="height: 200px; display: flex; align-items: center; justify-content: center; position: relative; z-index: 5;">
-                    <img src="{{ asset('img/category/fullac.png') }}" alt="Songkok Full AC" style="width: 100%; height: 100%; object-fit: contain; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" />
+                    <img src="{{ asset('img/category/fullac.png') }}" alt="Songkok Full AC" loading="lazy" style="width: 100%; height: 100%; object-fit: contain; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" />
                     <div style="position: absolute; top: 12px; right: 12px; background: #D97060; color: white; padding: 6px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 800; z-index: 10;">PREMIUM</div>
                 </div>
 
@@ -150,7 +150,7 @@
                     
                     <!-- Main Image -->
                     <div style="position: relative; border-radius: 24px; overflow: hidden; box-shadow: 0 25px 70px rgba(217,112,96,0.2); transition: all 0.4s ease; width: 100%;">
-                        <img src="{{ asset('img/category/Songkok.png') }}" alt="Tebu Mas Gresik" style="width: 100%; height: auto; display: block; filter: contrast(1.15) brightness(1.08);">
+                        <img src="{{ asset('img/category/Songkok.png') }}" alt="Tebu Mas Gresik" loading="lazy" style="width: 100%; height: auto; display: block; filter: contrast(1.15) brightness(1.08);">
                         <div style="position: absolute; top: 24px; right: 24px; background: linear-gradient(135deg, #D97060, #C65650); color: white; padding: 10px 18px; border-radius: 50px; font-size: 0.8rem; font-weight: 700; letter-spacing: 1px; box-shadow: 0 8px 20px rgba(217,112,96,0.3);">EST. 1993</div>
                     </div>
                     
@@ -195,7 +195,7 @@
                 <div style="display: flex; flex-direction: column; gap: 20px; height: 100%; justify-content: flex-start;">
                     <!-- Main Image - No Background -->
                     <div style="border-radius: 20px; overflow: hidden; box-shadow: 0 20px 60px rgba(217,112,96,0.15); transition: all 0.4s ease;">
-                        <img src="{{ asset('img/category/labelpg.png') }}" alt="Tebu Mas Label" style="width: 100%; height: auto; display: block; border-radius: 20px;">
+                        <img src="{{ asset('img/category/labelpg.png') }}" alt="Tebu Mas Label" loading="lazy" style="width: 100%; height: auto; display: block; border-radius: 20px;">
                     </div>
 
                     <!-- Info Section -->
@@ -380,7 +380,7 @@
                     <!-- Image 1 - Packing -->
                     <div class="col-12 col-md-6 col-lg-4">
                         <div class="trust-image-card" style="position: relative; display: flex; align-items: center; justify-content: center; border-radius: 12px; overflow: hidden; box-shadow: 0 12px 35px rgba(217,112,96,0.1); transition: all 0.4s ease; aspect-ratio: 1 / 1;" onmouseover="this.style.transform='scale(1.03)'; this.style.boxShadow='0 16px 45px rgba(217,112,96,0.18)'" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 12px 35px rgba(217,112,96,0.1)'">
-                            <img src="{{ asset('img/category/pkg.png') }}" alt="Proses Packing" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                            <img src="{{ asset('img/category/pkg.png') }}" alt="Proses Packing" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; display: block;">
                             <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.6), transparent); padding: 16px; color: white; text-align: center;">
                                 <p style="font-weight: 700; margin: 0; font-size: 0.9rem;">Proses Packing</p>
                             </div>
@@ -390,7 +390,7 @@
                     <!-- Image 2 - Tumpukan Paket -->
                     <div class="col-12 col-md-6 col-lg-4">
                         <div class="trust-image-card" style="position: relative; display: flex; align-items: center; justify-content: center; border-radius: 12px; overflow: hidden; box-shadow: 0 12px 35px rgba(217,112,96,0.1); transition: all 0.4s ease; aspect-ratio: 1 / 1;" onmouseover="this.style.transform='scale(1.03)'; this.style.boxShadow='0 16px 45px rgba(217,112,96,0.18)'" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 12px 35px rgba(217,112,96,0.1)'">
-                            <img src="{{ asset('img/category/kir.jpeg') }}" alt="Tumpukan Paket" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                            <img src="{{ asset('img/category/kir.jpeg') }}" alt="Tumpukan Paket" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; display: block;">
                             <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.6), transparent); padding: 16px; color: white; text-align: center;">
                                 <p style="font-weight: 700; margin: 0; font-size: 0.9rem;">Siap Pengiriman</p>
                             </div>
@@ -400,7 +400,7 @@
                     <!-- Image 3 - Kiriman -->
                     <div class="col-12 col-md-6 col-lg-4">
                         <div class="trust-image-card" style="position: relative; display: flex; align-items: center; justify-content: center; border-radius: 12px; overflow: hidden; box-shadow: 0 12px 35px rgba(217,112,96,0.1); transition: all 0.4s ease; aspect-ratio: 1 / 1;" onmouseover="this.style.transform='scale(1.03)'; this.style.boxShadow='0 16px 45px rgba(217,112,96,0.18)'" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 12px 35px rgba(217,112,96,0.1)'">
-                            <img src="{{ asset('img/category/kirim.jpeg') }}" alt="Produk Terkirim" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                            <img src="{{ asset('img/category/kirim.jpeg') }}" alt="Produk Terkirim" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; display: block;">
                             <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.6), transparent); padding: 16px; color: white; text-align: center;">
                                 <p style="font-weight: 700; margin: 0; font-size: 0.9rem;">Produk Tersampaikan</p>
                             </div>
@@ -645,5 +645,22 @@
     </div>
 </section>
 <!-- <section> close ============================-->
+
+@push('scripts')
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var popupVideo = document.getElementById('popupVideo');
+        if (!popupVideo) {
+            return;
+        }
+        popupVideo.addEventListener('shown.bs.modal', function () {
+            var iframe = document.getElementById('popupVideoIframe');
+            if (iframe && !iframe.src) {
+                iframe.src = iframe.dataset.src;
+            }
+        });
+    });
+</script>
+@endpush
 
 @endsection

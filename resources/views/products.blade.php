@@ -6,7 +6,7 @@
 
 <!-- ============================================-->
 <!-- <section> Products Hero ============================-->
-<section style="padding: 80px 0 0; background: linear-gradient(135deg, #fafafa 0%, #ffffff 100%); margin-top: 60px;">
+<section class="products-hero" style="padding: 80px 0 0; background: linear-gradient(135deg, #fafafa 0%, #ffffff 100%); margin-top: 60px;">
     <div class="container">
         <div class="text-center mb-8">
             <h1 class="fw-bold mb-2" style="font-size: 2.4rem; color: #1a1a1a; line-height: 1.3;">Koleksi Songkok Premium Tebu Mas</h1>
@@ -18,12 +18,12 @@
 
 <!-- ============================================-->
 <!-- <section> Filter Section ============================-->
-<section style="padding: 20px 0 30px;">
+<section class="filter-section" style="padding: 20px 0 30px;">
     <div class="container">
         <div style="background: white; padding: 30px; border-radius: 18px; box-shadow: 0 10px 35px rgba(217,112,96,0.1); margin-bottom: 30px;">
             <div class="row g-3 align-items-end">
                 <!-- Kategori Filter -->
-                <div class="col-lg-4 col-md-6">
+                <div class="col-12 col-md-6 col-lg-4">
                     <label style="font-weight: 700; color: #333; margin-bottom: 10px; display: block; font-size: 0.95rem;">📦 Kategori Produk</label>
                     <select id="kategoriFilter" class="form-select" style="border: 2.5px solid #D97060; border-radius: 12px; padding: 14px 16px; font-weight: 600; color: #333; font-size: 0.95rem; transition: all 0.3s ease;" onchange="generateProducts()">
                         <option value="all">✓ Semua Kategori</option>
@@ -34,13 +34,13 @@
                 </div>
 
                 <!-- Cari Tinggi -->
-                <div class="col-lg-4 col-md-6">
+                <div class="col-12 col-md-6 col-lg-4">
                     <label style="font-weight: 700; color: #333; margin-bottom: 10px; display: block; font-size: 0.95rem;">📏 Cari Tinggi</label>
                     <input type="number" id="tinggiCari" class="form-control" min="7" max="10" placeholder="Masukkan nomor tinggi (7-10)" style="border: 2.5px solid #D97060; border-radius: 12px; padding: 14px 16px; font-weight: 600; color: #333; font-size: 0.95rem;" />
                 </div>
 
                 <!-- Reset Button -->
-                <div class="col-lg-4 col-md-6">
+                <div class="col-12 col-lg-4">
                     <button type="button" class="btn w-100" style="background: linear-gradient(135deg, #D97060, #C65650); color: white; border: none; font-weight: 700; padding: 14px; border-radius: 12px; font-size: 0.95rem; transition: all 0.3s ease; box-shadow: 0 8px 20px rgba(217,112,96,0.2);" onclick="resetFilters()" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 12px 30px rgba(217,112,96,0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 20px rgba(217,112,96,0.2)'">
                         ↻ Reset Filter
                     </button>
@@ -63,15 +63,15 @@
 <!-- ============================================-->
 <!-- <section> Custom Modal Detail Produk ============================-->
 <div id="modalDetail" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); display: none; align-items: center; justify-content: center; z-index: 10000; animation: fadeIn 0.3s ease; padding: 20px;">
-    <div style="background: white; border-radius: 16px; max-width: 1000px; width: 100%; max-height: 85vh; box-shadow: 0 25px 80px rgba(0,0,0,0.15); animation: slideUp 0.3s ease; overflow: hidden; display: flex; flex-direction: column; margin: auto;">
+    <div class="modal-content" style="background: white; border-radius: 16px; max-width: 1000px; width: 100%; max-height: 85vh; box-shadow: 0 25px 80px rgba(0,0,0,0.15); animation: slideUp 0.3s ease; overflow: hidden; display: flex; flex-direction: column; margin: auto;">
         <!-- Modal Header -->
-        <div style="background: white; border-bottom: 1px solid #E0E0E0; padding: 16px 24px; display: flex; justify-content: space-between; align-items: center; flex-shrink: 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+        <div class="modal-header" style="background: white; border-bottom: 1px solid #E0E0E0; padding: 16px 24px; display: flex; justify-content: space-between; align-items: center; flex-shrink: 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
             <h2 id="modalTitle" style="margin: 0; font-size: 1.1rem; font-weight: 800; color: #1a1a1a;">Detail Produk</h2>
             <button onclick="closeDetailModal()" style="background: #f0f0f0; border: none; color: #666; width: 36px; height: 36px; border-radius: 50%; cursor: pointer; font-size: 1.2rem; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;" onmouseover="this.style.background='#e0e0e0'" onmouseout="this.style.background='#f0f0f0'">✕</button>
         </div>
         
         <!-- Modal Content -->
-        <div style="flex: 1; display: flex; overflow: hidden;">
+        <div class="modal-body-wrapper" style="flex: 1; display: flex; overflow: hidden;">
             <!-- Left: Product Image Slider -->
             <div style="flex: 1; background: linear-gradient(135deg, #F5F5F5 0%, #EEEEEE 100%); display: flex; align-items: center; justify-content: center; position: relative; padding: 30px 20px; overflow: hidden;">
                 <!-- Slider Container -->
@@ -97,20 +97,35 @@
             <!-- Right: Details & Purchase Panel -->
             <div style="width: 380px; background: #FAFAFA; overflow-y: auto; display: flex; flex-direction: column; border-left: 1px solid #E0E0E0;">
                 <!-- Content Scroll Area -->
-                <div style="flex: 1; padding: 28px; overflow-y: auto;">
+                <div class="modal-body" style="flex: 1; padding: 32px 30px; overflow-y: auto;">
                     <!-- Product Title & Description -->
-                    <div style="margin-bottom: 24px;">
-                        <div style="height: 2px; background: #D97060; width: 50px; margin-bottom: 14px; border-radius: 1px;"></div>
-                        <div id="modalDescription" style="color: #555; line-height: 1.7; font-size: 0.9rem; font-weight: 500;">
+                    <div style="margin-bottom: 28px;">
+                        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
+                            <div style="height: 3px; background: linear-gradient(to right, #D97060, rgba(217,112,96,0.3)); width: 40px; border-radius: 2px;"></div>
+                            <p style="font-size: 0.75rem; color: #999; margin: 0; font-weight: 700; letter-spacing: 1px; text-transform: uppercase;">Deskripsi</p>
+                        </div>
+                        <div id="modalDescription" style="color: #555; line-height: 1.8; font-size: 0.95rem; font-weight: 500;">
                             <!-- Deskripsi akan di-isi oleh JS -->
                         </div>
                     </div>
+
+                    <!-- Product Specifications -->
+                    <div style="margin-bottom: 32px;">
+                        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
+                            <div style="height: 3px; background: linear-gradient(to right, #D97060, rgba(217,112,96,0.3)); width: 40px; border-radius: 2px;"></div>
+                            <p style="font-size: 0.75rem; color: #999; margin: 0; font-weight: 700; letter-spacing: 1px; text-transform: uppercase;">Spesifikasi</p>
+                        </div>
+                        <div id="modalSpecs" class="product-specs-table"></div>
+                    </div>
                     
                     <!-- Nomor Selection -->
-                    <div style="margin-bottom: 20px;">
-                        <label style="font-weight: 700; color: #333; margin-bottom: 8px; display: block; font-size: 0.85rem;">Pilih Nomor (1-10)</label>
-                        <select id="nomorSelect" class="form-select" style="border: 1.5px solid #E0E0E0; border-radius: 10px; padding: 10px 12px; font-weight: 600; color: #333; font-size: 0.85rem; width: 100%; background: white; transition: all 0.3s ease;">
-                            <option value="">-- Pilih Nomor --</option>
+                    <div style="margin-bottom: 32px;">
+                        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
+                            <div style="height: 3px; background: linear-gradient(to right, #D97060, rgba(217,112,96,0.3)); width: 40px; border-radius: 2px;"></div>
+                            <p style="font-size: 0.75rem; color: #999; margin: 0; font-weight: 700; letter-spacing: 1px; text-transform: uppercase;">Pilih Nomor</p>
+                        </div>
+                        <select id="nomorSelect" class="form-select" style="border: 2px solid #E0E0E0; border-radius: 10px; padding: 12px 14px; font-weight: 600; color: #333; font-size: 0.9rem; width: 100%; background: white; transition: all 0.3s ease;">
+                            <option value="">-- Pilih Nomor (1-10) --</option>
                             <option value="1">Nomor 1</option>
                             <option value="2">Nomor 2</option>
                             <option value="3">Nomor 3</option>
@@ -124,60 +139,65 @@
                         </select>
                     </div>
                     
-                    <!-- Pilihan Beli -->
-                    <label style="font-weight: 700; color: #333; margin-bottom: 10px; display: block; font-size: 0.85rem;">Tipe Pembelian</label>
-                    
-                    <!-- Eceran Option -->
-                    <div id="eceranOption" style="border: 1.5px solid #E0E0E0; border-radius: 10px; padding: 12px; margin-bottom: 10px; cursor: pointer; transition: all 0.3s ease; background: white;" onclick="selectPurchaseType('eceran')" onmouseover="this.style.borderColor='#D97060'; this.style.boxShadow='0 4px 12px rgba(217,112,96,0.1)'" onmouseout="this.style.borderColor='#E0E0E0'; this.style.boxShadow='none'">
-                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
-                            <input type="radio" id="radioEceran" name="purchaseType" value="eceran" checked style="width: 16px; height: 16px; cursor: pointer;">
-                            <div>
-                                <label for="radioEceran" style="font-weight: 700; color: #333; margin: 0; cursor: pointer; font-size: 0.85rem; display: block;">Eceran (per pcs)</label>
-                                <div id="eceranPrice" style="font-size: 1rem; font-weight: 800; color: #D97060; margin-top: 3px;">Rp 35.000</div>
+                    <!-- Pilihan Beli Section -->
+                    <div style="margin-bottom: 32px;">
+                        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
+                            <div style="height: 3px; background: linear-gradient(to right, #D97060, rgba(217,112,96,0.3)); width: 40px; border-radius: 2px;"></div>
+                            <p style="font-size: 0.75rem; color: #999; margin: 0; font-weight: 700; letter-spacing: 1px; text-transform: uppercase;">Pilihan Pembelian</p>
+                        </div>
+                        
+                        <!-- Eceran Option -->
+                        <div id="eceranOption" style="border: 2px solid #E0E0E0; border-radius: 12px; padding: 16px; margin-bottom: 12px; cursor: pointer; transition: all 0.3s ease; background: white;" onclick="selectPurchaseType('eceran')" onmouseover="this.style.borderColor='#D97060'; this.style.boxShadow='0 6px 16px rgba(217,112,96,0.12)'; this.style.background='rgba(217,112,96,0.02)'" onmouseout="this.style.borderColor='#E0E0E0'; this.style.boxShadow='none'; this.style.background='white'">
+                            <div style="display: flex; align-items: center; gap: 12px;">
+                                <input type="radio" id="radioEceran" name="purchaseType" value="eceran" checked style="width: 18px; height: 18px; cursor: pointer;">
+                                <div style="flex: 1;">
+                                    <label for="radioEceran" style="font-weight: 700; color: #1a1a1a; margin: 0; cursor: pointer; font-size: 0.9rem; display: block; margin-bottom: 6px;">Eceran (per pcs)</label>
+                                    <div id="eceranPrice" style="font-size: 1.1rem; font-weight: 800; color: #D97060;">Rp 35.000</div>
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 8px; background: #F5F5F5; padding: 8px 12px; border-radius: 8px;">
+                                    <label style="font-size: 0.75rem; color: #666; font-weight: 600;">Qty:</label>
+                                    <input type="number" id="eceranQty" min="1" value="1" style="width: 50px; padding: 6px 8px; border: 1px solid #D0D0D0; border-radius: 6px; text-align: center; font-weight: 600; font-size: 0.9rem; background: white;" placeholder="Jumlah" onchange="updatePreview()" oninput="updatePreview()" />
+                                </div>
                             </div>
                         </div>
-                        <div style="display: flex; align-items: center; gap: 6px;">
-                            <label style="font-size: 0.8rem; color: #666; font-weight: 600; min-width: 30px;">Qty:</label>
-                            <input type="number" id="eceranQty" min="1" value="1" style="flex: 1; padding: 6px 10px; border: 1.5px solid #E0E0E0; border-radius: 8px; text-align: center; font-weight: 600; font-size: 0.85rem;" placeholder="Jumlah" onchange="updatePreview()" oninput="updatePreview()" />
-                        </div>
-                    </div>
-                    
-                    <!-- Kodi Option -->
-                    <div id="kodiOption" style="border: 1.5px solid #E0E0E0; border-radius: 10px; padding: 12px; cursor: pointer; transition: all 0.3s ease; background: white;" onclick="selectPurchaseType('kodi')" onmouseover="this.style.borderColor='#D97060'; this.style.boxShadow='0 4px 12px rgba(217,112,96,0.1)'" onmouseout="this.style.borderColor='#E0E0E0'; this.style.boxShadow='none'">
-                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
-                            <input type="radio" id="radioKodi" name="purchaseType" value="kodi" style="width: 16px; height: 16px; cursor: pointer;">
-                            <div>
-                                <label for="radioKodi" style="font-weight: 700; color: #333; margin: 0; cursor: pointer; font-size: 0.85rem; display: block;">Kodi - 20 pcs/kodi</label>
-                                <div id="kodiPrice" style="font-size: 1rem; font-weight: 800; color: #D97060; margin-top: 3px;">Rp 530.000</div>
-                                <div style="font-size: 0.7rem; color: #999; margin-top: 2px; font-weight: 600;" id="kodiPerUnit">Rp 26.500/pcs</div>
+                        
+                        <!-- Kodi Option -->
+                        <div id="kodiOption" style="border: 2px solid #E0E0E0; border-radius: 12px; padding: 16px; cursor: pointer; transition: all 0.3s ease; background: white;" onclick="selectPurchaseType('kodi')" onmouseover="this.style.borderColor='#D97060'; this.style.boxShadow='0 6px 16px rgba(217,112,96,0.12)'; this.style.background='rgba(217,112,96,0.02)'" onmouseout="this.style.borderColor='#E0E0E0'; this.style.boxShadow='none'; this.style.background='white'">
+                            <div style="display: flex; align-items: center; gap: 12px;">
+                                <input type="radio" id="radioKodi" name="purchaseType" value="kodi" style="width: 18px; height: 18px; cursor: pointer;">
+                                <div style="flex: 1;">
+                                    <label for="radioKodi" style="font-weight: 700; color: #1a1a1a; margin: 0; cursor: pointer; font-size: 0.9rem; display: block; margin-bottom: 6px;">Kodi (20 pcs)</label>
+                                    <div id="kodiPrice" style="font-size: 1.1rem; font-weight: 800; color: #D97060;">Rp 530.000</div>
+                                    <div style="font-size: 0.75rem; color: #999; margin-top: 4px; font-weight: 600;" id="kodiPerUnit">Rp 26.500/pcs</div>
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 8px; background: #F5F5F5; padding: 8px 12px; border-radius: 8px;">
+                                    <label style="font-size: 0.75rem; color: #666; font-weight: 600;">Qty:</label>
+                                    <input type="number" id="kodiQty" min="1" value="1" style="width: 50px; padding: 6px 8px; border: 1px solid #D0D0D0; border-radius: 6px; text-align: center; font-weight: 600; font-size: 0.9rem; background: white;" placeholder="Jumlah" disabled onchange="updatePreview()" oninput="updatePreview()" />
+                                </div>
                             </div>
-                        </div>
-                        <div style="display: flex; align-items: center; gap: 6px;">
-                            <label style="font-size: 0.8rem; color: #666; font-weight: 600; min-width: 30px;">Qty:</label>
-                            <input type="number" id="kodiQty" min="1" value="1" style="flex: 1; padding: 6px 10px; border: 1.5px solid #E0E0E0; border-radius: 8px; text-align: center; font-weight: 600; font-size: 0.85rem; background: white;" placeholder="Jumlah" disabled onchange="updatePreview()" oninput="updatePreview()" />
                         </div>
                     </div>
                 </div>
                 
                 <!-- Footer - Total & Buttons (Fixed) -->
-                <div style="padding: 16px 28px; border-top: 1px solid #E0E0E0; background: white; flex-shrink: 0;">
+                <div class="modal-footer" style="padding: 20px 28px; border-top: 1px solid #E0E0E0; background: linear-gradient(to right, #fafafa 0%, white 100%); flex-shrink: 0;">
                     <!-- Preview Total -->
-                    <div style="background: #F5F5F5; padding: 12px; border-radius: 10px; margin-bottom: 12px; text-align: center; border: 1px solid #E0E0E0;">
-                        <div style="font-size: 0.75rem; color: #999; margin-bottom: 4px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">Total Harga</div>
-                        <div id="totalPreview" style="font-size: 1.2rem; font-weight: 900; color: #D97060;">Rp 35.000</div>
+                    <div style="background: linear-gradient(135deg, #D97060 0%, #C65650 100%); padding: 16px; border-radius: 12px; margin-bottom: 14px; text-align: center; box-shadow: 0 4px 12px rgba(217,112,96,0.15);">
+                        <div style="font-size: 0.7rem; color: rgba(255,255,255,0.85); margin-bottom: 4px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;">Total Harga</div>
+                        <div id="totalPreview" style="font-size: 1.4rem; font-weight: 900; color: white;">Rp 35.000</div>
                     </div>
                     
                     <!-- Shipping Note -->
-                    <div style="background: rgba(217,112,96,0.08); padding: 8px 12px; border-radius: 8px; margin-bottom: 12px; border-left: 3px solid #D97060;">
-                        <p style="font-size: 0.75rem; color: #666; margin: 0; font-weight: 600;">💬 <span style="color: #D97060; font-weight: 700;">Harga belum termasuk ongkir</span> - Negosiasi setelah Anda menghubungi via WhatsApp</p>
+                    <div style="background: rgba(217,112,96,0.08); padding: 10px 14px; border-radius: 8px; margin-bottom: 14px; border-left: 4px solid #D97060;">
+                        <p style="font-size: 0.75rem; color: #666; margin: 0; font-weight: 600;">💬 <span style="color: #D97060; font-weight: 700;">Belum termasuk ongkir</span> — Konfirmasi & negosiasi via WhatsApp</p>
                     </div>
                     
                     <!-- Action Buttons -->
-                    <div style="display: flex; gap: 8px;">
-                        <button onclick="closeDetailModal()" style="flex: 0.7; background: #F5F5F5; border: 1px solid #E0E0E0; color: #333; padding: 10px; border-radius: 10px; font-weight: 700; cursor: pointer; transition: all 0.3s ease; font-size: 0.85rem;" onmouseover="this.style.background='#E8E8E8'" onmouseout="this.style.background='#F5F5F5'">
+                    <div style="display: flex; gap: 10px;">
+                        <button onclick="closeDetailModal()" style="flex: 0.6; background: #F5F5F5; border: 1.5px solid #E0E0E0; color: #333; padding: 12px; border-radius: 10px; font-weight: 700; cursor: pointer; transition: all 0.3s ease; font-size: 0.9rem;" onmouseover="this.style.background='#E8E8E8'; this.style.borderColor='#D0D0D0'" onmouseout="this.style.background='#F5F5F5'; this.style.borderColor='#E0E0E0'">
                             Tutup
                         </button>
-                        <button id="beliSekarangBtn" onclick="beliSekarang()" style="flex: 1.3; background: #D97060; border: none; color: white; padding: 10px; border-radius: 10px; font-weight: 700; cursor: pointer; transition: all 0.3s ease; font-size: 0.85rem; box-shadow: 0 6px 16px rgba(217,112,96,0.2);" onmouseover="this.style.background='#C65650'; this.style.transform='translateY(-1px)'; this.style.boxShadow='0 8px 20px rgba(217,112,96,0.3)'" onmouseout="this.style.background='#D97060'; this.style.transform='translateY(0)'; this.style.boxShadow='0 6px 16px rgba(217,112,96,0.2)'">
+                        <button id="beliSekarangBtn" onclick="beliSekarang()" style="flex: 1.4; background: linear-gradient(135deg, #D97060, #C65650); border: none; color: white; padding: 12px; border-radius: 10px; font-weight: 700; cursor: pointer; transition: all 0.3s ease; font-size: 0.9rem; box-shadow: 0 6px 16px rgba(217,112,96,0.25);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 10px 24px rgba(217,112,96,0.35)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 6px 16px rgba(217,112,96,0.25)'">
                             Pesan via WhatsApp
                         </button>
                     </div>
@@ -205,6 +225,41 @@
 }
 
 /* Product Card */
+.product-specs-table {
+    margin-bottom: 20px;
+}
+.product-specs-table table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+.product-specs-table th,
+.product-specs-table td {
+    padding: 13px 14px;
+    vertical-align: top;
+}
+.product-specs-table th {
+    width: 38%;
+    text-align: left;
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    color: #888;
+    font-weight: 700;
+    text-transform: uppercase;
+    background: #F9F9F9;
+}
+.product-specs-table td {
+    color: #333;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+.product-specs-table tr:nth-child(even) td {
+    background: #FAFAFA;
+}
+.product-specs-table tr + tr td {
+    border-top: 1px solid #ECECEC;
+}
+
 .product-card {
     border: none;
     border-radius: 16px;
@@ -323,11 +378,6 @@
     box-shadow: 0 10px 25px rgba(217, 112, 96, 0.25);
 }
 
-.product-card__btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 25px rgba(217, 112, 96, 0.25);
-}
-
 /* Custom Radio Button Styling */
 input[type="radio"] {
     accent-color: #D97060;
@@ -338,8 +388,262 @@ input[type="radio"]:disabled {
     accent-color: #ccc;
     cursor: not-allowed;
 }
-</style>
 
+/* Responsive Styles - Optimized for Mobile */
+@media (max-width: 991.98px) {
+    /* Hero Section */
+    .products-hero {
+        padding: 20px 0 !important;
+        margin-top: 10px !important;
+    }
+    .products-hero h1 {
+        font-size: 1.75rem !important;
+    }
+    .products-hero p {
+        font-size: 0.9rem !important;
+    }
+
+    /* Filter Section */
+    .filter-section .form-select,
+    .filter-section .form-control,
+    .filter-section .btn {
+        padding: 12px 14px !important;
+        font-size: 0.9rem !important;
+    }
+
+    /* Product Cards */
+    .product-card__title {
+        font-size: 0.85rem !important;
+    }
+    .product-card__prices {
+        grid-template-columns: 1fr 1fr !important;
+    }
+}
+
+@media (max-width: 767.98px) {
+    /* Hero Section */
+    .products-hero {
+        padding: 15px 0 !important;
+        margin-top: 5px !important;
+    }
+    .products-hero h1 {
+        font-size: 1.4rem !important;
+    }
+    .products-hero p {
+        font-size: 0.85rem !important;
+    }
+
+    /* Filter Section */
+    .filter-section {
+        padding: 12px 0 15px !important;
+    }
+    .filter-section > .container > div {
+        padding: 16px !important;
+        border-radius: 14px !important;
+    }
+    .filter-section .col-lg-4,
+    .filter-section .col-md-6 {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+    }
+    .filter-section label {
+        font-size: 0.8rem !important;
+    }
+    .filter-section .form-select,
+    .filter-section .form-control,
+    .filter-section .btn {
+        padding: 10px 12px !important;
+        font-size: 0.8rem !important;
+    }
+
+    /* Product Cards */
+    .product-card__body {
+        padding: 12px !important;
+    }
+    .product-card__title {
+        font-size: 0.8rem !important;
+    }
+    .product-card__subtitle {
+        font-size: 0.65rem !important;
+    }
+    .product-card__prices {
+        grid-template-columns: 1fr !important;
+        margin-bottom: 10px !important;
+    }
+    .price-item {
+        padding: 8px !important;
+    }
+    .price-value {
+        font-size: 0.75rem !important;
+    }
+    .price-label {
+        font-size: 0.5rem !important;
+    }
+    .product-card__btn {
+        padding: 8px !important;
+        font-size: 0.75rem !important;
+    }
+
+    /* Products Grid */
+    #productsGrid {
+        --bs-gutter-x: 0.75rem !important;
+        --bs-gutter-y: 0.75rem !important;
+    }
+
+    /* Modal */
+    #modalDetail {
+        padding: 10px !important;
+    }
+    .modal-content {
+        max-width: 95vw !important;
+        margin: auto !important;
+    }
+    #modalDetail .modal-content {
+        flex-direction: column !important;
+    }
+    #modalDetail .modal-content .modal-body-wrapper {
+        width: 100% !important;
+        height: auto !important;
+        flex-direction: column !important;
+    }
+    #modalDetail .modal-content .modal-body {
+        padding: 20px !important;
+        max-height: 50vh !important;
+    }
+    #modalDetail .modal-content .modal-footer {
+        padding: 12px 16px !important;
+    }
+}
+
+@media (max-width: 575.98px) {
+    /* Hero Section */
+    .products-hero {
+        padding: 12px 0 8px !important;
+    }
+    .products-hero h1 {
+        font-size: 1.2rem !important;
+        margin-bottom: 8px !important;
+    }
+    .products-hero p {
+        font-size: 0.8rem !important;
+    }
+
+    /* Filter Section */
+    .filter-section {
+        padding: 10px 0 12px !important;
+    }
+    .filter-section > .container {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+    .filter-section > .container > div {
+        padding: 12px !important;
+        margin-bottom: 10px !important;
+        border-radius: 10px !important;
+    }
+    .filter-section label {
+        font-size: 0.75rem !important;
+        margin-bottom: 6px !important;
+    }
+    .filter-section .form-select,
+    .filter-section .form-control,
+    .filter-section .btn {
+        padding: 8px 10px !important;
+        font-size: 0.75rem !important;
+    }
+
+    /* Product Cards - 2 columns layout */
+    .product-card {
+        border-radius: 10px !important;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06) !important;
+    }
+    .product-card__header {
+        aspect-ratio: 1 / 1 !important;
+    }
+    .product-card__body {
+        padding: 10px !important;
+    }
+    .product-card__title {
+        font-size: 0.7rem !important;
+        font-weight: 700 !important;
+        margin-bottom: 2px !important;
+    }
+    .product-card__subtitle {
+        font-size: 0.6rem !important;
+        margin-bottom: 6px !important;
+    }
+    .product-card__prices {
+        grid-template-columns: 1fr !important;
+        gap: 4px !important;
+        margin-bottom: 6px !important;
+    }
+    .price-item {
+        padding: 6px !important;
+        border-radius: 5px !important;
+    }
+    .price-value {
+        font-size: 0.65rem !important;
+    }
+    .price-label {
+        font-size: 0.45rem !important;
+    }
+    .product-card__btn {
+        padding: 6px !important;
+        font-size: 0.65rem !important;
+    }
+
+    /* Products Grid - 2 columns */
+    section[style*="padding: 0 0 60px"] > .container {
+        padding-left: 6px !important;
+        padding-right: 6px !important;
+    }
+    #productsGrid {
+        --bs-gutter-x: 0.5rem !important;
+        --bs-gutter-y: 0.5rem !important;
+        margin-bottom: 10px !important;
+    }
+    #productsGrid .row {
+        --bs-gutter-x: 0.5rem !important;
+        --bs-gutter-y: 0.5rem !important;
+    }
+
+    /* Modal */
+    #modalDetail {
+        padding: 8px !important;
+    }
+    .modal-content {
+        max-width: 100vw !important;
+        margin: 0 !important;
+        border-radius: 10px !important;
+        max-height: 92vh !important;
+    }
+    #modalDetail .modal-content {
+        flex-direction: column !important;
+    }
+    #modalDetail .modal-content .modal-body-wrapper {
+        width: 100% !important;
+        height: auto !important;
+        flex-direction: column !important;
+    }
+    #modalDetail .modal-content .modal-header {
+        padding: 10px 12px !important;
+    }
+    #modalDetail .modal-content .modal-header h2 {
+        font-size: 0.85rem !important;
+    }
+    #modalDetail .modal-content .modal-body {
+        padding: 16px !important;
+        max-height: 50vh !important;
+    }
+    #modalDetail .modal-content .modal-footer {
+        padding: 10px 14px !important;
+    }
+    #modalDetail .modal-content .modal-footer button {
+        padding: 8px !important;
+        font-size: 0.75rem !important;
+    }
+}
+</style>
 <script>
 // Data Produk
 const produktData = {
@@ -350,7 +654,13 @@ const produktData = {
         color: '#D97060',
         image: '/img/category/nonac.png',
         images: ['/img/category/nonac.png', '/img/category/nonac.png'],
-        desc: 'Songkok Non AC yang kokoh dan elegan. Cocok untuk tampilan formal dengan kenyamanan standar.'
+        desc: 'Songkok Non AC yang kokoh dan elegan. Cocok untuk tampilan formal dengan kenyamanan standar.',
+        specs: [
+            { label: 'Material', value: 'Katun premium' },
+            { label: 'Ventilasi', value: 'Tanpa ventilasi' },
+            { label: 'Diameter', value: '18 cm' },
+            { label: 'Warna', value: 'Hitam' }
+        ]
     },
     'ac': {
         name: 'Songkok AC',
@@ -359,7 +669,13 @@ const produktData = {
         color: '#C65650',
         image: '/img/category/ac.png',
         images: ['/img/category/ac.png', '/img/category/ac.png'],
-        desc: 'Songkok AC dengan sirkulasi udara baik. Nyaman untuk aktivitas harian dan ibadah.'
+        desc: 'Songkok AC dengan sirkulasi udara baik. Nyaman untuk aktivitas harian dan ibadah.',
+        specs: [
+            { label: 'Material', value: 'Katun plus mesh' },
+            { label: 'Ventilasi', value: 'Lubang samping ganda' },
+            { label: 'Diameter', value: '18 cm' },
+            { label: 'Warna', value: 'Hitam' }
+        ]
     },
     'full-ac': {
         name: 'Songkok Full AC',
@@ -368,7 +684,13 @@ const produktData = {
         color: '#A84A40',
         image: '/img/category/fullac.png',
         images: ['/img/category/fullac.png', '/img/category/fullac.png'],
-        desc: 'Songkok Full AC dengan teknologi pendinginan maksimal. Premium untuk kenyamanan maksimal.'
+        desc: 'Songkok Full AC dengan teknologi pendinginan maksimal. Premium untuk kenyamanan maksimal.',
+        specs: [
+            { label: 'Material', value: 'Mikrofiber premium' },
+            { label: 'Ventilasi', value: 'Jaring penuh pada seluruh permukaan' },
+            { label: 'Diameter', value: '18 cm' },
+            { label: 'Warna', value: 'Hitam' }
+        ]
     }
 };
 
@@ -437,7 +759,7 @@ function generateProducts() {
             const kodiPrice = formatCurrency(produk.hargaKodi);
             
             html += `
-            <div class="col-lg-3 col-md-6" style="contain: layout;">
+            <div class="col-lg-3 col-md-4 col-6" style="contain: layout;">
                 <div class="product-card" style="--card-color: ${produk.color}">
                     <div class="product-card__header" style="background-image: url('${produk.image}'); background-size: cover; background-position: center; background-repeat: no-repeat;">
                         <span class="product-card__badge">Stok 50+</span>
@@ -486,6 +808,19 @@ function openDetailModal(kategori, tinggi) {
     // Update modal content
     document.getElementById('modalTitle').textContent = `${produk.name} - Tinggi ${tinggi}`;
     document.getElementById('modalDescription').textContent = produk.desc;
+
+    // Render spesifikasi dan dimensi produk
+    const specs = produk.specs || [];
+    let specsHtml = '<div style="border: 1px solid #ECECEC; border-radius: 14px; overflow: hidden; background: #fff;">';
+    specsHtml += '<table><tbody>';
+    specsHtml += `<tr><th>Kategori</th><td>${produk.name}</td></tr>`;
+    specsHtml += `<tr><th>Tinggi</th><td>${tinggi} cm</td></tr>`;
+    specsHtml += `<tr><th>Nomor</th><td>1 - 10</td></tr>`;
+    specs.forEach(item => {
+        specsHtml += `<tr><th>${item.label}</th><td>${item.value}</td></tr>`;
+    });
+    specsHtml += '</tbody></table></div>';
+    document.getElementById('modalSpecs').innerHTML = specsHtml;
     
     // Update prices
     document.getElementById('eceranPrice').textContent = formatCurrency(produk.hargaEceran);
