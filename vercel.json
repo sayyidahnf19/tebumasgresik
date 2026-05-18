@@ -6,12 +6,8 @@
   "functions": {
     "api/index.php": {
       "runtime": "vercel-php@0.9.0",
-      "includeFiles": [
-        "public/build/manifest.json",
-        "resources/views/**",
-        "resources/lang/**"
-      ],
-      "excludeFiles": "{public/build/assets/**,public/css/**,public/js/**,public/img/**,resources/**,tests/**,database/**,.github/**,.vscode/**,.git/**,.env*,node_modules/**}"
+      "includeFiles": "public/build/manifest.json",
+      "excludeFiles": "{public/build/assets/**,public/css/**,public/js/**,public/img/**,tests/**,database/**,.github/**,.vscode/**,.git/**,.env*,node_modules/**}"
     }
   },
   "routes": [
