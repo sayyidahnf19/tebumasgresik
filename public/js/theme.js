@@ -270,7 +270,13 @@ var navbarInit = function navbarInit() {
   var DataKey = {
     NAVBAR_ON_SCROLL: 'navbar-light-on-scroll'
   };
-  var navbar = document.querySelector(Selector.NAVBAR);
+  var navbar = document.querySelector(Selector.NAVBAR); // responsive nav collapsed
+
+  navbar.addEventListener('click', function (e) {
+    if (e.target.classList.contains('nav-link') && window.innerWidth < utils.getBreakpoint(navbar)) {
+      navbar.querySelector(Selector.NAVBAR_TOGGLER).click();
+    }
+  });
 
   if (navbar) {
     var windowHeight = window.innerHeight;

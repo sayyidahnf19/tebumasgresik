@@ -111,7 +111,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://kit.fontawesome.com/9dcb039351.js" crossorigin="anonymous"></script>
-    <script src="{{ asset('js/theme.js') }}?v=2"></script>
+    <script src="{{ asset('js/theme.js') }}?v=1"></script>
     @vite(['resources/js/app.js'])
     @stack('scripts')
 </body>
