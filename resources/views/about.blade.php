@@ -1,4 +1,4 @@
-@extends('layouts.app')
+﻿@extends('layouts.app')
 
 @section('title', 'Tentang Kami - Tebu Mas Gresik')
 @section('description', 'Mengenal Tebu Mas Gresik - Produsen Songkok Berkualitas Tinggi dengan Pengalaman 30+ Tahun')
@@ -6,429 +6,1684 @@
 @section('content')
 
 <!-- ============================================-->
-<!-- Hero Section - Modern Gradient -->
+<!-- ABOUT HERO SECTION -->
 <!-- ============================================-->
-<section style="padding-top: 8rem; padding-bottom: 6rem; background: linear-gradient(135deg, #D97060 0%, #C65650 50%, #A84A40 100%); position: relative; overflow: hidden; margin-top: 60px;">
-    <!-- Decorative Shapes -->
-    <div style="position: absolute; top: -100px; right: -100px; width: 400px; height: 400px; background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%); border-radius: 50%; z-index: 1;"></div>
-    <div style="position: absolute; bottom: -50px; left: -50px; width: 300px; height: 300px; background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 70%); border-radius: 50%; z-index: 1;"></div>
-    
-    <div class="container" style="position: relative; z-index: 2;">
+
+<style>
+
+/* ============================================
+   ABOUT HERO
+============================================ */
+
+.about-hero-section {
+  position: relative;
+  overflow: hidden;
+
+  padding: 8rem 0 6rem;
+  margin-top: 65px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #faf8f7 0%,
+      #ffffff 100%
+    );
+}
+
+/* ============================================
+   BACKGROUND
+============================================ */
+
+.about-hero-blur {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  z-index: 1;
+}
+
+.about-hero-blur-1 {
+  top: -180px;
+  right: -120px;
+
+  width: 380px;
+  height: 380px;
+
+  background: rgba(217,112,96,0.12);
+}
+
+.about-hero-blur-2 {
+  bottom: -160px;
+  left: -120px;
+
+  width: 300px;
+  height: 300px;
+
+  background: rgba(198,86,80,0.08);
+}
+
+.about-hero-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* ============================================
+   CONTENT
+============================================ */
+
+.about-hero-content {
+  padding-right: 2rem;
+}
+
+.about-hero-label {
+  display: inline-flex;
+  align-items: center;
+
+  padding: 0.75rem 1.3rem;
+  margin-bottom: 1.6rem;
+
+  border-radius: 999px;
+
+  background: rgba(217,112,96,0.10);
+
+  color: #D97060;
+
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.about-hero-content h1 {
+  color: #14183E;
+
+  font-size: 4.2rem;
+  font-weight: 900;
+  line-height: 1.05;
+
+  margin-bottom: 1.5rem;
+}
+
+.about-hero-content p {
+  max-width: 580px;
+
+  color: #667085;
+
+  font-size: 1rem;
+  line-height: 1.9;
+
+  margin-bottom: 2.3rem;
+}
+
+/* ============================================
+   STATS
+============================================ */
+
+.about-hero-stats {
+  display: flex;
+  gap: 1rem;
+
+  margin-bottom: 2.3rem;
+}
+
+.about-hero-stat {
+  min-width: 170px;
+
+  padding: 1.4rem 1.5rem;
+
+  border-radius: 22px;
+
+  background: rgba(255,255,255,0.95);
+
+  border: 1px solid rgba(0,0,0,0.05);
+
+  box-shadow:
+    0 15px 35px rgba(0,0,0,0.05);
+}
+
+.about-hero-stat h3 {
+  color: #D97060;
+
+  font-size: 2rem;
+  font-weight: 900;
+
+  margin-bottom: 0.35rem;
+}
+
+.about-hero-stat span {
+  color: #667085;
+
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* ============================================
+   BUTTON
+============================================ */
+
+.about-hero-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.about-btn-primary,
+.about-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 1rem 2rem;
+
+  border-radius: 16px;
+
+  text-decoration: none;
+
+  font-size: 0.95rem;
+  font-weight: 700;
+
+  transition: all 0.3s ease;
+}
+
+.about-btn-primary {
+  background: #D97060;
+  color: #fff;
+
+  box-shadow:
+    0 15px 30px rgba(217,112,96,0.25);
+}
+
+.about-btn-primary:hover {
+  transform: translateY(-4px);
+
+  background: #C65650;
+  color: #fff;
+}
+
+.about-btn-secondary {
+  background: #fff;
+  color: #14183E;
+
+  border: 1px solid rgba(20,24,62,0.08);
+}
+
+.about-btn-secondary:hover {
+  transform: translateY(-4px);
+
+  background: #14183E;
+  color: #fff;
+}
+
+/* ============================================
+   IMAGE SIDE
+============================================ */
+
+.about-hero-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+/* MAIN IMAGE */
+
+.about-main-image {
+  position: relative;
+
+  border-radius: 32px;
+  overflow: hidden;
+
+  background: #fff;
+
+  padding: 1rem;
+
+  box-shadow:
+    0 30px 70px rgba(0,0,0,0.08);
+}
+
+.about-main-image img {
+  width: 100%;
+  height: auto;
+
+  display: block;
+
+  border-radius: 24px;
+
+  object-fit: contain;
+}
+
+/* SMALL GRID */
+
+.about-small-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+}
+
+.about-small-card {
+  background: #fff;
+
+  border-radius: 24px;
+
+  padding: 1rem;
+
+  box-shadow:
+    0 20px 45px rgba(0,0,0,0.06);
+
+  transition: all 0.3s ease;
+}
+
+.about-small-card:hover {
+  transform: translateY(-6px);
+}
+
+.about-small-card img {
+  width: 100%;
+  height: 220px;
+
+  object-fit: contain;
+
+  display: block;
+}
+
+/* ============================================
+   TABLET
+============================================ */
+
+@media (max-width: 1023px) {
+
+  .about-hero-section {
+    padding: 7rem 0 5rem;
+  }
+
+  .about-hero-content {
+    padding-right: 0;
+
+    text-align: center;
+  }
+
+  .about-hero-content p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .about-hero-content h1 {
+    font-size: 3.2rem;
+  }
+
+  .about-hero-stats {
+    justify-content: center;
+  }
+
+  .about-hero-actions {
+    justify-content: center;
+  }
+
+  .about-hero-gallery {
+    margin-top: 2rem;
+  }
+
+}
+
+/* ============================================
+   MOBILE
+============================================ */
+
+@media (max-width: 768px) {
+
+  .about-hero-section {
+    padding: 6rem 0 4rem;
+    margin-top: 55px;
+  }
+
+  .about-hero-content h1 {
+    font-size: 2.3rem;
+    line-height: 1.18;
+  }
+
+  .about-hero-content p {
+    font-size: 0.95rem;
+    line-height: 1.8;
+  }
+
+  .about-hero-stats {
+    flex-direction: column;
+  }
+
+  .about-hero-stat {
+    width: 100%;
+  }
+
+  .about-hero-actions {
+    flex-direction: column;
+  }
+
+  .about-btn-primary,
+  .about-btn-secondary {
+    width: 100%;
+  }
+
+  .about-main-image {
+    border-radius: 24px;
+    padding: 0.8rem;
+  }
+
+  .about-main-image img {
+    border-radius: 18px;
+  }
+
+  .about-small-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-small-card {
+    padding: 0.8rem;
+    border-radius: 20px;
+  }
+
+  .about-small-card img {
+    height: 180px;
+  }
+
+}
+/* ============================================
+   TABLET IMPROVEMENT
+============================================ */
+
+@media (max-width: 1023px) {
+
+  .about-hero-section {
+    padding: 7rem 0 5rem;
+  }
+
+  .about-hero-content {
+    max-width: 100%;
+    text-align: center;
+
+    margin-bottom: 2rem;
+  }
+
+  .about-hero-label {
+    margin-inline: auto;
+  }
+
+  .about-hero-content h1 {
+    font-size: 2.8rem;
+    line-height: 1.18;
+
+    margin-bottom: 1.4rem;
+  }
+
+  .about-hero-content p {
+    max-width: 720px;
+
+    margin-inline: auto;
+    margin-bottom: 2rem;
+
+    font-size: 1rem;
+  }
+
+  .about-hero-stats {
+    justify-content: center;
+    gap: 1rem;
+
+    margin-bottom: 2rem;
+  }
+
+  .about-hero-stat {
+    max-width: 220px;
+  }
+
+  .about-hero-actions {
+    justify-content: center;
+  }
+
+  /* IMAGE AREA */
+  .about-hero-gallery {
+    margin-top: 1rem;
+  }
+
+  .about-hero-main-image {
+    height: auto;
+    padding: 2rem;
+
+    border-radius: 28px;
+  }
+
+  .about-hero-main-image img {
+    width: 100%;
+    height: auto;
+
+    object-fit: contain;
+  }
+
+  .about-hero-small-wrapper {
+    gap: 1rem;
+  }
+
+  .about-hero-small-image {
+    height: auto;
+
+    padding: 1.2rem;
+  }
+
+  .about-hero-small-image img {
+    width: 100%;
+    height: auto;
+
+    object-fit: contain;
+  }
+
+}
+
+
+/* ============================================
+   MOBILE IMPROVEMENT
+============================================ */
+
+@media (max-width: 768px) {
+
+  .about-hero-section {
+    padding: 6rem 0 4rem;
+    margin-top: 55px;
+  }
+
+  .about-hero-content {
+    text-align: center;
+  }
+
+  .about-hero-content h1 {
+    font-size: 2rem;
+    line-height: 1.25;
+
+    margin-bottom: 1rem;
+  }
+
+  .about-hero-content p {
+    font-size: 0.95rem;
+    line-height: 1.8;
+
+    margin-bottom: 1.8rem;
+  }
+
+  /* STATS */
+  .about-hero-stats {
+    flex-direction: column;
+    align-items: center;
+
+    gap: 1rem;
+  }
+
+  .about-hero-stat {
+    width: 100%;
+    max-width: 100%;
+
+    padding: 1.2rem;
+    border-radius: 20px;
+  }
+
+  .about-hero-stat h3 {
+    font-size: 1.8rem;
+  }
+
+  /* BUTTONS */
+  .about-hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .about-primary-btn,
+  .about-secondary-btn {
+    width: 100%;
+
+    padding: 1rem 1.4rem;
+    border-radius: 14px;
+  }
+
+  /* IMAGES */
+  .about-hero-gallery {
+    gap: 1rem;
+  }
+
+  .about-hero-main-image {
+    height: auto;
+
+    padding: 1.3rem;
+    border-radius: 24px;
+  }
+
+  .about-hero-main-image img {
+    width: 100%;
+    height: auto;
+
+    object-fit: contain;
+  }
+
+  .about-hero-small-wrapper {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.8rem;
+  }
+
+  .about-hero-small-image {
+    height: auto;
+
+    padding: 1rem;
+    border-radius: 18px;
+  }
+
+  .about-hero-small-image img {
+    width: 100%;
+    height: auto;
+
+    object-fit: contain;
+  }
+
+}
+
+</style>
+
+<section class="about-hero-section">
+
+    <!-- BLUR -->
+    <div class="about-hero-blur about-hero-blur-1"></div>
+    <div class="about-hero-blur about-hero-blur-2"></div>
+
+    <div class="container">
+
         <div class="row align-items-center g-5">
-            <!-- Left Content -->
+
+            <!-- LEFT -->
             <div class="col-lg-6">
-                <div style="background: rgba(255,255,255,0.95); padding: 45px; border-radius: 20px; box-shadow: 0 30px 80px rgba(0,0,0,0.15); backdrop-filter: blur(10px);">
-                    <p style="font-size: 0.9rem; color: #D97060; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px;">🏆 Tentang Kami</p>
-                    <h1 style="font-size: 2.8rem; font-weight: 900; color: #1a1a1a; margin-bottom: 24px; line-height: 1.2;">
-                        Tebu Mas Gresik
+
+                <div class="about-hero-content">
+
+                    <span class="about-hero-label">
+                        Tentang Tebu Mas
+                    </span>
+
+                    <h1>
+                        Songkok Premium
+                        dengan Sentuhan
+                        Elegan & Profesional
                     </h1>
-                    <p style="font-size: 1rem; color: #666; line-height: 1.9; margin-bottom: 28px; font-weight: 500;">
-                        Sejak <span style="font-weight: 800; color: #D97060;">1993</span>, kami telah menjadi produsen songkok terpercaya di Indonesia. Dengan dedikasi penuh terhadap kualitas dan inovasi, Tebu Mas Gresik menjadi pilihan utama bagi pelanggan yang menghargai kualitas premium.
+
+                    <p>
+                        Tebu Mas Gresik menghadirkan songkok berkualitas
+                        sejak 1993 dengan desain elegan, jahitan rapi,
+                        dan kenyamanan maksimal untuk kebutuhan formal
+                        maupun penggunaan harian.
                     </p>
-                    
-                    <!-- Stats Grid -->
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 36px;">
-                        <div style="text-align: center; padding: 20px; background: linear-gradient(135deg, #D97060, #C65650); color: white; border-radius: 14px; box-shadow: 0 8px 20px rgba(217,112,96,0.3);">
-                            <h3 style="font-size: 2.2rem; font-weight: 900; margin: 0;">30+</h3>
-                            <p style="font-size: 0.85rem; margin: 8px 0 0 0; font-weight: 600;">Tahun</p>
+
+                    <!-- STATS -->
+                    <div class="about-hero-stats">
+
+                        <div class="about-hero-stat">
+                            <h3>30+</h3>
+                            <span>Tahun Pengalaman</span>
                         </div>
-                        <div style="text-align: center; padding: 20px; background: linear-gradient(135deg, #C65650, #A84A40); color: white; border-radius: 14px; box-shadow: 0 8px 20px rgba(217,112,96,0.3);">
-                            <h3 style="font-size: 2.2rem; font-weight: 900; margin: 0;">10K+</h3>
-                            <p style="font-size: 0.85rem; margin: 8px 0 0 0; font-weight: 600;">Terjual</p>
+
+                        <div class="about-hero-stat">
+                            <h3>10K+</h3>
+                            <span>Pelanggan Puas</span>
                         </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Right Images Grid -->
-            <div class="col-lg-6">
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; grid-auto-rows: auto;">
-                    <!-- Large Image Top Left -->
-                    <div style="grid-column: 1 / -1; position: relative; overflow: hidden; border-radius: 18px; box-shadow: 0 25px 60px rgba(0,0,0,0.2); height: 280px;">
-                        <img src="{{ asset('img/category/nonac.png') }}" alt="Songkok Non AC" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease;" />
-                        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(135deg, transparent 0%, rgba(217,112,96,0.3) 100%);"></div>
-                    </div>
-                    
-                    <!-- Bottom Right Images -->
-                    <div style="position: relative; overflow: hidden; border-radius: 16px; box-shadow: 0 15px 40px rgba(0,0,0,0.15); height: 150px;">
-                        <img src="{{ asset('img/category/ac.png') }}" alt="Songkok AC" style="width: 100%; height: 100%; object-fit: cover;" />
-                    </div>
-                    <div style="position: relative; overflow: hidden; border-radius: 16px; box-shadow: 0 15px 40px rgba(0,0,0,0.15); height: 150px;">
-                        <img src="{{ asset('img/category/fullac.png') }}" alt="Songkok Full AC" style="width: 100%; height: 100%; object-fit: cover;" />
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 
-<!-- ============================================-->
-<!-- Mission & Vision Section - Modern Cards -->
-<!-- ============================================-->
-<section style="padding: 6rem 0; background: white; position: relative; overflow: hidden;">
-    <!-- Background Decoration -->
-    <div style="position: absolute; top: 0; right: 0; width: 500px; height: 500px; background: radial-gradient(circle, rgba(217,112,96,0.05) 0%, transparent 70%); border-radius: 50%; z-index: 0; opacity: 0.6;"></div>
-    
-    <div class="container" style="position: relative; z-index: 1;">
-        <div class="text-center mb-5">
-            <p style="font-size: 0.9rem; color: #D97060; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px;">💡 Komitmen Kami</p>
-            <h2 style="font-size: 2.6rem; font-weight: 900; color: #1a1a1a; margin-bottom: 20px;">Misi & Visi</h2>
-            <div style="width: 80px; height: 4px; background: linear-gradient(to right, #D97060, #C65650); margin: 0 auto;"></div>
-        </div>
-
-        <div class="row g-4" style="margin-top: 50px;">
-            <!-- Mission Card -->
-            <div class="col-lg-6">
-                <div style="position: relative; overflow: hidden; border-radius: 20px; background: white; border: 2px solid #f0f0f0; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); cursor: pointer; padding: 50px; min-height: 400px; display: flex; flex-direction: column; justify-content: space-between;" onmouseover="this.style.borderColor='#D97060'; this.style.boxShadow='0 25px 60px rgba(217,112,96,0.15)'; this.style.transform='translateY(-8px)'" onmouseout="this.style.borderColor='#f0f0f0'; this.style.boxShadow='none'; this.style.transform='translateY(0)'">
-                    <!-- Background Accent -->
-                    <div style="position: absolute; top: -100px; right: -100px; width: 300px; height: 300px; background: linear-gradient(135deg, #D97060, #C65650); border-radius: 50%; opacity: 0.08; z-index: 0;"></div>
-                    
-                    <div style="position: relative; z-index: 1;">
-                        <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #D97060, #C65650); border-radius: 16px; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem; margin-bottom: 28px; box-shadow: 0 15px 40px rgba(217,112,96,0.2);">
-                            🎯
-                        </div>
-                        <h3 style="font-size: 1.8rem; font-weight: 900; color: #1a1a1a; margin-bottom: 20px; line-height: 1.3;">Misi Kami</h3>
-                        <p style="font-size: 1rem; color: #666; line-height: 2; margin: 0; font-weight: 500;">
-                            Menyediakan songkok berkualitas premium dengan standar internasional, menggunakan bahan pilihan terbaik dan keterampilan jahit yang teliti. Kami berkomitmen memberikan produk yang tahan lama, nyaman, dan membanggakan.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Vision Card -->
-            <div class="col-lg-6">
-                <div style="position: relative; overflow: hidden; border-radius: 20px; background: linear-gradient(135deg, #D97060, #C65650); transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); cursor: pointer; padding: 50px; min-height: 400px; display: flex; flex-direction: column; justify-content: space-between; color: white; box-shadow: 0 20px 60px rgba(217,112,96,0.2);" onmouseover="this.style.boxShadow='0 30px 80px rgba(217,112,96,0.3)'; this.style.transform='translateY(-8px)'" onmouseout="this.style.boxShadow='0 20px 60px rgba(217,112,96,0.2)'; this.style.transform='translateY(0)'">
-                    <!-- Background Accent -->
-                    <div style="position: absolute; top: -100px; right: -100px; width: 300px; height: 300px; background: rgba(255,255,255,0.1); border-radius: 50%; z-index: 0;"></div>
-                    
-                    <div style="position: relative; z-index: 1;">
-                        <div style="width: 70px; height: 70px; background: rgba(255,255,255,0.2); border-radius: 16px; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem; margin-bottom: 28px;">
-                            🌟
-                        </div>
-                        <h3 style="font-size: 1.8rem; font-weight: 900; color: white; margin-bottom: 20px; line-height: 1.3;">Visi Kami</h3>
-                        <p style="font-size: 1rem; color: rgba(255,255,255,0.95); line-height: 2; margin: 0; font-weight: 500;">
-                            Menjadi produsen songkok terdepan di Asia Tenggara yang dikenal karena inovasi, kualitas, dan pelayanan terbaik. Kami ingin setiap orang yang mengenakan songkok Tebu Mas merasa percaya diri dan nyaman.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ============================================-->
-<!-- Core Values Section -->
-<!-- ============================================-->
-<section style="padding: 6rem 0; background: linear-gradient(135deg, #f8f9fa 0%, #eeeeee 100%);">
-    <div class="container">
-        <div class="text-center mb-5">
-            <h2 style="font-size: 2.5rem; font-weight: 800; color: #1a1a1a; margin-bottom: 20px;">Nilai-Nilai Inti Kami</h2>
-            <div style="width: 80px; height: 4px; background: linear-gradient(to right, #D97060, #C65650); margin: 0 auto;"></div>
-        </div>
-
-        <div class="row g-4">
-            <!-- Value 1 -->
-            <div class="col-lg-3 col-md-6">
-                <div style="background: white; padding: 32px; border-radius: 16px; text-align: center; box-shadow: 0 8px 24px rgba(0,0,0,0.05); transition: all 0.4s ease; height: 100%;" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 16px 40px rgba(217,112,96,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 24px rgba(0,0,0,0.05)'">
-                    <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #D97060, #C65650); border-radius: 16px; display: flex; align-items: center; justify-content: center; color: white; font-size: 2.5rem; margin: 0 auto 20px;">
-                        💎
-                    </div>
-                    <h4 style="font-size: 1.3rem; font-weight: 800; color: #1a1a1a; margin-bottom: 12px;">Kualitas</h4>
-                    <p style="font-size: 0.95rem; color: #666; line-height: 1.6; margin: 0;">
-                        Setiap produk melalui quality control ketat untuk memastikan standar tertinggi
-                    </p>
-                </div>
-            </div>
-
-            <!-- Value 2 -->
-            <div class="col-lg-3 col-md-6">
-                <div style="background: white; padding: 32px; border-radius: 16px; text-align: center; box-shadow: 0 8px 24px rgba(0,0,0,0.05); transition: all 0.4s ease; height: 100%;" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 16px 40px rgba(217,112,96,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 24px rgba(0,0,0,0.05)'">
-                    <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #D97060, #C65650); border-radius: 16px; display: flex; align-items: center; justify-content: center; color: white; font-size: 2.5rem; margin: 0 auto 20px;">
-                        🤝
-                    </div>
-                    <h4 style="font-size: 1.3rem; font-weight: 800; color: #1a1a1a; margin-bottom: 12px;">Integritas</h4>
-                    <p style="font-size: 0.95rem; color: #666; line-height: 1.6; margin: 0;">
-                        Jujur, transparan, dan bertanggung jawab dalam setiap transaksi bisnis
-                    </p>
-                </div>
-            </div>
-
-            <!-- Value 3 -->
-            <div class="col-lg-3 col-md-6">
-                <div style="background: white; padding: 32px; border-radius: 16px; text-align: center; box-shadow: 0 8px 24px rgba(0,0,0,0.05); transition: all 0.4s ease; height: 100%;" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 16px 40px rgba(217,112,96,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 24px rgba(0,0,0,0.05)'">
-                    <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #D97060, #C65650); border-radius: 16px; display: flex; align-items: center; justify-content: center; color: white; font-size: 2.5rem; margin: 0 auto 20px;">
-                        💡
-                    </div>
-                    <h4 style="font-size: 1.3rem; font-weight: 800; color: #1a1a1a; margin-bottom: 12px;">Inovasi</h4>
-                    <p style="font-size: 0.95rem; color: #666; line-height: 1.6; margin: 0;">
-                        Terus berinovasi untuk menghadirkan produk dan layanan yang lebih baik
-                    </p>
-                </div>
-            </div>
-
-            <!-- Value 4 -->
-            <div class="col-lg-3 col-md-6">
-                <div style="background: white; padding: 32px; border-radius: 16px; text-align: center; box-shadow: 0 8px 24px rgba(0,0,0,0.05); transition: all 0.4s ease; height: 100%;" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 16px 40px rgba(217,112,96,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 24px rgba(0,0,0,0.05)'">
-                    <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #D97060, #C65650); border-radius: 16px; display: flex; align-items: center; justify-content: center; color: white; font-size: 2.5rem; margin: 0 auto 20px;">
-                        😊
-                    </div>
-                    <h4 style="font-size: 1.3rem; font-weight: 800; color: #1a1a1a; margin-bottom: 12px;">Kepuasan Pelanggan</h4>
-                    <p style="font-size: 0.95rem; color: #666; line-height: 1.6; margin: 0;">
-                        Kepuasan pelanggan adalah prioritas utama kami dalam setiap layanan
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ============================================-->
-<!-- Why Choose Us Section -->
-<!-- ============================================-->
-<section style="padding: 6rem 0; background: white;">
-    <div class="container">
-        <div class="text-center mb-5">
-            <h2 style="font-size: 2.5rem; font-weight: 800; color: #1a1a1a; margin-bottom: 20px;">Mengapa Memilih Tebu Mas?</h2>
-            <div style="width: 80px; height: 4px; background: linear-gradient(to right, #D97060, #C65650); margin: 0 auto;"></div>
-        </div>
-
-        <div class="row g-4 align-items-center">
-            <div class="col-lg-6">
-                <div style="position: relative;">
-                    <img src="{{ asset('img/dest/Elegan.png') }}" alt="Produk Elegan" style="width: 100%; border-radius: 16px; box-shadow: 0 20px 60px rgba(217,112,96,0.15);" />
-                </div>
-            </div>
-
-            <div class="col-lg-6">
-                <div style="display: flex; flex-direction: column; gap: 24px;">
-                    <!-- Benefit 1 -->
-                    <div style="display: flex; gap: 16px;">
-                        <div style="width: 50px; height: 50px; background: linear-gradient(135deg, #D97060, #C65650); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; flex-shrink: 0;">
-                            ✓
-                        </div>
-                        <div>
-                            <h4 style="font-size: 1.1rem; font-weight: 800; color: #1a1a1a; margin-bottom: 8px;">Bahan Berkualitas Premium</h4>
-                            <p style="font-size: 0.95rem; color: #666; margin: 0; line-height: 1.6;">Kami menggunakan bahan pilihan terbaik yang nyaman, tahan lama, dan cocok untuk iklim tropis Indonesia</p>
-                        </div>
                     </div>
 
-                    <!-- Benefit 2 -->
-                    <div style="display: flex; gap: 16px;">
-                        <div style="width: 50px; height: 50px; background: linear-gradient(135deg, #D97060, #C65650); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; flex-shrink: 0;">
-                            ✓
-                        </div>
-                        <div>
-                            <h4 style="font-size: 1.1rem; font-weight: 800; color: #1a1a1a; margin-bottom: 8px;">Jahitan Rapi & Presisi</h4>
-                            <p style="font-size: 0.95rem; color: #666; margin: 0; line-height: 1.6;">Setiap jahitan dikerjakan dengan teliti oleh pengrajin berpengalaman kami</p>
-                        </div>
-                    </div>
+                    <!-- BUTTON -->
+                    <div class="about-hero-actions">
 
-                    <!-- Benefit 3 -->
-                    <div style="display: flex; gap: 16px;">
-                        <div style="width: 50px; height: 50px; background: linear-gradient(135deg, #D97060, #C65650); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; flex-shrink: 0;">
-                            ✓
-                        </div>
-                        <div>
-                            <h4 style="font-size: 1.1rem; font-weight: 800; color: #1a1a1a; margin-bottom: 8px;">Harga Kompetitif</h4>
-                            <p style="font-size: 0.95rem; color: #666; margin: 0; line-height: 1.6;">Kualitas premium dengan harga yang terjangkau untuk semua kalangan</p>
-                        </div>
-                    </div>
+                        <a href="{{ route('products') }}"
+                           class="about-btn-primary">
 
-                    <!-- Benefit 4 -->
-                    <div style="display: flex; gap: 16px;">
-                        <div style="width: 50px; height: 50px; background: linear-gradient(135deg, #D97060, #C65650); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; flex-shrink: 0;">
-                            ✓
-                        </div>
-                        <div>
-                            <h4 style="font-size: 1.1rem; font-weight: 800; color: #1a1a1a; margin-bottom: 8px;">Pengiriman Cepat</h4>
-                            <p style="font-size: 0.95rem; color: #666; margin: 0; line-height: 1.6;">Proses pemesanan yang mudah dengan pengiriman ke seluruh Indonesia</p>
-                        </div>
-                    </div>
+                            Lihat Koleksi
 
-                    <!-- Benefit 5 -->
-                    <div style="display: flex; gap: 16px;">
-                        <div style="width: 50px; height: 50px; background: linear-gradient(135deg, #D97060, #C65650); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; flex-shrink: 0;">
-                            ✓
-                        </div>
-                        <div>
-                            <h4 style="font-size: 1.1rem; font-weight: 800; color: #1a1a1a; margin-bottom: 8px;">Garansi & Layanan Purna Jual</h4>
-                            <p style="font-size: 0.95rem; color: #666; margin: 0; line-height: 1.6;">Kami siap memberikan garansi dan layanan purna jual terbaik untuk kepuasan Anda</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ============================================-->
-<!-- Timeline/History Section -->
-<!-- ============================================-->
-<section style="padding: 6rem 0; background: linear-gradient(135deg, #f8f9fa 0%, #eeeeee 100%);">
-    <div class="container">
-        <div class="text-center mb-5">
-            <h2 style="font-size: 2.5rem; font-weight: 800; color: #1a1a1a; margin-bottom: 20px;">Perjalanan Kami</h2>
-            <div style="width: 80px; height: 4px; background: linear-gradient(to right, #D97060, #C65650); margin: 0 auto;"></div>
-        </div>
-
-        <div style="max-width: 900px; margin: 0 auto;">
-            <!-- Timeline Item 1 -->
-            <div style="display: flex; gap: 24px; margin-bottom: 48px; position: relative;">
-                <div style="text-align: right; width: 150px; flex-shrink: 0;">
-                    <h4 style="font-size: 1.3rem; font-weight: 800; color: #D97060; margin: 0;">1993</h4>
-                    <p style="font-size: 0.9rem; color: #666; margin: 8px 0 0 0;">Awal Berdiri</p>
-                </div>
-                <div style="width: 40px; display: flex; align-items: flex-start; justify-content: center; flex-shrink: 0;">
-                    <div style="width: 16px; height: 16px; background: #D97060; border-radius: 50%; border: 4px solid white; box-shadow: 0 0 0 3px #D97060;"></div>
-                </div>
-                <div style="flex: 1; padding: 24px; background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
-                    <h5 style="font-size: 1rem; font-weight: 700; color: #1a1a1a; margin: 0 0 8px 0;">Tebu Mas Gresik Didirikan</h5>
-                    <p style="font-size: 0.9rem; color: #666; margin: 0; line-height: 1.6;">Memulai perjalanan sebagai produsen songkok dengan komitmen tinggi terhadap kualitas</p>
-                </div>
-            </div>
-
-            <!-- Timeline Item 2 -->
-            <div style="display: flex; gap: 24px; margin-bottom: 48px;">
-                <div style="text-align: right; width: 150px; flex-shrink: 0;">
-                    <h4 style="font-size: 1.3rem; font-weight: 800; color: #D97060; margin: 0;">2005</h4>
-                    <p style="font-size: 0.9rem; color: #666; margin: 8px 0 0 0;">Ekspansi</p>
-                </div>
-                <div style="width: 40px; display: flex; align-items: flex-start; justify-content: center; flex-shrink: 0;">
-                    <div style="width: 16px; height: 16px; background: #D97060; border-radius: 50%; border: 4px solid white; box-shadow: 0 0 0 3px #D97060;"></div>
-                </div>
-                <div style="flex: 1; padding: 24px; background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
-                    <h5 style="font-size: 1rem; font-weight: 700; color: #1a1a1a; margin: 0 0 8px 0;">Ekspansi Produksi</h5>
-                    <p style="font-size: 0.9rem; color: #666; margin: 0; line-height: 1.6;">Meningkatkan kapasitas produksi dan memperluas jangkauan pasar ke seluruh Indonesia</p>
-                </div>
-            </div>
-
-            <!-- Timeline Item 3 -->
-            <div style="display: flex; gap: 24px; margin-bottom: 48px;">
-                <div style="text-align: right; width: 150px; flex-shrink: 0;">
-                    <h4 style="font-size: 1.3rem; font-weight: 800; color: #D97060; margin: 0;">2015</h4>
-                    <p style="font-size: 0.9rem; color: #666; margin: 8px 0 0 0;">Inovasi</p>
-                </div>
-                <div style="width: 40px; display: flex; align-items: flex-start; justify-content: center; flex-shrink: 0;">
-                    <div style="width: 16px; height: 16px; background: #D97060; border-radius: 50%; border: 4px solid white; box-shadow: 0 0 0 3px #D97060;"></div>
-                </div>
-                <div style="flex: 1; padding: 24px; background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
-                    <h5 style="font-size: 1rem; font-weight: 700; color: #1a1a1a; margin: 0 0 8px 0;">Inovasi Produk AC</h5>
-                    <p style="font-size: 0.9rem; color: #666; margin: 0; line-height: 1.6;">Meluncurkan inovasi songkok dengan ventilasi AC untuk kenyamanan maksimal</p>
-                </div>
-            </div>
-
-            <!-- Timeline Item 4 -->
-            <div style="display: flex; gap: 24px;">
-                <div style="text-align: right; width: 150px; flex-shrink: 0;">
-                    <h4 style="font-size: 1.3rem; font-weight: 800; color: #D97060; margin: 0;">2023</h4>
-                    <p style="font-size: 0.9rem; color: #666; margin: 8px 0 0 0;">Digital</p>
-                </div>
-                <div style="width: 40px; display: flex; align-items: flex-start; justify-content: center; flex-shrink: 0;">
-                    <div style="width: 16px; height: 16px; background: #D97060; border-radius: 50%; border: 4px solid white; box-shadow: 0 0 0 3px #D97060;"></div>
-                </div>
-                <div style="flex: 1; padding: 24px; background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
-                    <h5 style="font-size: 1rem; font-weight: 700; color: #1a1a1a; margin: 0 0 8px 0;">Platform Digital</h5>
-                    <p style="font-size: 0.9rem; color: #666; margin: 0; line-height: 1.6;">Meluncurkan platform online untuk memudahkan pelanggan berbelanja songkok berkualitas</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ============================================-->
-<!-- Product Categories Showcase -->
-<!-- ============================================-->
-<section style="padding: 6rem 0; background: linear-gradient(135deg, #f8f9fa 0%, #eeeeee 100%); position: relative; overflow: hidden;">
-    <!-- Decorative Background -->
-    <div style="position: absolute; bottom: 0; left: 0; width: 300px; height: 300px; background: radial-gradient(circle, rgba(217,112,96,0.08) 0%, transparent 70%); border-radius: 50%; z-index: 0;"></div>
-    <div style="position: absolute; top: 100px; right: -100px; width: 400px; height: 400px; background: radial-gradient(circle, rgba(217,112,96,0.06) 0%, transparent 70%); border-radius: 50%; z-index: 0;"></div>
-    
-    <div class="container" style="position: relative; z-index: 1;">
-        <div class="text-center mb-5">
-            <p style="font-size: 0.9rem; color: #D97060; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px;">🛍️ Koleksi Kami</p>
-            <h2 style="font-size: 2.6rem; font-weight: 900; color: #1a1a1a; margin-bottom: 20px;">Produk Unggulan</h2>
-            <div style="width: 80px; height: 4px; background: linear-gradient(to right, #D97060, #C65650); margin: 0 auto;"></div>
-        </div>
-
-        <div class="row g-4" style="margin-top: 50px;">
-            <!-- Songkok Non AC -->
-            <div class="col-lg-4 col-md-6">
-                <div style="background: white; border-radius: 18px; overflow: hidden; box-shadow: 0 12px 36px rgba(0,0,0,0.08); transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); height: 100%; display: flex; flex-direction: column;" onmouseover="this.style.transform='translateY(-12px)'; this.style.boxShadow='0 24px 60px rgba(217,112,96,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 12px 36px rgba(0,0,0,0.08)'">
-                    <div style="height: 260px; background: linear-gradient(135deg, #f5f5f5, #eeeeee); display: flex; align-items: center; justify-content: center; overflow: hidden; position: relative;">
-                        <img src="{{ asset('img/category/nonac.png') }}" alt="Songkok Non AC" style="width: 90%; height: 90%; object-fit: contain; transition: transform 0.6s ease;" />
-                    </div>
-                    <div style="padding: 28px; display: flex; flex-direction: column; flex: 1;">
-                        <div style="width: 70px; height: 4px; background: linear-gradient(to right, #D97060, #C65650); margin-bottom: 16px; border-radius: 2px;"></div>
-                        <h4 style="font-size: 1.3rem; font-weight: 900; color: #1a1a1a; margin: 0 0 12px 0;">Songkok Non AC</h4>
-                        <p style="font-size: 0.95rem; color: #666; line-height: 1.7; margin: 0 0 24px 0; flex: 1;">Desain solid dan elegan dengan jahitan rapi sempurna untuk tampilan formal yang memukau.</p>
-                        <a href="{{ route('products') }}" style="background: linear-gradient(135deg, #D97060, #C65650); color: white; padding: 12px 20px; border-radius: 10px; text-decoration: none; font-weight: 700; transition: all 0.3s ease; display: inline-block; text-align: center; box-shadow: 0 8px 20px rgba(217,112,96,0.2);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 12px 30px rgba(217,112,96,0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 20px rgba(217,112,96,0.2)'">
-                            Lihat Produk →
                         </a>
+
+                        <a href="https://wa.me/6281234567890"
+                           class="about-btn-secondary">
+
+                            Hubungi Kami
+
+                        </a>
+
                     </div>
+
                 </div>
+
             </div>
 
-            <!-- Songkok AC -->
-            <div class="col-lg-4 col-md-6">
-                <div style="background: white; border-radius: 18px; overflow: hidden; box-shadow: 0 12px 36px rgba(0,0,0,0.08); transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); height: 100%; display: flex; flex-direction: column;" onmouseover="this.style.transform='translateY(-12px)'; this.style.boxShadow='0 24px 60px rgba(217,112,96,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 12px 36px rgba(0,0,0,0.08)'">
-                    <div style="height: 260px; background: linear-gradient(135deg, #f5f5f5, #eeeeee); display: flex; align-items: center; justify-content: center; overflow: hidden; position: relative;">
-                        <img src="{{ asset('img/category/ac.png') }}" alt="Songkok AC" style="width: 90%; height: 90%; object-fit: contain; transition: transform 0.6s ease;" />
+            <!-- RIGHT -->
+            <div class="col-lg-6">
+
+                <div class="about-hero-gallery">
+
+                    <!-- MAIN -->
+                    <div class="about-main-image">
+
+                        <img
+                            src="{{ asset('img/hero/prod.gif') }}"
+                            alt="Produksi Songkok"
+                        >
+
                     </div>
-                    <div style="padding: 28px; display: flex; flex-direction: column; flex: 1;">
-                        <div style="width: 70px; height: 4px; background: linear-gradient(to right, #D97060, #C65650); margin-bottom: 16px; border-radius: 2px;"></div>
-                        <h4 style="font-size: 1.3rem; font-weight: 900; color: #1a1a1a; margin: 0 0 12px 0;">Songkok AC</h4>
-                        <p style="font-size: 0.95rem; color: #666; line-height: 1.7; margin: 0 0 24px 0; flex: 1;">Dilengkapi ventilasi standar untuk sirkulasi udara yang lebih nyaman sepanjang hari.</p>
-                        <a href="{{ route('products') }}" style="background: linear-gradient(135deg, #D97060, #C65650); color: white; padding: 12px 20px; border-radius: 10px; text-decoration: none; font-weight: 700; transition: all 0.3s ease; display: inline-block; text-align: center; box-shadow: 0 8px 20px rgba(217,112,96,0.2);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 12px 30px rgba(217,112,96,0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 20px rgba(217,112,96,0.2)'">
-                            Lihat Produk →
-                        </a>
+
+                    <!-- SMALL -->
+                    <div class="about-small-grid">
+
+                        <div class="about-small-card">
+
+                            <img
+                                src="{{ asset('img/category/Songkok.png') }}"
+                                alt="Songkok Premium"
+                            >
+
+                        </div>
+
+                        <div class="about-small-card">
+
+                            <img
+                                src="{{ asset('img/category/labelpg.png') }}"
+                                alt="Label Premium"
+                            >
+
+                        </div>
+
                     </div>
+
                 </div>
+
             </div>
 
-            <!-- Songkok Full AC -->
-            <div class="col-lg-4 col-md-6">
-                <div style="background: white; border-radius: 18px; overflow: hidden; box-shadow: 0 12px 36px rgba(0,0,0,0.08); transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); height: 100%; display: flex; flex-direction: column;" onmouseover="this.style.transform='translateY(-12px)'; this.style.boxShadow='0 24px 60px rgba(217,112,96,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 12px 36px rgba(0,0,0,0.08)'">
-                    <div style="height: 260px; background: linear-gradient(135deg, #f5f5f5, #eeeeee); display: flex; align-items: center; justify-content: center; overflow: hidden; position: relative;">
-                        <img src="{{ asset('img/category/fullac.png') }}" alt="Songkok Full AC" style="width: 90%; height: 90%; object-fit: contain; transition: transform 0.6s ease;" />
-                    </div>
-                    <div style="padding: 28px; display: flex; flex-direction: column; flex: 1;">
-                        <div style="width: 70px; height: 4px; background: linear-gradient(to right, #D97060, #C65650); margin-bottom: 16px; border-radius: 2px;"></div>
-                        <h4 style="font-size: 1.3rem; font-weight: 900; color: #1a1a1a; margin: 0 0 12px 0;">Songkok Full AC</h4>
-                        <p style="font-size: 0.95rem; color: #666; line-height: 1.7; margin: 0 0 24px 0; flex: 1;">Teknologi full jaring untuk ventilasi maksimal dan kenyamanan premium saat dipakai.</p>
-                        <a href="{{ route('products') }}" style="background: linear-gradient(135deg, #D97060, #C65650); color: white; padding: 12px 20px; border-radius: 10px; text-decoration: none; font-weight: 700; transition: all 0.3s ease; display: inline-block; text-align: center; box-shadow: 0 8px 20px rgba(217,112,96,0.2);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 12px 30px rgba(217,112,96,0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 20px rgba(217,112,96,0.2)'">
-                            Lihat Produk →
-                        </a>
-                    </div>
-                </div>
-            </div>
         </div>
+
     </div>
+
 </section>
 
 <!-- ============================================-->
-<!-- CTA Section - Final -->
+<!-- SHOWCASE SECTION -->
 <!-- ============================================-->
-<section style="padding: 6rem 0; background: linear-gradient(135deg, #D97060 0%, #C65650 50%, #A84A40 100%); position: relative; overflow: hidden;">
-    <!-- Decorative Shapes -->
-    <div style="position: absolute; top: -100px; right: -100px; width: 400px; height: 400px; background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%); border-radius: 50%; z-index: 1;"></div>
-    <div style="position: absolute; bottom: -50px; left: -50px; width: 300px; height: 300px; background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 70%); border-radius: 50%; z-index: 1;"></div>
-    
-    <div class="container" style="position: relative; z-index: 2;">
-        <div class="text-center">
-            <h2 style="font-size: 2.8rem; font-weight: 900; color: white; margin-bottom: 24px; line-height: 1.3;">Siap Memesan Songkok Berkualitas?</h2>
-            <p style="font-size: 1.1rem; color: rgba(255,255,255,0.95); margin-bottom: 40px; max-width: 700px; margin-left: auto; margin-right: auto; line-height: 1.9; font-weight: 500;">
-                Jangan lewatkan kesempatan untuk memiliki songkok premium dari Tebu Mas. Pesan sekarang dan nikmati kualitas terbaik dengan harga terjangkau ke seluruh Indonesia.
+<section class="about-showcase-section">
+
+    <div class="container">
+
+        <!-- HEADER -->
+        <div class="about-showcase-header">
+
+            <span class="about-showcase-label">
+                Produk Unggulan
+            </span>
+
+            <h2>
+                Koleksi Songkok Premium <br>
+                dengan Karakter Berbeda
+            </h2>
+
+            <p>
+                Setiap produk memiliki karakteristik tersendiri mulai dari
+                desain klasik formal hingga ventilasi modern untuk kenyamanan
+                maksimal.
             </p>
-            <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
-                <a href="{{ route('products') }}" style="background: white; color: #D97060; padding: 16px 36px; border-radius: 12px; text-decoration: none; font-weight: 800; transition: all 0.3s ease; display: inline-block; font-size: 1rem; box-shadow: 0 12px 30px rgba(0,0,0,0.2);" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 16px 40px rgba(0,0,0,0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 12px 30px rgba(0,0,0,0.2)'">
-                    Lihat Katalog Produk
+
+        </div>
+
+        <!-- TOP FEATURED -->
+        <div class="about-featured-product">
+
+            <!-- IMAGE -->
+            <div class="about-featured-image">
+                <img src="{{ asset('img/category/ac.png') }}"
+                     alt="Songkok AC Premium">
+            </div>
+
+            <!-- CONTENT -->
+            <div class="about-featured-content">
+
+                <span class="featured-badge">
+                    MOST POPULAR
+                </span>
+
+                <h3>
+                    Songkok AC Premium
+                </h3>
+
+                <p>
+                    Dilengkapi ventilasi udara modern untuk memberikan
+                    kenyamanan maksimal tanpa mengurangi kesan elegan.
+                    Cocok digunakan harian maupun acara formal.
+                </p>
+
+                <!-- FEATURES -->
+                <div class="featured-features">
+
+                    <div class="featured-item">
+                        <strong>Ventilasi Adem</strong>
+                        <span>Sirkulasi udara lebih nyaman</span>
+                    </div>
+
+                    <div class="featured-item">
+                        <strong>Desain Premium</strong>
+                        <span>Tampilan lebih modern & eksklusif</span>
+                    </div>
+
+                    <div class="featured-item">
+                        <strong>Nyaman Dipakai</strong>
+                        <span>Ringan digunakan seharian</span>
+                    </div>
+
+                </div>
+
+                <a href="{{ route('products') }}"
+                   class="featured-btn">
+                    Lihat Produk
                 </a>
-                <a href="https://wa.me/6281234567890" target="_blank" style="background: transparent; color: white; padding: 16px 36px; border-radius: 12px; text-decoration: none; font-weight: 800; border: 2.5px solid white; transition: all 0.3s ease; display: inline-block; font-size: 1rem;" onmouseover="this.style.background='rgba(255,255,255,0.15)'; this.style.transform='translateY(-3px)'" onmouseout="this.style.background='transparent'; this.style.transform='translateY(0)'">
+
+            </div>
+
+        </div>
+
+        <!-- SMALL CARDS -->
+        <div class="about-showcase-grid">
+
+            <!-- CARD -->
+            <div class="showcase-card minimal">
+
+                <div class="showcase-image">
+                    <img src="{{ asset('img/category/nonac.png') }}"
+                         alt="Songkok Non AC">
+                </div>
+
+                <div class="showcase-content">
+
+                    <span class="showcase-type">
+                        Classic Edition
+                    </span>
+
+                    <h4>Songkok Non AC</h4>
+
+                    <p>
+                        Model klasik dengan desain formal
+                        dan tampilan lebih kokoh.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- CARD -->
+            <div class="showcase-card premium">
+
+                <div class="premium-top">
+                    <span>PREMIUM</span>
+                </div>
+
+                <div class="showcase-image">
+                    <img src="{{ asset('img/category/labelpg.png') }}"
+                         alt="Label Premium">
+                </div>
+
+                <div class="showcase-content">
+
+                    <h4>Label Premium</h4>
+
+                    <p>
+                        Identitas eksklusif dengan
+                        detail finishing berkualitas tinggi.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- CARD -->
+            <div class="showcase-card dark-card">
+
+                <div class="showcase-image dark">
+                    <img src="{{ asset('img/category/Songkok.png') }}"
+                         alt="Koleksi Eksklusif">
+                </div>
+
+                <div class="showcase-content">
+
+                    <span class="showcase-type light">
+                        Exclusive Collection
+                    </span>
+
+                    <h4>Koleksi Eksklusif</h4>
+
+                    <p>
+                        Kombinasi desain modern,
+                        elegan, dan nyaman digunakan.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<style>
+
+/* ============================================
+   SHOWCASE SECTION
+============================================ */
+
+.about-showcase-section{
+    padding: 7rem 0;
+    background: #f8f8f8;
+}
+
+/* HEADER */
+.about-showcase-header{
+    text-align: center;
+    max-width: 760px;
+    margin: 0 auto 5rem;
+}
+
+.about-showcase-label{
+    display: inline-block;
+
+    margin-bottom: 1rem;
+
+    color: #D97060;
+
+    font-size: 0.82rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.about-showcase-header h2{
+    color: #14183E;
+
+    font-size: 3rem;
+    font-weight: 900;
+    line-height: 1.2;
+
+    margin-bottom: 1.4rem;
+}
+
+.about-showcase-header p{
+    color: #666;
+
+    font-size: 1rem;
+    line-height: 1.9;
+}
+
+/* ============================================
+   FEATURED PRODUCT
+============================================ */
+
+.about-featured-product{
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 0;
+
+    overflow: hidden;
+
+    border-radius: 36px;
+
+    background: #fff;
+
+    margin-bottom: 3rem;
+
+    box-shadow:
+        0 30px 80px rgba(0,0,0,0.08);
+}
+
+/* IMAGE */
+.about-featured-image{
+    position: relative;
+    min-height: 580px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f7efeb 0%,
+            #fff 100%
+        );
+}
+
+.about-featured-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+
+    padding: 3rem;
+}
+
+/* CONTENT */
+.about-featured-content{
+    padding: 4rem;
+}
+
+.featured-badge{
+    display: inline-flex;
+
+    padding: 0.7rem 1rem;
+
+    border-radius: 999px;
+
+    background: rgba(217,112,96,0.12);
+
+    color: #D97060;
+
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+
+    margin-bottom: 1.5rem;
+}
+
+.about-featured-content h3{
+    color: #14183E;
+
+    font-size: 3rem;
+    font-weight: 900;
+    line-height: 1.15;
+
+    margin-bottom: 1.5rem;
+}
+
+.about-featured-content p{
+    color: #666;
+
+    font-size: 1rem;
+    line-height: 1.9;
+
+    margin-bottom: 2rem;
+}
+
+/* FEATURES */
+.featured-features{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    margin-bottom: 2.5rem;
+}
+
+.featured-item{
+    padding: 1rem 1.2rem;
+
+    border-radius: 18px;
+
+    background: #faf7f5;
+
+    border: 1px solid rgba(217,112,96,0.08);
+}
+
+.featured-item strong{
+    display: block;
+
+    color: #14183E;
+
+    font-size: 1rem;
+    font-weight: 800;
+
+    margin-bottom: 0.3rem;
+}
+
+.featured-item span{
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* BUTTON */
+.featured-btn{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 1rem 2rem;
+
+    border-radius: 16px;
+
+    background: #D97060;
+    color: #fff;
+
+    text-decoration: none;
+
+    font-size: 0.95rem;
+    font-weight: 800;
+
+    transition: all 0.3s ease;
+}
+
+.featured-btn:hover{
+    background: #C65650;
+    color: #fff;
+
+    transform: translateY(-4px);
+}
+
+/* ============================================
+   SMALL CARDS
+============================================ */
+
+.about-showcase-grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1.5rem;
+}
+
+/* CARD BASE */
+.showcase-card{
+    overflow: hidden;
+    border-radius: 28px;
+
+    transition: all 0.35s ease;
+}
+
+.showcase-card:hover{
+    transform: translateY(-8px);
+}
+
+/* IMAGE */
+.showcase-image{
+    height: 260px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #fff;
+}
+
+.showcase-image img{
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    padding: 2rem;
+}
+
+/* CONTENT */
+.showcase-content{
+    padding: 2rem;
+}
+
+.showcase-content h4{
+    font-size: 1.4rem;
+    font-weight: 800;
+
+    margin-bottom: 0.8rem;
+}
+
+.showcase-content p{
+    font-size: 0.95rem;
+    line-height: 1.8;
+
+    margin: 0;
+}
+
+/* TYPE */
+.showcase-type{
+    display: inline-block;
+
+    margin-bottom: 1rem;
+
+    color: #D97060;
+
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.showcase-type.light{
+    color: rgba(255,255,255,0.75);
+}
+
+/* CARD 1 */
+.showcase-card.minimal{
+    background: #fff;
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,0.06);
+}
+
+/* CARD 2 */
+.showcase-card.premium{
+    background:
+        linear-gradient(
+            135deg,
+            #D97060 0%,
+            #C65650 100%
+        );
+
+    color: #fff;
+
+    box-shadow:
+        0 18px 45px rgba(217,112,96,0.22);
+}
+
+.premium-top{
+    padding: 1.2rem 1.5rem 0;
+}
+
+.premium-top span{
+    background: rgba(255,255,255,0.14);
+
+    padding: 0.55rem 1rem;
+
+    border-radius: 999px;
+
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.showcase-card.premium .showcase-image{
+    background: transparent;
+}
+
+.showcase-card.premium h4,
+.showcase-card.premium p{
+    color: #fff;
+}
+
+/* CARD 3 */
+.showcase-card.dark-card{
+    background: #14183E;
+    color: #fff;
+}
+
+.showcase-image.dark{
+    background:
+        linear-gradient(
+            135deg,
+            #1b204e 0%,
+            #14183E 100%
+        );
+}
+
+.showcase-card.dark-card h4,
+.showcase-card.dark-card p{
+    color: #fff;
+}
+
+/* ============================================
+   TABLET
+============================================ */
+
+@media (max-width: 991px){
+
+    .about-showcase-section{
+        padding: 5rem 0;
+    }
+
+    .about-featured-product{
+        grid-template-columns: 1fr;
+    }
+
+    .about-featured-image{
+        min-height: 420px;
+    }
+
+    .about-featured-content{
+        padding: 3rem 2rem;
+    }
+
+    .about-featured-content h3{
+        font-size: 2.4rem;
+    }
+
+    .about-showcase-grid{
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* ============================================
+   MOBILE
+============================================ */
+
+@media (max-width: 768px){
+
+    .about-showcase-header{
+        margin-bottom: 3rem;
+    }
+
+    .about-showcase-header h2{
+        font-size: 2rem;
+        line-height: 1.3;
+    }
+
+    .about-showcase-header p{
+        font-size: 0.92rem;
+    }
+
+    .about-featured-product{
+        border-radius: 26px;
+    }
+
+    .about-featured-image{
+        min-height: 300px;
+    }
+
+    .about-featured-image img{
+        padding: 1.5rem;
+    }
+
+    .about-featured-content{
+        padding: 2rem 1.4rem;
+    }
+
+    .about-featured-content h3{
+        font-size: 2rem;
+    }
+
+    .about-featured-content p{
+        font-size: 0.92rem;
+    }
+
+    .showcase-image{
+        height: 220px;
+    }
+
+    .showcase-content{
+        padding: 1.5rem;
+    }
+
+    .showcase-content h4{
+        font-size: 1.2rem;
+    }
+
+    .showcase-content p{
+        font-size: 0.9rem;
+    }
+
+}
+
+</style>
+
+<!-- ============================================-->
+<!-- CTA SECTION -->
+<!-- ============================================-->
+<section class="about-cta-section">
+
+    <!-- Background Glow -->
+    <div class="about-cta-glow about-cta-glow-1"></div>
+    <div class="about-cta-glow about-cta-glow-2"></div>
+
+    <div class="container position-relative">
+
+        <div class="about-cta-wrapper">
+
+            <span class="about-cta-label">
+                Premium Quality Since 1993
+            </span>
+
+            <h2>
+                Siap tampil lebih elegan <br>
+                dengan songkok premium Tebu Mas?
+            </h2>
+
+            <p>
+                Kami menghadirkan songkok berkualitas dengan desain elegan,
+                jahitan rapi, dan kenyamanan maksimal untuk kebutuhan formal
+                maupun penggunaan sehari-hari.
+            </p>
+
+            <!-- CTA BUTTON -->
+            <div class="about-cta-buttons">
+
+                <a href="{{ route('products') }}" class="about-cta-btn primary">
+                    Lihat Katalog
+                </a>
+
+                <a href="https://wa.me/6281234567890"
+                   target="_blank"
+                   class="about-cta-btn secondary">
                     Hubungi Kami
                 </a>
+
             </div>
+
+            <!-- MINI INFO -->
+            <div class="about-cta-info">
+
+                <div class="about-cta-info-item">
+                    <strong>30+</strong>
+                    <span>Tahun Pengalaman</span>
+                </div>
+
+                <div class="about-cta-info-item">
+                    <strong>10K+</strong>
+                    <span>Pelanggan Puas</span>
+                </div>
+
+                <div class="about-cta-info-item">
+                    <strong>Premium</strong>
+                    <span>Kualitas Terbaik</span>
+                </div>
+
+            </div>
+
         </div>
+
     </div>
 </section>
+
+<style>
+
+/* ============================================
+   CTA SECTION
+============================================ */
+
+.about-cta-section{
+    position: relative;
+    overflow: hidden;
+
+    padding: 7rem 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            #D97060 0%,
+            #C65650 50%,
+            #A84A40 100%
+        );
+}
+
+/* GLOW */
+.about-cta-glow{
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(10px);
+}
+
+.about-cta-glow-1{
+    width: 420px;
+    height: 420px;
+
+    top: -160px;
+    right: -120px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255,255,255,0.18) 0%,
+            transparent 70%
+        );
+}
+
+.about-cta-glow-2{
+    width: 320px;
+    height: 320px;
+
+    bottom: -120px;
+    left: -100px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255,255,255,0.12) 0%,
+            transparent 70%
+        );
+}
+
+/* WRAPPER */
+.about-cta-wrapper{
+    position: relative;
+    z-index: 2;
+
+    max-width: 920px;
+    margin: 0 auto;
+
+    text-align: center;
+
+    padding: 4rem;
+
+    border-radius: 34px;
+
+    background:
+        rgba(255,255,255,0.10);
+
+    backdrop-filter: blur(12px);
+
+    border:
+        1px solid rgba(255,255,255,0.18);
+
+    box-shadow:
+        0 30px 80px rgba(0,0,0,0.18);
+}
+
+/* LABEL */
+.about-cta-label{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0.8rem 1.4rem;
+    margin-bottom: 1.5rem;
+
+    border-radius: 999px;
+
+    background:
+        rgba(255,255,255,0.15);
+
+    color: #fff;
+
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+
+    border:
+        1px solid rgba(255,255,255,0.18);
+}
+
+/* TITLE */
+.about-cta-wrapper h2{
+    color: #fff;
+
+    font-size: 3.4rem;
+    font-weight: 900;
+    line-height: 1.15;
+
+    margin-bottom: 1.5rem;
+}
+
+/* TEXT */
+.about-cta-wrapper p{
+    max-width: 720px;
+    margin: 0 auto;
+
+    color:
+        rgba(255,255,255,0.88);
+
+    font-size: 1.05rem;
+    line-height: 1.9;
+
+    margin-bottom: 2.5rem;
+}
+
+/* BUTTONS */
+.about-cta-buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    flex-wrap: wrap;
+
+    margin-bottom: 3rem;
+}
+
+.about-cta-btn{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 190px;
+
+    padding: 1rem 2rem;
+
+    border-radius: 16px;
+
+    text-decoration: none;
+
+    font-size: 0.95rem;
+    font-weight: 800;
+
+    transition: all 0.3s ease;
+}
+
+/* PRIMARY */
+.about-cta-btn.primary{
+    background: #fff;
+    color: #D97060;
+
+    box-shadow:
+        0 16px 35px rgba(0,0,0,0.18);
+}
+
+.about-cta-btn.primary:hover{
+    transform: translateY(-5px);
+
+    color: #D97060;
+}
+
+/* SECONDARY */
+.about-cta-btn.secondary{
+    background:
+        rgba(255,255,255,0.10);
+
+    color: #fff;
+
+    border:
+        1px solid rgba(255,255,255,0.25);
+}
+
+.about-cta-btn.secondary:hover{
+    background:
+        rgba(255,255,255,0.16);
+
+    color: #fff;
+
+    transform: translateY(-5px);
+}
+
+/* INFO */
+.about-cta-info{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+
+    flex-wrap: wrap;
+}
+
+.about-cta-info-item{
+    min-width: 180px;
+
+    padding: 1.2rem 1rem;
+
+    border-radius: 20px;
+
+    background:
+        rgba(255,255,255,0.10);
+
+    border:
+        1px solid rgba(255,255,255,0.12);
+}
+
+.about-cta-info-item strong{
+    display: block;
+
+    color: #fff;
+
+    font-size: 1.5rem;
+    font-weight: 900;
+
+    margin-bottom: 0.4rem;
+}
+
+.about-cta-info-item span{
+    color:
+        rgba(255,255,255,0.8);
+
+    font-size: 0.9rem;
+}
+
+/* ============================================
+   TABLET
+============================================ */
+
+@media (max-width: 991px){
+
+    .about-cta-section{
+        padding: 5rem 0;
+    }
+
+    .about-cta-wrapper{
+        padding: 3rem 2rem;
+        border-radius: 28px;
+    }
+
+    .about-cta-wrapper h2{
+        font-size: 2.6rem;
+    }
+
+    .about-cta-wrapper p{
+        font-size: 0.98rem;
+    }
+
+}
+
+/* ============================================
+   MOBILE
+============================================ */
+
+@media (max-width: 768px){
+
+    .about-cta-section{
+        padding: 4rem 0;
+    }
+
+    .about-cta-wrapper{
+        padding: 2.3rem 1.3rem;
+        border-radius: 24px;
+    }
+
+    .about-cta-label{
+        font-size: 0.72rem;
+        padding: 0.7rem 1rem;
+    }
+
+    .about-cta-wrapper h2{
+        font-size: 2rem;
+        line-height: 1.3;
+    }
+
+    .about-cta-wrapper p{
+        font-size: 0.92rem;
+        line-height: 1.8;
+
+        margin-bottom: 2rem;
+    }
+
+    .about-cta-buttons{
+        flex-direction: column;
+    }
+
+    .about-cta-btn{
+        width: 100%;
+    }
+
+    .about-cta-info{
+        flex-direction: column;
+    }
+
+    .about-cta-info-item{
+        width: 100%;
+        min-width: unset;
+    }
+
+}
+
+</style>
 
 @endsection
