@@ -5,6 +5,33 @@
 
 @section('content')
 
+<!-- SVG sprite: ikon-ikon profesional untuk halaman kontak -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="icon-envelope" viewBox="0 0 24 24">
+    <path fill="currentColor" d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/>
+  </symbol>
+  <symbol id="icon-map" viewBox="0 0 24 24">
+    <path fill="currentColor" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/>
+  </symbol>
+  <symbol id="icon-clock" viewBox="0 0 24 24">
+    <path fill="currentColor" d="M12 1a11 11 0 1 0 11 11A11.013 11.013 0 0 0 12 1zm1 12.59V7h-2v6l5 3 .9-1.54z"/>
+  </symbol>
+  <symbol id="icon-phone" viewBox="0 0 24 24">
+    <path fill="currentColor" d="M6.6 10.79a15.05 15.05 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1.05-.24c1.12.45 2.33.69 3.57.69a1 1 0 0 1 1 1v3.5a1 1 0 0 1-1 1A17 17 0 0 1 3 5a1 1 0 0 1 1-1H7.5a1 1 0 0 1 1 1c0 1.24.24 2.45.69 3.57a1 1 0 0 1-.24 1.05l-2.35 2.17z"/>
+  </symbol>
+  <symbol id="icon-bolt" viewBox="0 0 24 24">
+    <path fill="currentColor" d="M13 2L3 14h7l-1 8 10-12h-7z"/>
+  </symbol>
+  <symbol id="icon-location-arrow" viewBox="0 0 24 24">
+    <path fill="currentColor" d="M21 11l-9 9v-6H3V2z"/>
+  </symbol>
+  <symbol id="icon-paper-plane" viewBox="0 0 24 24">
+    <path fill="currentColor" d="M2 21l21-9L2 3v7l15 2-15 2z"/>
+  </symbol>
+  <symbol id="icon-shield" viewBox="0 0 24 24">
+    <path fill="currentColor" d="M12 1l7 3v5c0 5-3.8 9.7-7 11-3.2-1.3-7-6-7-11V4l7-3z"/>
+  </symbol>
+</svg>
 <!-- ============================================-->
 <!-- CONTACT HERO SECTION -->
 <!-- ============================================-->
@@ -690,7 +717,9 @@
                     <div class="contact-main-glow"></div>
 
                     <div class="contact-main-icon">
-                        <i class="fab fa-whatsapp"></i>
+                        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="color: #fff;">
+                          <use href="#icon-phone" fill="currentColor"></use>
+                        </svg>
                     </div>
 
                     <h3>
@@ -713,12 +742,14 @@
                     <br>
 
                     <a
-                        href="https://wa.me/6281234567890"
-                        target="_blank"
-                        class="contact-main-btn"
+                      href="https://wa.me/6281234567890"
+                      target="_blank"
+                      class="contact-main-btn"
                     >
-                        Chat Sekarang
-                        <i class="fas fa-arrow-right"></i>
+                      Chat Sekarang
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="color: #fff;">
+                        <use href="#icon-location-arrow" fill="currentColor"></use>
+                      </svg>
                     </a>
 
                 </div>
@@ -734,7 +765,9 @@
                     <div class="contact-side-card">
 
                         <div class="contact-side-icon">
-                            <i class="fas fa-envelope"></i>
+                            <svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true" style="color: #D97060;">
+                              <use href="#icon-envelope" fill="currentColor"></use>
+                            </svg>
                         </div>
 
                         <h5>Email</h5>
@@ -749,7 +782,9 @@
                     <div class="contact-side-card">
 
                         <div class="contact-side-icon">
-                            <i class="fas fa-map-marker-alt"></i>
+                            <svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true" style="color: #D97060;">
+                              <use href="#icon-map" fill="currentColor"></use>
+                            </svg>
                         </div>
 
                         <h5>Lokasi</h5>
@@ -779,7 +814,9 @@
                     <div class="contact-info-item">
 
                         <div class="contact-info-icon">
-                            <i class="fas fa-clock"></i>
+                            <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" style="color: #D97060;">
+                              <use href="#icon-clock" fill="currentColor"></use>
+                            </svg>
                         </div>
 
                         <div>
@@ -803,7 +840,9 @@
                     <div class="contact-info-item">
 
                         <div class="contact-info-icon">
-                            <i class="fas fa-phone"></i>
+                            <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" style="color: #D97060;">
+                              <use href="#icon-phone" fill="currentColor"></use>
+                            </svg>
                         </div>
 
                         <div>
@@ -826,7 +865,9 @@
                     <div class="contact-info-item">
 
                         <div class="contact-info-icon">
-                            <i class="fas fa-star"></i>
+                            <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" style="color: #D97060;">
+                              <use href="#icon-bolt" fill="currentColor"></use>
+                            </svg>
                         </div>
 
                         <div>
@@ -981,7 +1022,9 @@
 
                         <button type="submit" class="contact-submit-btn">
 
-                            <i class="fas fa-paper-plane"></i>
+                            <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" style="vertical-align:middle; margin-right:6px;">
+                              <use href="#icon-paper-plane" fill="currentColor"></use>
+                            </svg>
 
                             Kirim Pesan
 
@@ -1038,7 +1081,9 @@
                         <div class="contact-info-card">
 
                             <div class="contact-info-icon">
-                                <i class="fas fa-map-marker-alt"></i>
+                                <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" style="color:#D97060;">
+                                  <use href="#icon-map" fill="currentColor"></use>
+                                </svg>
                             </div>
 
                             <div>
@@ -1060,7 +1105,9 @@
                         <div class="contact-info-card">
 
                             <div class="contact-info-icon">
-                                <i class="fas fa-clock"></i>
+                                <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" style="color:#D97060;">
+                                  <use href="#icon-clock" fill="currentColor"></use>
+                                </svg>
                             </div>
 
                             <div>
@@ -1091,7 +1138,9 @@
                         class="contact-maps-btn"
                     >
 
-                        <i class="fas fa-location-arrow"></i>
+                        <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" style="vertical-align:middle; margin-right:8px; color:#fff;">
+                          <use href="#icon-location-arrow" fill="currentColor"></use>
+                        </svg>
 
                         Buka Google Maps
 
@@ -1566,20 +1615,24 @@
             <div class="contact-cta-actions">
 
                 <a 
-                    href="https://wa.me/6281234567890"
-                    target="_blank"
-                    class="contact-cta-primary"
+                  href="https://wa.me/6281234567890"
+                  target="_blank"
+                  class="contact-cta-primary"
                 >
-                    <i class="fab fa-whatsapp"></i>
-                    Chat WhatsApp
+                  <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" style="vertical-align:middle; margin-right:8px; color:#fff;">
+                    <use href="#icon-phone" fill="currentColor"></use>
+                  </svg>
+                  Chat WhatsApp
                 </a>
 
                 <a 
-                    href="mailto:info@tebumasgresik.com"
-                    class="contact-cta-secondary"
+                  href="mailto:info@tebumasgresik.com"
+                  class="contact-cta-secondary"
                 >
-                    <i class="fas fa-envelope"></i>
-                    Kirim Email
+                  <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" style="vertical-align:middle; margin-right:8px; color: #D97060;">
+                    <use href="#icon-envelope" fill="currentColor"></use>
+                  </svg>
+                  Kirim Email
                 </a>
 
             </div>
@@ -1590,7 +1643,9 @@
                 <div class="contact-cta-info-item">
 
                     <div class="contact-cta-info-icon">
-                        <i class="fas fa-clock"></i>
+                        <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" style="color:#D97060;">
+                          <use href="#icon-clock" fill="currentColor"></use>
+                        </svg>
                     </div>
 
                     <div>
@@ -1605,7 +1660,9 @@
                 <div class="contact-cta-info-item">
 
                     <div class="contact-cta-info-icon">
-                        <i class="fas fa-phone-alt"></i>
+                        <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" style="color:#D97060;">
+                          <use href="#icon-phone" fill="currentColor"></use>
+                        </svg>
                     </div>
 
                     <div>
@@ -1620,7 +1677,9 @@
                 <div class="contact-cta-info-item">
 
                     <div class="contact-cta-info-icon">
-                        <i class="fas fa-shield-alt"></i>
+                        <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" style="color:#D97060;">
+                          <use href="#icon-shield" fill="currentColor"></use>
+                        </svg>
                     </div>
 
                     <div>

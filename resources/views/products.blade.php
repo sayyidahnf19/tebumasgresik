@@ -508,27 +508,26 @@ input[type="radio"]:disabled {
         overflow: visible !important;
         gap: 0 !important;
     }
+    #modalDetail .modal-content .modal-body {
+        padding: 20px !important;
+        max-height: calc(100vh - 260px) !important;
+        overflow-y: auto !important;
+    }
+    #modalDetail .modal-content .modal-footer {
+        padding: 12px 16px !important;
+        position: sticky !important;
+        bottom: 0 !important;
+        background: #FAFAFA !important;
+        z-index: 10 !important;
+    }
     #modalDetail .modal-content .modal-detail-panel {
         display: flex !important;
         flex-direction: column !important;
         width: 100% !important;
         border-left: none !important;
         border-top: 1px solid #E0E0E0 !important;
-        max-height: none !important;
-        overflow: visible !important;
-    }
-    #modalDetail .modal-content .modal-detail-panel .modal-body {
-        flex: 1 1 auto !important;
-        min-height: 0 !important;
-        overflow: visible !important;
-        padding-bottom: 0 !important;
-    }
-    #modalDetail .modal-content .modal-footer {
-        padding: 12px 16px !important;
-        position: relative !important;
-        bottom: auto !important;
-        background: #FAFAFA !important;
-        z-index: auto !important;
+        max-height: calc(100vh - 190px) !important;
+        overflow-y: auto !important;
     }
 }
 
@@ -644,7 +643,7 @@ input[type="radio"]:disabled {
         width: 100% !important;
         flex: 1 1 auto !important;
         min-height: 0 !important;
-        overflow: visible !important;
+        overflow: hidden !important;
         flex-direction: column !important;
     }
     #modalDetail .modal-content .modal-detail-panel {
@@ -657,7 +656,14 @@ input[type="radio"]:disabled {
         max-height: calc(100vh - 160px) !important;
         overflow: hidden !important;
     }
-    #modalDetail .modal-content .modal-detail-panel .modal-body {
+    #modalDetail .modal-content .modal-header {
+        padding: 10px 12px !important;
+    }
+    #modalDetail .modal-content .modal-header h2 {
+        font-size: 1rem !important;
+    }
+    #modalDetail .modal-content .modal-body {
+        padding: 14px !important;
         flex: 1 1 auto !important;
         min-height: 0 !important;
         overflow-y: auto !important;
@@ -702,6 +708,7 @@ input[type="radio"]:disabled {
         right: 10px !important;
     }
 }
+
 </style>
 <script>
 // Data Produk
