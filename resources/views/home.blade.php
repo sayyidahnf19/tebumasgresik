@@ -528,7 +528,7 @@
         <div class="row g-4 cta-grid">
 
             <!-- CONTACT CARD -->
-            <div class="col-12 col-lg-8">
+            <div class="col-12 col-lg-7">
 
                 <div class="contact-card h-100">
 
@@ -598,7 +598,7 @@
 
 
             <!-- MAPS SIDE -->
-            <div class="col-12 col-lg-8">
+            <div class="col-12 col-lg-5">
 
                 <!-- LOCATION -->
                 <div class="location-card">
