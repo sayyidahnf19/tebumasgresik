@@ -345,133 +345,100 @@
 
 <!-- ============================================-->
 <!-- <section> Kepercayaan Pelanggan Section ============================-->
-<section id="kepercayaan" style="background: linear-gradient(135deg, #fafafa 0%, #f5f5f5 100%); padding: 60px 0;">
+<section id="kepercayaan">
     <div class="container">
-        <!-- Header Section -->
-        <div class="text-center" style="margin-bottom: 40px;">
-            <h5 class="text-primary fw-semibold mb-2" style="letter-spacing: 2px; font-size: 0.95rem;">KEPERCAYAAN PELANGGAN</h5>
-            <h2 class="fw-bold mb-3" style="font-size: 2rem; color: #1a1a1a;">Dipercaya Pelanggan dari Berbagai Daerah</h2>
-            <p style="font-size: 1rem; color: #666; max-width: 700px; margin: 15px auto; line-height: 1.6;">Kepercayaan pelanggan adalah aset paling berharga kami. Sejak 1993, kami terus berinovasi dengan produksi lokal dan pengiriman ke seluruh nusantara.</p>
-            <div style="width: 80px; height: 3px; background: linear-gradient(to right, #D97060, #C65650); margin: 15px auto;"></div>
+        <div class="text-center trust-header">
+            <span class="trust-eyebrow">KEPERCAYAAN PELANGGAN</span>
+            <h2>Dipercaya Pelanggan dari Berbagai Daerah</h2>
+            <p>Kepercayaan pelanggan adalah aset paling berharga kami. Sejak 1993, kami terus berinovasi dengan produksi lokal dan pengiriman ke seluruh nusantara.</p>
+            <div class="trust-divider"></div>
         </div>
 
-        <!-- Trust Stats Grid -->
-        <div class="row g-3" style="margin-bottom: 45px;">
-            <!-- Stat 1 -->
-            <div class="col-lg-3 col-sm-6">
-                <div style="background: white; padding: 24px 20px; border-radius: 14px; text-align: center; box-shadow: 0 6px 20px rgba(217,112,96,0.08); transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 12px 35px rgba(217,112,96,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 6px 20px rgba(217,112,96,0.08)'">
-                    <div style="font-size: 2.2rem; font-weight: 900; color: #D97060; margin-bottom: 6px;">30+</div>
-                    <div style="font-size: 0.9rem; font-weight: 700; color: #333; margin-bottom: 6px;">TAHUN BERPENGALAMAN</div>
-                    <p style="font-size: 0.8rem; color: #666; margin: 0; line-height: 1.4;">Handmade sejak 1993</p>
-                </div>
+        <div class="row g-4 trust-stat-grid">
+            <div class="col-6 col-lg-3">
+                <article class="trust-stat-card">
+                    <strong>30+</strong>
+                    <span>TAHUN BERPENGALAMAN</span>
+                    <small>Handmade sejak 1993</small>
+                </article>
             </div>
-
-            <!-- Stat 2 -->
-            <div class="col-lg-3 col-sm-6">
-                <div style="background: white; padding: 24px 20px; border-radius: 14px; text-align: center; box-shadow: 0 6px 20px rgba(217,112,96,0.08); transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 12px 35px rgba(217,112,96,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 6px 20px rgba(217,112,96,0.08)'">
-                    <div style="font-size: 2.2rem; font-weight: 900; color: #D97060; margin-bottom: 6px;">10000+</div>
-                    <div style="font-size: 0.9rem; font-weight: 700; color: #333; margin-bottom: 6px;">PRODUK TERKIRIM</div>
-                    <p style="font-size: 0.8rem; color: #666; margin: 0; line-height: 1.4;">Digunakan ribuan pelanggan</p>
-                </div>
+            <div class="col-6 col-lg-3">
+                <article class="trust-stat-card">
+                    <strong>10k+</strong>
+                    <span>PRODUK TERKIRIM</span>
+                    <small>Digunakan ribuan pelanggan</small>
+                </article>
             </div>
-
-            <!-- Stat 3 -->
-            <div class="col-lg-3 col-sm-6">
-                <div style="background: white; padding: 24px 20px; border-radius: 14px; text-align: center; box-shadow: 0 6px 20px rgba(217,112,96,0.08); transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 12px 35px rgba(217,112,96,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 6px 20px rgba(217,112,96,0.08)'">
-                    <div style="font-size: 2.2rem; font-weight: 900; color: #D97060; margin-bottom: 6px;">30+</div>
-                    <div style="font-size: 0.9rem; font-weight: 700; color: #333; margin-bottom: 6px;">KOTA PENGIRIMAN</div>
-                    <p style="font-size: 0.8rem; color: #666; margin: 0; line-height: 1.4;">Pengiriman ke berbagai daerah</p>
-                </div>
+            <div class="col-6 col-lg-3">
+                <article class="trust-stat-card">
+                    <strong>30+</strong>
+                    <span>KOTA PENGIRIMAN</span>
+                    <small>Pengiriman ke berbagai daerah</small>
+                </article>
             </div>
-
-            <!-- Stat 4 -->
-            <div class="col-lg-3 col-sm-6">
-                <div style="background: white; padding: 24px 20px; border-radius: 14px; text-align: center; box-shadow: 0 6px 20px rgba(217,112,96,0.08); transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 12px 35px rgba(217,112,96,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 6px 20px rgba(217,112,96,0.08)'">
-                    <div style="font-size: 2.2rem; font-weight: 900; color: #D97060; margin-bottom: 6px;">100%</div>
-                    <div style="font-size: 0.9rem; font-weight: 700; color: #333; margin-bottom: 6px;">LOKAL GRESIK</div>
-                    <p style="font-size: 0.8rem; color: #666; margin: 0; line-height: 1.4;">Produksi lokal berkualitas</p>
-                </div>
+            <div class="col-6 col-lg-3">
+                <article class="trust-stat-card">
+                    <strong>100%</strong>
+                    <span>LOKAL GRESIK</span>
+                    <small>Produksi lokal berkualitas</small>
+                </article>
             </div>
         </div>
 
-        <!-- Trust Features + Images Section -->
-        <div class="row align-items-center g-4 trust-layout" style="margin-bottom: 40px;">
-            <!-- Left: Features -->
-            <div class="col-12">
-                <div style="display: flex; flex-direction: column; gap: 12px;">
-                    <h4 style="font-size: 1.2rem; font-weight: 800; color: #1a1a1a; margin-bottom: 4px;">Komitmen Kami</h4>
-                    
-                    <!-- Feature 1 -->
-                    <div style="display: flex; gap: 12px; align-items: flex-start;">
-                        <div style="width: 36px; height: 36px; background: linear-gradient(135deg, #D97060, #C65650); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 900; font-size: 1rem; flex-shrink: 0;">✓</div>
-                        <div style="flex-grow: 1;">
-                            <div style="font-weight: 700; color: #1a1a1a; margin-bottom: 2px; font-size: 0.95rem;">Pengiriman Rutin</div>
-                            <p style="font-size: 0.85rem; color: #666; margin: 0; line-height: 1.4;">Pengiriman rutin ke berbagai daerah dengan jaminan keamanan paket</p>
-                        </div>
+        <div class="row align-items-stretch g-4 trust-layout mb-4">
+            <div class="col-12 col-lg-5">
+                <article class="trust-panel">
+                    <p class="trust-panel-tag">Komitmen Kami</p>
+                    <h3>Menjaga kualitas, keamanan, dan kepercayaan dari awal sampai tujuan</h3>
+                    <p class="trust-panel-copy">Kami fokus pada proses yang rapi, pengemasan profesional, dan pelayanan yang konsisten agar setiap order sampai dengan aman dan terpercaya.</p>
+                    <div class="trust-feature-list">
+                        <article class="trust-feature-card">
+                            <div class="trust-feature-icon">✓</div>
+                            <div>
+                                <h4>Pengiriman Rutin</h4>
+                                <p>Pengiriman ke berbagai daerah dengan jaminan keamanan paket.</p>
+                            </div>
+                        </article>
+                        <article class="trust-feature-card">
+                            <div class="trust-feature-icon">✓</div>
+                            <div>
+                                <h4>Proses Packing Profesional</h4>
+                                <p>Setiap paket dikemas dengan hati-hati agar produk sampai aman.</p>
+                            </div>
+                        </article>
+                        <article class="trust-feature-card">
+                            <div class="trust-feature-icon">✓</div>
+                            <div>
+                                <h4>Kualitas Terjamin</h4>
+                                <p>Produk handmade dengan standar kualitas tinggi sejak proses pembuatan.</p>
+                            </div>
+                        </article>
                     </div>
-
-                    <!-- Feature 2 -->
-                    <div style="display: flex; gap: 12px; align-items: flex-start;">
-                        <div style="width: 36px; height: 36px; background: linear-gradient(135deg, #D97060, #C65650); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 900; font-size: 1rem; flex-shrink: 0;">✓</div>
-                        <div style="flex-grow: 1;">
-                            <div style="font-weight: 700; color: #1a1a1a; margin-bottom: 2px; font-size: 0.95rem;">Proses Packing Profesional</div>
-                            <p style="font-size: 0.85rem; color: #666; margin: 0; line-height: 1.4;">Setiap paket dikemas dengan hati-hati untuk memastikan produk sampai dengan aman</p>
-                        </div>
-                    </div>
-
-                    <!-- Feature 3 -->
-                    <div style="display: flex; gap: 12px; align-items: flex-start;">
-                        <div style="width: 36px; height: 36px; background: linear-gradient(135deg, #D97060, #C65650); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 900; font-size: 1rem; flex-shrink: 0;">✓</div>
-                        <div style="flex-grow: 1;">
-                            <div style="font-weight: 700; color: #1a1a1a; margin-bottom: 2px; font-size: 0.95rem;">Kualitas Terjamin</div>
-                            <p style="font-size: 0.85rem; color: #666; margin: 0; line-height: 1.4;">Produk handmade dengan standar kualitas tinggi sejak proses pembuatan</p>
-                        </div>
-                    </div>
-                </div>
+                </article>
             </div>
 
-            <!-- Right: Images (3 Columns) -->
-            <div class="col-12">
-                <div class="row g-3 trust-images-row">
-                    <!-- Image 1 - Packing -->
-                    <div class="col-12 col-sm-6 col-lg-4">
-                        <div class="trust-image-card" style="position: relative; display: flex; align-items: center; justify-content: center; border-radius: 12px; overflow: hidden; box-shadow: 0 12px 35px rgba(217,112,96,0.1); transition: all 0.4s ease; aspect-ratio: 1 / 1;" onmouseover="this.style.transform='scale(1.03)'; this.style.boxShadow='0 16px 45px rgba(217,112,96,0.18)'" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 12px 35px rgba(217,112,96,0.1)'">
-                            <img src="{{ asset('img/category/pkg.png') }}" alt="Proses Packing" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-                            <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.6), transparent); padding: 16px; color: white; text-align: center;">
-                                <p style="font-weight: 700; margin: 0; font-size: 0.9rem;">Proses Packing</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Image 2 - Tumpukan Paket -->
-                    <div class="col-12 col-sm-6 col-lg-4">
-                        <div class="trust-image-card" style="position: relative; display: flex; align-items: center; justify-content: center; border-radius: 12px; overflow: hidden; box-shadow: 0 12px 35px rgba(217,112,96,0.1); transition: all 0.4s ease; aspect-ratio: 1 / 1;" onmouseover="this.style.transform='scale(1.03)'; this.style.boxShadow='0 16px 45px rgba(217,112,96,0.18)'" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 12px 35px rgba(217,112,96,0.1)'">
-                            <img src="{{ asset('img/category/kir.jpeg') }}" alt="Tumpukan Paket" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-                            <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.6), transparent); padding: 16px; color: white; text-align: center;">
-                                <p style="font-weight: 700; margin: 0; font-size: 0.9rem;">Siap Pengiriman</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Image 3 - Kiriman -->
-                    <div class="col-12 col-sm-6 col-lg-4">
-                        <div class="trust-image-card" style="position: relative; display: flex; align-items: center; justify-content: center; border-radius: 12px; overflow: hidden; box-shadow: 0 12px 35px rgba(217,112,96,0.1); transition: all 0.4s ease; aspect-ratio: 1 / 1;" onmouseover="this.style.transform='scale(1.03)'; this.style.boxShadow='0 16px 45px rgba(217,112,96,0.18)'" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 12px 35px rgba(217,112,96,0.1)'">
-                            <img src="{{ asset('img/category/kirim.jpeg') }}" alt="Produk Terkirim" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-                            <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.6), transparent); padding: 16px; color: white; text-align: center;">
-                                <p style="font-weight: 700; margin: 0; font-size: 0.9rem;">Produk Tersampaikan</p>
-                            </div>
-                        </div>
-                    </div>
+            <div class="col-12 col-lg-7">
+                <div class="trust-gallery-grid">
+                    <article class="trust-photo-card">
+                        <img src="{{ asset('img/category/pkg.png') }}" alt="Proses Packing" loading="lazy">
+                        <div class="trust-photo-label">Proses Packing</div>
+                    </article>
+                    <article class="trust-photo-card">
+                        <img src="{{ asset('img/category/kir.jpeg') }}" alt="Tumpukan Paket" loading="lazy">
+                        <div class="trust-photo-label">Siap Pengiriman</div>
+                    </article>
+                    <article class="trust-photo-card">
+                        <img src="{{ asset('img/category/kirim.jpeg') }}" alt="Produk Terkirim" loading="lazy">
+                        <div class="trust-photo-label">Produk Tersampaikan</div>
+                    </article>
                 </div>
             </div>
         </div>
 
         <!-- Trust Seal Section -->
-        <div style="margin-top: 40px; text-align: center;">
-            <p style="font-size: 0.9rem; color: #666; margin-bottom: 12px;">Kepercayaan Anda adalah prioritas utama kami</p>
-            <div style="display: inline-block; background: linear-gradient(135deg, #D97060, #C65650); color: white; padding: 14px 28px; border-radius: 50px; font-weight: 700; letter-spacing: 0.5px; font-size: 0.9rem;">
-                🛡️ TERPERCAYA SEJAK 1993
-            </div>
+        <div class="trust-seal">
+            <p>Kepercayaan Anda adalah prioritas utama kami</p>
+            <div class="trust-badge">🛡️ TERPERCAYA SEJAK 1993</div>
         </div>
     </div>
 </section>
