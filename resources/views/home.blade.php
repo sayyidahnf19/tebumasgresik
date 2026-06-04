@@ -750,7 +750,7 @@
 
             <div class="cta-buttons">
 
-                <a href="https://wa.me/6281234567890"
+                <a href="https://wa.me/6287702885164"
                    target="_blank"
                    class="cta-btn cta-btn-primary">
 
@@ -790,9 +790,9 @@
                         <div>
                             <h5>WhatsApp</h5>
 
-                            <a href="https://wa.me/6281234567890"
+                            <a href="https://wa.me/6287702885164"
                                target="_blank">
-                                +62 812 3456 7890
+                                +62 877 0288 5164
                             </a>
 
                             <p>

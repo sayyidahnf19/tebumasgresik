@@ -733,16 +733,16 @@
                     </p>
 
                     <a
-                        href="https://wa.me/6281234567890"
+                        href="https://wa.me/6287702885164"
                         class="contact-main-number"
                     >
-                        +62 812 3456 7890
+                        +62 877 0288 5164
                     </a>
 
                     <br>
 
                     <a
-                      href="https://wa.me/6281234567890"
+                      href="https://wa.me/6287702885164"
                       target="_blank"
                       class="contact-main-btn"
                     >
@@ -964,7 +964,7 @@
 
                             <input
                                 type="tel"
-                                placeholder="+62 812 xxxx xxxx"
+                                placeholder="+62 87702885164"
                                 required
                             >
 
@@ -1616,7 +1616,7 @@
             <div class="contact-cta-actions">
 
                 <a 
-                  href="https://wa.me/6281234567890"
+                  href="https://wa.me/6287702885164"
                   target="_blank"
                   class="contact-cta-primary"
                 >
