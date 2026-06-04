@@ -26,6 +26,7 @@
     <link rel="manifest" href="{{ asset('img/favicons/manifest.json') }}">
     <meta name="msapplication-TileImage" content="{{ asset('img/LogoTM.png') }}">
     <meta name="theme-color" content="#ffffff">
+    <meta name="google-site-verification" content="QbHlAWqwd9LaB9gHXNHQpIgmZWkB7RP8dpsLtJ1PNjs" />
 
     <!-- ===============================================-->
     <!--    Stylesheets-->
