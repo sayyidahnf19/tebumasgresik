@@ -45,7 +45,7 @@
                     <h5 class="footer-title">Hubungi Kami</h5>
                     <div class="footer-card">
                         <p class="footer-label">WhatsApp</p>
-                        <a class="footer-contact" href="https://wa.me/6281234567890" target="_blank">+62 812-3456-7890</a>
+                        <a class="footer-contact" href="https://wa.me/6287702885164" target="_blank">+62 877-0288-5164</a>
                     </div>
                     <div class="footer-card">
                         <p class="footer-label">Email</p>
