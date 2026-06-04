@@ -46,6 +46,10 @@
         "cache-control": "public, max-age=31536000"
       }
     },
+        {
+      "src": "/sitemap.xml",
+      "dest": "/sitemap.xml"
+    },
     {
       "src": "/robots.txt",
       "dest": "/robots.txt"
