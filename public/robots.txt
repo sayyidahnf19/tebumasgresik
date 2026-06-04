@@ -1,2 +1,4 @@
 User-agent: *
-Disallow:
+Allow: /
+
+Sitemap: https://tebumasgresik.vercel.app/sitemap.xml
