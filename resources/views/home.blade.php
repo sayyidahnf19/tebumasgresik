@@ -4,34 +4,320 @@
 
 @section('content')
 
+<style>
+    /* Hero Section Styling */
+    section[style*="padding-top: 0"] {
+        background: transparent;
+        padding-top: 2rem !important;
+        padding-bottom: 3rem !important;
+    }
+
+    .hero-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 3rem;
+        min-height: 560px;
+    }
+
+    .hero-image-col {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 1 1 60%;
+    }
+
+    .hero-img {
+        width: clamp(480px, 55vw, 760px);
+        max-width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .hero-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1.5rem;
+        flex: 1 1 40%;
+        max-width: 500px;
+    }
+
+    .hero-subtitle {
+        color: #F1A501;
+        font-size: clamp(0.85rem, 2vw, 1rem);
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        margin: 0;
+    }
+
+    .hero-title {
+        font-size: clamp(1.8rem, 5vw, 2.8rem);
+        font-weight: 700;
+        line-height: 1.2;
+        color: #14183E;
+        margin: 0.5rem 0;
+        word-spacing: 0.05em;
+    }
+
+    .hero-description {
+        font-size: clamp(0.95rem, 2vw, 1.1rem);
+        line-height: 1.7;
+        color: #555;
+        margin: 0;
+        font-weight: 500;
+    }
+
+    .hero-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin-top: 0.5rem;
+    }
+
+    .hero-buttons .btn {
+        font-size: clamp(0.9rem, 2vw, 1rem);
+        padding: clamp(0.6rem, 2vw, 0.75rem) clamp(1.2rem, 3vw, 1.5rem);
+        border-radius: 6px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        white-space: nowrap;
+    }
+
+    .hero-buttons .btn-primary {
+        background: linear-gradient(135deg, #F1A501 0%, #DF6951 100%);
+        border: none;
+        box-shadow: 0 4px 15px rgba(241, 165, 1, 0.3);
+    }
+
+    .hero-buttons .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(241, 165, 1, 0.4);
+    }
+
+    .hero-buttons .btn-outline-primary {
+        border: 2px solid #F1A501;
+        color: #F1A501;
+        background: transparent;
+    }
+
+    .hero-buttons .btn-outline-primary:hover {
+        background: #F1A501;
+        color: white;
+    }
+
+    .destination-shape {
+        position: absolute;
+        top: 24px;
+
+    /* Service cards — reduce visual footprint to a professional size */
+    .service-section .col-lg-4 {
+        display: flex;
+        justify-content: center;
+    }
+
+    .service-section .service-card {
+        width: 100%;
+        max-width: 360px;
+        padding: 1.1rem 1.25rem;
+        border-radius: 12px;
+        box-shadow: 0 6px 18px rgba(20,24,62,0.06);
+        transition: transform .18s ease, box-shadow .18s ease;
+        display: flex;
+        flex-direction: column;
+        gap: .75rem;
+        align-items: stretch;
+        min-height: 300px;
+    }
+
+    .service-section .service-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 10px 26px rgba(20,24,62,0.08);
+    }
+
+    .service-image-wrapper {
+        text-align: center;
+        padding-top: 0.25rem;
+        padding-bottom: 0.25rem;
+    }
+
+    .service-image-wrapper img {
+        width: 120px;
+        height: auto;
+        object-fit: contain;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .service-content h4 {
+        font-size: 1.08rem;
+        margin: 0 0 0.35rem 0;
+        font-weight: 700;
+        color: #14183E;
+    }
+
+    .service-content p {
+        font-size: 0.95rem;
+        color: #505050;
+        margin: 0 0 0.6rem 0;
+        line-height: 1.5;
+    }
+
+    .service-tags span {
+        display: inline-block;
+        font-size: 0.78rem;
+        padding: 0.25rem 0.45rem;
+        background: rgba(20,24,62,0.04);
+        border-radius: 6px;
+        margin-right: 6px;
+        color: #333;
+    }
+
+    @media (max-width: 768px) {
+        .service-section .service-card {
+            max-width: 320px;
+            padding: 0.9rem 1rem;
+            min-height: auto;
+        }
+
+        .service-image-wrapper img {
+            width: 88px;
+        }
+
+        .service-content h4 { font-size: 1rem; }
+        .service-content p  { font-size: 0.92rem; }
+    }
+        right: -60px;
+        width: 220px;
+        opacity: 0.16;
+        pointer-events: none;
+        transform: translateY(0);
+    }
+
+    .service-btn {
+        display: inline-block;
+        background: linear-gradient(135deg, #F1A501 0%, #DF6951 100%);
+        color: white !important;
+        padding: 0.65rem 1.5rem;
+        border-radius: 6px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(241, 165, 1, 0.3);
+    }
+
+    .service-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(241, 165, 1, 0.4);
+        color: white !important;
+    }
+
+    @media (max-width: 1200px) {
+        .destination-shape {
+            display: none;
+        }
+    }
+
+    /* Responsive Design */
+    @media (max-width: 1024px) {
+        section[style*="padding-top: 0"] {
+            padding-top: 1.5rem !important;
+            padding-bottom: 2.5rem !important;
+        }
+
+        .hero-container {
+            min-height: 400px;
+            gap: 1.5rem;
+        }
+    }
+
+    @media (max-width: 768px) {
+        section[style*="padding-top: 0"] {
+            padding-top: 1rem !important;
+            padding-bottom: 2rem !important;
+        }
+
+        .hero-container {
+            flex-direction: column;
+            min-height: auto;
+            text-align: center;
+        }
+
+        .hero-image-col {
+            order: -1;
+        }
+
+        .hero-content {
+            align-items: center;
+        }
+
+        .hero-title {
+            margin-top: 1rem;
+        }
+
+        .hero-buttons {
+            justify-content: center;
+            margin-top: 1rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        section[style*="padding-top: 0"] {
+            padding-top: 0.75rem !important;
+            padding-bottom: 1.5rem !important;
+        }
+
+        .hero-img {
+            width: clamp(280px, 70vw, 360px);
+            max-width: 100%;
+        }
+
+        .hero-buttons {
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .hero-buttons .btn {
+            width: 100%;
+        }
+    }
+
+    /* About stats: make primary number (e.g. 30+) white */
+    .about-stat-card.primary h3,
+    .about-stat-card.primary strong {
+        color: #ffffff !important;
+    }
+</style>
+
 <!-- ============================================-->
 <!-- <section> Hero Section ============================-->
 <section style="padding-top: 0; padding-bottom: 1.5rem;">
-    <div class="bg-holder" style="background-image:url({{ asset('img/hero/hero-bg.svg') }})">
-    </div>
-
     <div class="container">
-        <div class="row align-items-start justify-content-between gx-0 gy-4">
-            <div class="col-12 col-md-5 col-lg-6 order-0 order-md-1 text-center text-md-end px-0 px-md-3">
-                <img class="hero-img" src="{{ asset('img/hero/prod.gif') }}" alt="hero-header" style="width: 100%; max-width: 420px; height: auto; margin: 0 auto;" />
+        <div class="hero-container">
+            <!-- Image Column -->
+            <div class="hero-image-col">
+                <img class="hero-img" src="{{ asset('img/hero/prod.gif') }}" alt="Songkok Berkualitas Tebu Mas" />
             </div>
-            <div class="col-12 col-md-7 col-lg-6 text-md-start text-center py-4 pe-md-5">
-                <h4 class="fw-bold text-danger mb-3">{{ $heroTitle ?? 'Produsen Songkok Berkualitas dari Gresik' }}</h4>
-                <h3 class="hero-title">{{ $heroSubtitle ?? 'Songkok Premium, Untuk Ibadah & Acara Resmi' }}</h3>
-                <p class="mb-4 fw-medium">{{ $heroDescription ?? 'Tebu Mas menyediakan songkok AC, non AC, dan full AC.' }}
-                {{ $heroDescriptionCont ?? 'Dengan bahan pilihan dan jahitan rapi' }}
+
+            <!-- Content Column -->
+            <div class="hero-content">
+                <p class="hero-subtitle">{{ $heroTitle ?? 'Produsen Songkok Berkualitas dari Gresik' }}</p>
+                <h1 class="hero-title">{{ $heroSubtitle ?? 'Songkok Premium, Untuk Ibadah & Acara Resmi' }}</h1>
+                <p class="hero-description">{{ $heroDescription ?? 'Tebu Mas menyediakan songkok AC, non AC, dan full AC.' }}
+                {{ $heroDescriptionCont ?? 'Dengan bahan pilihan dan jahitan rapi.' }}
                 {{ $heroDescriptionEnd ?? 'Cocok untuk penggunaan harian maupun acara resmi.' }}</p>
-                <div class="d-flex flex-column flex-sm-row justify-content-center justify-content-md-start gap-3">
-                    <a class="btn btn-primary btn-lg border-0 primary-btn-shadow" href="{{ route('products') }}" role="button">Lihat Product</a>
-                    <a class="btn btn-outline-primary btn-lg" href="#tentang-kami" role="button">Tentang Kami</a>
+
+                <div class="hero-buttons">
+                    <a class="btn btn-primary" href="{{ route('products') }}" role="button">Lihat Produk</a>
+                    <a class="btn btn-outline-primary" href="#tentang-kami" role="button">Tentang Kami</a>
                 </div>
 
-                    <!-- Modal -->
-                    <div class="modal fade" id="popupVideo" tabindex="-1" aria-labelledby="popupVideo" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered modal-lg">
-                            <div class="modal-content">
-                                <iframe id="popupVideoIframe" class="rounded" style="width:100%;max-height:500px;" height="500px" src="" data-src="https://www.youtube.com/embed/_lhdhL4UDIo" title="YouTube video player" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"></iframe>
-                            </div>
+                <!-- Modal -->
+                <div class="modal fade" id="popupVideo" tabindex="-1" aria-labelledby="popupVideo" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content">
+                            <iframe id="popupVideoIframe" class="rounded" style="width:100%;max-height:500px;" height="500px" src="" data-src="https://www.youtube.com/embed/_lhdhL4UDIo" title="YouTube video player" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"></iframe>
                         </div>
                     </div>
                 </div>
@@ -59,8 +345,6 @@
             <!-- CARD 1 -->
             <div class="col-lg-4 col-md-6">
                 <div class="service-card">
-
-                    <div class="service-badge">POLOS</div>
 
                     <div class="service-image-wrapper">
                         <img src="{{ asset('img/category/prodlm.png') }}" alt="Songkok Non AC">
@@ -91,8 +375,6 @@
             <div class="col-lg-4 col-md-6">
                 <div class="service-card">
 
-                    <div class="service-badge">SEDANG</div>
-
                     <div class="service-image-wrapper">
                         <img src="{{ asset('img/category/ac.png') }}" alt="Songkok AC">
                     </div>
@@ -121,8 +403,6 @@
             <!-- CARD 3 -->
             <div class="col-lg-4 col-md-6">
                 <div class="service-card">
-
-                    <div class="service-badge">PREMIUM</div>
 
                     <div class="service-image-wrapper">
                         <img src="{{ asset('img/category/fullac.png') }}" alt="Songkok Full AC">
@@ -167,7 +447,7 @@
     <!-- IMAGE -->
     <div class="about-image-side">
 
-        <div class="about-image-card">
+        <div class="about-image-card no-bg">
 
             <div class="about-badge">
                 EST. 1993
@@ -275,7 +555,7 @@
     <!-- IMAGE -->
     <div class="about-image-side second-image">
 
-        <div class="about-image-card">
+        <div class="about-image-card no-bg">
 
             <img
                 src="{{ asset('img/category/labelpg.png') }}"
@@ -297,7 +577,7 @@
 <!-- <section> Destinations Section ============================-->
 <section class="pt-5" id="destination">
     <div class="container">
-        <div class="position-absolute start-100 bottom-0 translate-middle-x d-none d-xl-block ms-xl-n4">
+        <div class="destination-shape d-none d-xl-block">
             <img src="{{ asset('img/dest/shape.svg') }}" alt="destination" />
         </div>
         <div class="mb-7 text-center">
@@ -357,7 +637,7 @@
         <div class="row g-4 trust-stat-grid">
             <div class="col-6 col-lg-3">
                 <article class="trust-stat-card">
-                    <strong>30+</strong>
+                    <strong style="color: white;">30+</strong>
                     <span>TAHUN BERPENGALAMAN</span>
                     <small>Handmade sejak 1993</small>
                 </article>
@@ -595,8 +875,9 @@
                 <div class="maps-card">
 
                     <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.6548765432097!2d112.6463!3d-7.17891!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7799c3d3d3d3d!2sTebu%20Mas!5e0!3m2!1sid!2sid!4v1640000000000"
-                        allowfullscreen=""
+                        src="https://www.google.com/maps?q=Jl.+Sindujoyo+2+A+No.+6+Kroman+Gresik&output=embed"
+                        title="Lokasi Tebu Mas Gresik"
+                        allowfullscreen
                         loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade">
                     </iframe>

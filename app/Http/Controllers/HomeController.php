@@ -20,7 +20,7 @@ class HomeController extends Controller
 
         // Services Section Data
         $servicesLabel = 'Koleksi Songkok Tebu Mas';
-        $servicesTitle = 'Pilih jenis songkok sesuai kebutuhan Anda';
+        $servicesTitle = 'Pilih Jenis Songkok Sesuai Kebutuhan Anda';
         $services = [
             [
                 'icon' => 'img/category/icon1.png',

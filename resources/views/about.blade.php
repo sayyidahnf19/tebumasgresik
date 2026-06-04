@@ -1,1689 +1,1209 @@
 ﻿@extends('layouts.app')
 
 @section('title', 'Tentang Kami - Tebu Mas Gresik')
-@section('description', 'Mengenal Tebu Mas Gresik - Produsen Songkok Berkualitas Tinggi dengan Pengalaman 30+ Tahun')
 
 @section('content')
-
-<!-- ============================================-->
-<!-- ABOUT HERO SECTION -->
-<!-- ============================================-->
-
 <style>
-
-/* ============================================
-   ABOUT HERO
-============================================ */
-
-.about-hero-section {
-  position: relative;
-  overflow: hidden;
-
-  padding: 8rem 0 6rem;
-  margin-top: 65px;
-
-  background:
-    linear-gradient(
-      180deg,
-      #faf8f7 0%,
-      #ffffff 100%
-    );
-}
-
-/* ============================================
-   BACKGROUND
-============================================ */
-
-.about-hero-blur {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(80px);
-  z-index: 1;
-}
-
-.about-hero-blur-1 {
-  top: -180px;
-  right: -120px;
-
-  width: 380px;
-  height: 380px;
-
-  background: rgba(217,112,96,0.12);
-}
-
-.about-hero-blur-2 {
-  bottom: -160px;
-  left: -120px;
-
-  width: 300px;
-  height: 300px;
-
-  background: rgba(198,86,80,0.08);
-}
-
-.about-hero-section .container {
-  position: relative;
-  z-index: 2;
-}
-
-/* ============================================
-   CONTENT
-============================================ */
-
-.about-hero-content {
-  padding-right: 2rem;
-}
-
-.about-hero-label {
-  display: inline-flex;
-  align-items: center;
-
-  padding: 0.75rem 1.3rem;
-  margin-bottom: 1.6rem;
-
-  border-radius: 999px;
-
-  background: rgba(217,112,96,0.10);
-
-  color: #D97060;
-
-  font-size: 0.78rem;
-  font-weight: 800;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-}
-
-.about-hero-content h1 {
-  color: #14183E;
-
-  font-size: 4.2rem;
-  font-weight: 900;
-  line-height: 1.05;
-
-  margin-bottom: 1.5rem;
-}
-
-.about-hero-content p {
-  max-width: 580px;
-
-  color: #667085;
-
-  font-size: 1rem;
-  line-height: 1.9;
-
-  margin-bottom: 2.3rem;
-}
-
-/* ============================================
-   STATS
-============================================ */
-
-.about-hero-stats {
-  display: flex;
-  gap: 1rem;
-
-  margin-bottom: 2.3rem;
-}
-
-.about-hero-stat {
-  min-width: 170px;
-
-  padding: 1.4rem 1.5rem;
-
-  border-radius: 22px;
-
-  background: rgba(255,255,255,0.95);
-
-  border: 1px solid rgba(0,0,0,0.05);
-
-  box-shadow:
-    0 15px 35px rgba(0,0,0,0.05);
-}
-
-.about-hero-stat h3 {
-  color: #D97060;
-
-  font-size: 2rem;
-  font-weight: 900;
-
-  margin-bottom: 0.35rem;
-}
-
-.about-hero-stat span {
-  color: #667085;
-
-  font-size: 0.9rem;
-  font-weight: 600;
-}
-
-/* ============================================
-   BUTTON
-============================================ */
-
-.about-hero-actions {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
-.about-btn-primary,
-.about-btn-secondary {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  padding: 1rem 2rem;
-
-  border-radius: 16px;
-
-  text-decoration: none;
-
-  font-size: 0.95rem;
-  font-weight: 700;
-
-  transition: all 0.3s ease;
-}
-
-.about-btn-primary {
-  background: #D97060;
-  color: #fff;
-
-  box-shadow:
-    0 15px 30px rgba(217,112,96,0.25);
-}
-
-.about-btn-primary:hover {
-  transform: translateY(-4px);
-
-  background: #C65650;
-  color: #fff;
-}
-
-.about-btn-secondary {
-  background: #fff;
-  color: #14183E;
-
-  border: 1px solid rgba(20,24,62,0.08);
-}
-
-.about-btn-secondary:hover {
-  transform: translateY(-4px);
-
-  background: #14183E;
-  color: #fff;
-}
-
-/* ============================================
-   IMAGE SIDE
-============================================ */
-
-.about-hero-gallery {
-  display: flex;
-  flex-direction: column;
-  gap: 1.2rem;
-}
-
-/* MAIN IMAGE */
-
-.about-main-image {
-  position: relative;
-
-  border-radius: 32px;
-  overflow: hidden;
-
-  background: #fff;
-
-  padding: 1rem;
-
-  box-shadow:
-    0 30px 70px rgba(0,0,0,0.08);
-}
-
-.about-main-image img {
-  width: 100%;
-  height: auto;
-
-  display: block;
-
-  border-radius: 24px;
-
-  object-fit: contain;
-}
-
-/* SMALL GRID */
-
-.about-small-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.2rem;
-}
-
-.about-small-card {
-  background: #fff;
-
-  border-radius: 24px;
-
-  padding: 1rem;
-
-  box-shadow:
-    0 20px 45px rgba(0,0,0,0.06);
-
-  transition: all 0.3s ease;
-}
-
-.about-small-card:hover {
-  transform: translateY(-6px);
-}
-
-.about-small-card img {
-  width: 100%;
-  height: 220px;
-
-  object-fit: contain;
-
-  display: block;
-}
-
-/* ============================================
-   TABLET
-============================================ */
-
-@media (max-width: 1023px) {
-
-  .about-hero-section {
-    padding: 7rem 0 5rem;
-  }
-
-  .about-hero-content {
-    padding-right: 0;
-
-    text-align: center;
-  }
-
-  .about-hero-content p {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .about-hero-content h1 {
-    font-size: 3.2rem;
-  }
-
-  .about-hero-stats {
-    justify-content: center;
-  }
-
-  .about-hero-actions {
-    justify-content: center;
-  }
-
-  .about-hero-gallery {
-    margin-top: 2rem;
-  }
-
-}
-
-/* ============================================
-   MOBILE
-============================================ */
-
-@media (max-width: 768px) {
-
-  .about-hero-section {
-    padding: 6rem 0 4rem;
-    margin-top: 55px;
-  }
-
-  .about-hero-content h1 {
-    font-size: 2.3rem;
-    line-height: 1.18;
-  }
-
-  .about-hero-content p {
-    font-size: 0.95rem;
-    line-height: 1.8;
-  }
-
-  .about-hero-stats {
-    flex-direction: column;
-  }
-
-  .about-hero-stat {
-    width: 100%;
-  }
-
-  .about-hero-actions {
-    flex-direction: column;
-  }
-
-  .about-btn-primary,
-  .about-btn-secondary {
-    width: 100%;
-  }
-
-  .about-main-image {
-    border-radius: 24px;
-    padding: 0.8rem;
-  }
-
-  .about-main-image img {
-    border-radius: 18px;
-  }
-
-  .about-small-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .about-small-card {
-    padding: 0.8rem;
-    border-radius: 20px;
-  }
-
-  .about-small-card img {
-    height: 180px;
-  }
-
-}
-/* ============================================
-   TABLET IMPROVEMENT
-============================================ */
-
-@media (max-width: 1023px) {
-
-  .about-hero-section {
-    padding: 7rem 0 5rem;
-  }
-
-  .about-hero-content {
-    max-width: 100%;
-    text-align: center;
-
-    margin-bottom: 2rem;
-  }
-
-  .about-hero-label {
-    margin-inline: auto;
-  }
-
-  .about-hero-content h1 {
-    font-size: 2.8rem;
-    line-height: 1.18;
-
-    margin-bottom: 1.4rem;
-  }
-
-  .about-hero-content p {
-    max-width: 720px;
-
-    margin-inline: auto;
-    margin-bottom: 2rem;
-
-    font-size: 1rem;
-  }
-
-  .about-hero-stats {
-    justify-content: center;
-    gap: 1rem;
-
-    margin-bottom: 2rem;
-  }
-
-  .about-hero-stat {
-    max-width: 220px;
-  }
-
-  .about-hero-actions {
-    justify-content: center;
-  }
-
-  /* IMAGE AREA */
-  .about-hero-gallery {
-    margin-top: 1rem;
-  }
-
-  .about-hero-main-image {
-    height: auto;
-    padding: 2rem;
-
-    border-radius: 28px;
-  }
-
-  .about-hero-main-image img {
-    width: 100%;
-    height: auto;
-
-    object-fit: contain;
-  }
-
-  .about-hero-small-wrapper {
-    gap: 1rem;
-  }
-
-  .about-hero-small-image {
-    height: auto;
-
-    padding: 1.2rem;
-  }
-
-  .about-hero-small-image img {
-    width: 100%;
-    height: auto;
-
-    object-fit: contain;
-  }
-
-}
-
-
-/* ============================================
-   MOBILE IMPROVEMENT
-============================================ */
-
-@media (max-width: 768px) {
-
-  .about-hero-section {
-    padding: 6rem 0 4rem;
-    margin-top: 55px;
-  }
-
-  .about-hero-content {
-    text-align: center;
-  }
-
-  .about-hero-content h1 {
-    font-size: 2rem;
-    line-height: 1.25;
-
-    margin-bottom: 1rem;
-  }
-
-  .about-hero-content p {
-    font-size: 0.95rem;
-    line-height: 1.8;
-
-    margin-bottom: 1.8rem;
-  }
-
-  /* STATS */
-  .about-hero-stats {
-    flex-direction: column;
-    align-items: center;
-
-    gap: 1rem;
-  }
-
-  .about-hero-stat {
-    width: 100%;
-    max-width: 100%;
-
-    padding: 1.2rem;
-    border-radius: 20px;
-  }
-
-  .about-hero-stat h3 {
-    font-size: 1.8rem;
-  }
-
-  /* BUTTONS */
-  .about-hero-actions {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .about-primary-btn,
-  .about-secondary-btn {
-    width: 100%;
-
-    padding: 1rem 1.4rem;
-    border-radius: 14px;
-  }
-
-  /* IMAGES */
-  .about-hero-gallery {
-    gap: 1rem;
-  }
-
-  .about-hero-main-image {
-    height: auto;
-
-    padding: 1.3rem;
-    border-radius: 24px;
-  }
-
-  .about-hero-main-image img {
-    width: 100%;
-    height: auto;
-
-    object-fit: contain;
-  }
-
-  .about-hero-small-wrapper {
-    grid-template-columns: 1fr 1fr;
-    gap: 0.8rem;
-  }
-
-  .about-hero-small-image {
-    height: auto;
-
-    padding: 1rem;
-    border-radius: 18px;
-  }
-
-  .about-hero-small-image img {
-    width: 100%;
-    height: auto;
-
-    object-fit: contain;
-  }
-
-}
-
-</style>
-
-<section class="about-hero-section">
-
-    <!-- BLUR -->
-    <div class="about-hero-blur about-hero-blur-1"></div>
-    <div class="about-hero-blur about-hero-blur-2"></div>
-
-    <div class="container">
-
-        <div class="row align-items-center g-5">
-
-            <!-- LEFT -->
-            <div class="col-lg-6">
-
-                <div class="about-hero-content">
-
-                    <span class="about-hero-label">
-                        Tentang Tebu Mas
-                    </span>
-
-                    <h1>
-                        Songkok Premium
-                        dengan Sentuhan
-                        Elegan & Profesional
-                    </h1>
-
-                    <p>
-                        Tebu Mas Gresik menghadirkan songkok berkualitas
-                        sejak 1993 dengan desain elegan, jahitan rapi,
-                        dan kenyamanan maksimal untuk kebutuhan formal
-                        maupun penggunaan harian.
-                    </p>
-
-                    <!-- STATS -->
-                    <div class="about-hero-stats">
-
-                        <div class="about-hero-stat">
-                            <h3>30+</h3>
-                            <span>Tahun Pengalaman</span>
-                        </div>
-
-                        <div class="about-hero-stat">
-                            <h3>10K+</h3>
-                            <span>Pelanggan Puas</span>
-                        </div>
-
-                    </div>
-
-                    <!-- BUTTON -->
-                    <div class="about-hero-actions">
-
-                        <a href="{{ route('products') }}"
-                           class="about-btn-primary">
-
-                            Lihat Koleksi
-
-                        </a>
-
-                        <a href="https://wa.me/6281234567890"
-                           class="about-btn-secondary">
-
-                            Hubungi Kami
-
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-            <!-- RIGHT -->
-            <div class="col-lg-6">
-
-                <div class="about-hero-gallery">
-
-                    <!-- MAIN -->
-                    <div class="about-main-image">
-
-                        <img
-                            src="{{ asset('img/hero/prod.gif') }}"
-                            alt="Produksi Songkok"
-                        >
-
-                    </div>
-
-                    <!-- SMALL -->
-                    <div class="about-small-grid">
-
-                        <div class="about-small-card">
-
-                            <img
-                                src="{{ asset('img/category/Songkok.png') }}"
-                                alt="Songkok Premium"
-                            >
-
-                        </div>
-
-                        <div class="about-small-card">
-
-                            <img
-                                src="{{ asset('img/category/labelpg.png') }}"
-                                alt="Label Premium"
-                            >
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- ============================================-->
-<!-- SHOWCASE SECTION -->
-<!-- ============================================-->
-<section class="about-showcase-section">
-
-    <div class="container">
-
-        <!-- HEADER -->
-        <div class="about-showcase-header">
-
-            <span class="about-showcase-label">
-                Produk Unggulan
-            </span>
-
-            <h2>
-                Koleksi Songkok Premium <br>
-                dengan Karakter Berbeda
-            </h2>
-
-            <p>
-                Setiap produk memiliki karakteristik tersendiri mulai dari
-                desain klasik formal hingga ventilasi modern untuk kenyamanan
-                maksimal.
-            </p>
-
-        </div>
-
-        <!-- TOP FEATURED -->
-        <div class="about-featured-product">
-
-            <!-- IMAGE -->
-            <div class="about-featured-image">
-                <img src="{{ asset('img/category/ac.png') }}"
-                     alt="Songkok AC Premium">
-            </div>
-
-            <!-- CONTENT -->
-            <div class="about-featured-content">
-
-                <span class="featured-badge">
-                    MOST POPULAR
-                </span>
-
-                <h3>
-                    Songkok AC Premium
-                </h3>
-
-                <p>
-                    Dilengkapi ventilasi udara modern untuk memberikan
-                    kenyamanan maksimal tanpa mengurangi kesan elegan.
-                    Cocok digunakan harian maupun acara formal.
-                </p>
-
-                <!-- FEATURES -->
-                <div class="featured-features">
-
-                    <div class="featured-item">
-                        <strong>Ventilasi Adem</strong>
-                        <span>Sirkulasi udara lebih nyaman</span>
-                    </div>
-
-                    <div class="featured-item">
-                        <strong>Desain Premium</strong>
-                        <span>Tampilan lebih modern & eksklusif</span>
-                    </div>
-
-                    <div class="featured-item">
-                        <strong>Nyaman Dipakai</strong>
-                        <span>Ringan digunakan seharian</span>
-                    </div>
-
-                </div>
-
-                <a href="{{ route('products') }}"
-                   class="featured-btn">
-                    Lihat Produk
-                </a>
-
-            </div>
-
-        </div>
-
-        <!-- SMALL CARDS -->
-        <div class="about-showcase-grid">
-
-            <!-- CARD -->
-            <div class="showcase-card minimal">
-
-                <div class="showcase-image">
-                    <img src="{{ asset('img/category/nonac.png') }}"
-                         alt="Songkok Non AC">
-                </div>
-
-                <div class="showcase-content">
-
-                    <span class="showcase-type">
-                        Classic Edition
-                    </span>
-
-                    <h4>Songkok Non AC</h4>
-
-                    <p>
-                        Model klasik dengan desain formal
-                        dan tampilan lebih kokoh.
-                    </p>
-
-                </div>
-
-            </div>
-
-            <!-- CARD -->
-            <div class="showcase-card premium">
-
-                <div class="premium-top">
-                    <span>PREMIUM</span>
-                </div>
-
-                <div class="showcase-image">
-                    <img src="{{ asset('img/category/labelpg.png') }}"
-                         alt="Label Premium">
-                </div>
-
-                <div class="showcase-content">
-
-                    <h4>Label Premium</h4>
-
-                    <p>
-                        Identitas eksklusif dengan
-                        detail finishing berkualitas tinggi.
-                    </p>
-
-                </div>
-
-            </div>
-
-            <!-- CARD -->
-            <div class="showcase-card dark-card">
-
-                <div class="showcase-image dark">
-                    <img src="{{ asset('img/category/Songkok.png') }}"
-                         alt="Koleksi Eksklusif">
-                </div>
-
-                <div class="showcase-content">
-
-                    <span class="showcase-type light">
-                        Exclusive Collection
-                    </span>
-
-                    <h4>Koleksi Eksklusif</h4>
-
-                    <p>
-                        Kombinasi desain modern,
-                        elegan, dan nyaman digunakan.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-</section>
-
-<style>
-
-/* ============================================
-   SHOWCASE SECTION
-============================================ */
-
-.about-showcase-section{
-    padding: 7rem 0;
-    background: #f8f8f8;
-}
-
-/* HEADER */
-.about-showcase-header{
-    text-align: center;
-    max-width: 760px;
-    margin: 0 auto 5rem;
-}
-
-.about-showcase-label{
-    display: inline-block;
-
-    margin-bottom: 1rem;
-
-    color: #D97060;
-
-    font-size: 0.82rem;
-    font-weight: 800;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-}
-
-.about-showcase-header h2{
-    color: #14183E;
-
-    font-size: 3rem;
-    font-weight: 900;
-    line-height: 1.2;
-
-    margin-bottom: 1.4rem;
-}
-
-.about-showcase-header p{
-    color: #666;
-
-    font-size: 1rem;
-    line-height: 1.9;
-}
-
-/* ============================================
-   FEATURED PRODUCT
-============================================ */
-
-.about-featured-product{
-    display: grid;
-    grid-template-columns: 1.1fr 1fr;
-    gap: 0;
-
-    overflow: hidden;
-
-    border-radius: 36px;
-
-    background: #fff;
-
-    margin-bottom: 3rem;
-
-    box-shadow:
-        0 30px 80px rgba(0,0,0,0.08);
-}
-
-/* IMAGE */
-.about-featured-image{
-    position: relative;
-    min-height: 580px;
-
-    background:
-        linear-gradient(
-            135deg,
-            #f7efeb 0%,
-            #fff 100%
-        );
-}
-
-.about-featured-image img{
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-
-    padding: 3rem;
-}
-
-/* CONTENT */
-.about-featured-content{
-    padding: 4rem;
-}
-
-.featured-badge{
-    display: inline-flex;
-
-    padding: 0.7rem 1rem;
-
-    border-radius: 999px;
-
-    background: rgba(217,112,96,0.12);
-
-    color: #D97060;
-
-    font-size: 0.78rem;
-    font-weight: 800;
-    letter-spacing: 1px;
-
-    margin-bottom: 1.5rem;
-}
-
-.about-featured-content h3{
-    color: #14183E;
-
-    font-size: 3rem;
-    font-weight: 900;
-    line-height: 1.15;
-
-    margin-bottom: 1.5rem;
-}
-
-.about-featured-content p{
-    color: #666;
-
-    font-size: 1rem;
-    line-height: 1.9;
-
-    margin-bottom: 2rem;
-}
-
-/* FEATURES */
-.featured-features{
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-
-    margin-bottom: 2.5rem;
-}
-
-.featured-item{
-    padding: 1rem 1.2rem;
-
-    border-radius: 18px;
-
-    background: #faf7f5;
-
-    border: 1px solid rgba(217,112,96,0.08);
-}
-
-.featured-item strong{
-    display: block;
-
-    color: #14183E;
-
-    font-size: 1rem;
-    font-weight: 800;
-
-    margin-bottom: 0.3rem;
-}
-
-.featured-item span{
-    color: #666;
-    font-size: 0.9rem;
-}
-
-/* BUTTON */
-.featured-btn{
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-
-    padding: 1rem 2rem;
-
-    border-radius: 16px;
-
-    background: #D97060;
-    color: #fff;
-
-    text-decoration: none;
-
-    font-size: 0.95rem;
-    font-weight: 800;
-
-    transition: all 0.3s ease;
-}
-
-.featured-btn:hover{
-    background: #C65650;
-    color: #fff;
-
-    transform: translateY(-4px);
-}
-
-/* ============================================
-   SMALL CARDS
-============================================ */
-
-.about-showcase-grid{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 1.5rem;
-}
-
-/* CARD BASE */
-.showcase-card{
-    overflow: hidden;
-    border-radius: 28px;
-
-    transition: all 0.35s ease;
-}
-
-.showcase-card:hover{
-    transform: translateY(-8px);
-}
-
-/* IMAGE */
-.showcase-image{
-    height: 260px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    background: #fff;
-}
-
-.showcase-image img{
-    width: 100%;
-    height: 100%;
-
-    object-fit: contain;
-
-    padding: 2rem;
-}
-
-/* CONTENT */
-.showcase-content{
-    padding: 2rem;
-}
-
-.showcase-content h4{
-    font-size: 1.4rem;
-    font-weight: 800;
-
-    margin-bottom: 0.8rem;
-}
-
-.showcase-content p{
-    font-size: 0.95rem;
-    line-height: 1.8;
-
-    margin: 0;
-}
-
-/* TYPE */
-.showcase-type{
-    display: inline-block;
-
-    margin-bottom: 1rem;
-
-    color: #D97060;
-
-    font-size: 0.78rem;
-    font-weight: 700;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-}
-
-.showcase-type.light{
-    color: rgba(255,255,255,0.75);
-}
-
-/* CARD 1 */
-.showcase-card.minimal{
-    background: #fff;
-
-    box-shadow:
-        0 15px 40px rgba(0,0,0,0.06);
-}
-
-/* CARD 2 */
-.showcase-card.premium{
-    background:
-        linear-gradient(
-            135deg,
-            #D97060 0%,
-            #C65650 100%
-        );
-
-    color: #fff;
-
-    box-shadow:
-        0 18px 45px rgba(217,112,96,0.22);
-}
-
-.premium-top{
-    padding: 1.2rem 1.5rem 0;
-}
-
-.premium-top span{
-    background: rgba(255,255,255,0.14);
-
-    padding: 0.55rem 1rem;
-
-    border-radius: 999px;
-
-    font-size: 0.75rem;
-    font-weight: 700;
-}
-
-.showcase-card.premium .showcase-image{
-    background: transparent;
-}
-
-.showcase-card.premium h4,
-.showcase-card.premium p{
-    color: #fff;
-}
-
-/* CARD 3 */
-.showcase-card.dark-card{
-    background: #14183E;
-    color: #fff;
-}
-
-.showcase-image.dark{
-    background:
-        linear-gradient(
-            135deg,
-            #1b204e 0%,
-            #14183E 100%
-        );
-}
-
-.showcase-card.dark-card h4,
-.showcase-card.dark-card p{
-    color: #fff;
-}
-
-/* ============================================
-   TABLET
-============================================ */
-
-@media (max-width: 991px){
-
-    .about-showcase-section{
-        padding: 5rem 0;
+    /* Hero Section */
+    .about-hero {
+        background: linear-gradient(135deg, #FFFEFE 0%, #F8FBFC 50%, #F0F4F9 100%);
+        color: #14183E;
+        padding: 120px 20px 80px;
+        position: relative;
+        overflow: hidden;
     }
 
-    .about-featured-product{
-        grid-template-columns: 1fr;
+    .about-hero::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: -5%;
+        width: 400px;
+        height: 400px;
+        background: radial-gradient(circle, rgba(241, 165, 1, 0.06) 0%, transparent 70%);
+        border-radius: 50%;
+        z-index: 0;
     }
 
-    .about-featured-image{
-        min-height: 420px;
+    .about-hero::after {
+        content: '';
+        position: absolute;
+        bottom: 10%;
+        left: -8%;
+        width: 350px;
+        height: 350px;
+        background: radial-gradient(circle, rgba(223, 105, 81, 0.04) 0%, transparent 70%);
+        border-radius: 50%;
+        z-index: 0;
     }
 
-    .about-featured-content{
-        padding: 3rem 2rem;
+    @keyframes float {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(20px); }
     }
 
-    .about-featured-content h3{
-        font-size: 2.4rem;
+    .about-hero-content {
+        position: relative;
+        z-index: 1;
+        max-width: 900px;
+        margin: 0 auto;
     }
 
-    .about-showcase-grid{
-        grid-template-columns: 1fr;
+    .about-hero h1 {
+        font-size: clamp(2.2rem, 7vw, 3.2rem);
+        font-weight: 800;
+        margin-bottom: 20px;
+        line-height: 1.25;
+        color: #14183E;
+        letter-spacing: -0.02em;
     }
 
-}
-
-/* ============================================
-   MOBILE
-============================================ */
-
-@media (max-width: 768px){
-
-    .about-showcase-header{
-        margin-bottom: 3rem;
+    .about-hero .hero-badge {
+        display: inline-block;
+        background: linear-gradient(135deg, #F1A501, #DF6951);
+        color: white;
+        padding: 8px 18px;
+        border-radius: 50px;
+        font-size: 0.85rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+        letter-spacing: 0.5px;
     }
 
-    .about-showcase-header h2{
-        font-size: 2rem;
-        line-height: 1.3;
-    }
-
-    .about-showcase-header p{
-        font-size: 0.92rem;
-    }
-
-    .about-featured-product{
-        border-radius: 26px;
-    }
-
-    .about-featured-image{
-        min-height: 300px;
-    }
-
-    .about-featured-image img{
-        padding: 1.5rem;
-    }
-
-    .about-featured-content{
-        padding: 2rem 1.4rem;
-    }
-
-    .about-featured-content h3{
-        font-size: 2rem;
-    }
-
-    .about-featured-content p{
-        font-size: 0.92rem;
-    }
-
-    .showcase-image{
-        height: 220px;
-    }
-
-    .showcase-content{
-        padding: 1.5rem;
-    }
-
-    .showcase-content h4{
-        font-size: 1.2rem;
-    }
-
-    .showcase-content p{
-        font-size: 0.9rem;
-    }
-
-}
-
-</style>
-
-<!-- ============================================-->
-<!-- CTA SECTION -->
-<!-- ============================================-->
-<section class="about-cta-section">
-
-    <!-- Background Glow -->
-    <div class="about-cta-glow about-cta-glow-1"></div>
-    <div class="about-cta-glow about-cta-glow-2"></div>
-
-    <div class="container position-relative">
-
-        <div class="about-cta-wrapper">
-
-            <span class="about-cta-label">
-                Premium Quality Since 1993
-            </span>
-
-            <h2>
-                Siap tampil lebih elegan <br>
-                dengan songkok premium Tebu Mas?
-            </h2>
-
-            <p>
-                Kami menghadirkan songkok berkualitas dengan desain elegan,
-                jahitan rapi, dan kenyamanan maksimal untuk kebutuhan formal
-                maupun penggunaan sehari-hari.
-            </p>
-
-            <!-- CTA BUTTON -->
-            <div class="about-cta-buttons">
-
-                <a href="{{ route('products') }}" class="about-cta-btn primary">
-                    Lihat Katalog
-                </a>
-
-                <a href="https://wa.me/6281234567890"
-                   target="_blank"
-                   class="about-cta-btn secondary">
-                    Hubungi Kami
-                </a>
-
-            </div>
-
-            <!-- MINI INFO -->
-            <div class="about-cta-info">
-
-                <div class="about-cta-info-item">
-                    <strong>30+</strong>
-                    <span>Tahun Pengalaman</span>
-                </div>
-
-                <div class="about-cta-info-item">
-                    <strong>10K+</strong>
-                    <span>Pelanggan Puas</span>
-                </div>
-
-                <div class="about-cta-info-item">
-                    <strong>Premium</strong>
-                    <span>Kualitas Terbaik</span>
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-</section>
-
-<style>
-
-/* ============================================
-   CTA SECTION
-============================================ */
-
-.about-cta-section{
-    position: relative;
-    overflow: hidden;
-
-    padding: 7rem 0;
-
-    background:
-        linear-gradient(
-            135deg,
-            #D97060 0%,
-            #C65650 50%,
-            #A84A40 100%
-        );
-}
-
-/* GLOW */
-.about-cta-glow{
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(10px);
-}
-
-.about-cta-glow-1{
-    width: 420px;
-    height: 420px;
-
-    top: -160px;
-    right: -120px;
-
-    background:
-        radial-gradient(
-            circle,
-            rgba(255,255,255,0.18) 0%,
-            transparent 70%
-        );
-}
-
-.about-cta-glow-2{
-    width: 320px;
-    height: 320px;
-
-    bottom: -120px;
-    left: -100px;
-
-    background:
-        radial-gradient(
-            circle,
-            rgba(255,255,255,0.12) 0%,
-            transparent 70%
-        );
-}
-
-/* WRAPPER */
-.about-cta-wrapper{
-    position: relative;
-    z-index: 2;
-
-    max-width: 920px;
-    margin: 0 auto;
-
-    text-align: center;
-
-    padding: 4rem;
-
-    border-radius: 34px;
-
-    background:
-        rgba(255,255,255,0.10);
-
-    backdrop-filter: blur(12px);
-
-    border:
-        1px solid rgba(255,255,255,0.18);
-
-    box-shadow:
-        0 30px 80px rgba(0,0,0,0.18);
-}
-
-/* LABEL */
-.about-cta-label{
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-
-    padding: 0.8rem 1.4rem;
-    margin-bottom: 1.5rem;
-
-    border-radius: 999px;
-
-    background:
-        rgba(255,255,255,0.15);
-
-    color: #fff;
-
-    font-size: 0.82rem;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-
-    border:
-        1px solid rgba(255,255,255,0.18);
-}
-
-/* TITLE */
-.about-cta-wrapper h2{
-    color: #fff;
-
-    font-size: 3.4rem;
-    font-weight: 900;
-    line-height: 1.15;
-
-    margin-bottom: 1.5rem;
-}
-
-/* TEXT */
-.about-cta-wrapper p{
-    max-width: 720px;
-    margin: 0 auto;
-
-    color:
-        rgba(255,255,255,0.88);
-
-    font-size: 1.05rem;
-    line-height: 1.9;
-
-    margin-bottom: 2.5rem;
-}
-
-/* BUTTONS */
-.about-cta-buttons{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-
-    flex-wrap: wrap;
-
-    margin-bottom: 3rem;
-}
-
-.about-cta-btn{
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-
-    min-width: 190px;
-
-    padding: 1rem 2rem;
-
-    border-radius: 16px;
-
-    text-decoration: none;
-
-    font-size: 0.95rem;
-    font-weight: 800;
-
-    transition: all 0.3s ease;
-}
-
-/* PRIMARY */
-.about-cta-btn.primary{
-    background: #fff;
-    color: #D97060;
-
-    box-shadow:
-        0 16px 35px rgba(0,0,0,0.18);
-}
-
-.about-cta-btn.primary:hover{
-    transform: translateY(-5px);
-
-    color: #D97060;
-}
-
-/* SECONDARY */
-.about-cta-btn.secondary{
-    background:
-        rgba(255,255,255,0.10);
-
-    color: #fff;
-
-    border:
-        1px solid rgba(255,255,255,0.25);
-}
-
-.about-cta-btn.secondary:hover{
-    background:
-        rgba(255,255,255,0.16);
-
-    color: #fff;
-
-    transform: translateY(-5px);
-}
-
-/* INFO */
-.about-cta-info{
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-
-    flex-wrap: wrap;
-}
-
-.about-cta-info-item{
-    min-width: 180px;
-
-    padding: 1.2rem 1rem;
-
-    border-radius: 20px;
-
-    background:
-        rgba(255,255,255,0.10);
-
-    border:
-        1px solid rgba(255,255,255,0.12);
-}
-
-.about-cta-info-item strong{
-    display: block;
-
-    color: #fff;
-
-    font-size: 1.5rem;
-    font-weight: 900;
-
-    margin-bottom: 0.4rem;
-}
-
-.about-cta-info-item span{
-    color:
-        rgba(255,255,255,0.8);
-
-    font-size: 0.9rem;
-}
-
-/* ============================================
-   TABLET
-============================================ */
-
-@media (max-width: 991px){
-
-    .about-cta-section{
-        padding: 5rem 0;
-    }
-
-    .about-cta-wrapper{
-        padding: 3rem 2rem;
-        border-radius: 28px;
-    }
-
-    .about-cta-wrapper h2{
-        font-size: 2.6rem;
-    }
-
-    .about-cta-wrapper p{
-        font-size: 0.98rem;
-    }
-
-}
-
-/* ============================================
-   MOBILE
-============================================ */
-
-@media (max-width: 768px){
-
-    .about-cta-section{
-        padding: 4rem 0;
-    }
-
-    .about-cta-wrapper{
-        padding: 2.3rem 1.3rem;
-        border-radius: 24px;
-    }
-
-    .about-cta-label{
-        font-size: 0.72rem;
-        padding: 0.7rem 1rem;
-    }
-
-    .about-cta-wrapper h2{
-        font-size: 2rem;
-        line-height: 1.3;
-    }
-
-    .about-cta-wrapper p{
-        font-size: 0.92rem;
+    .about-hero p {
+        font-size: clamp(0.95rem, 2.2vw, 1.1rem);
+        margin-bottom: 50px;
+        color: #5E6282;
         line-height: 1.8;
-
-        margin-bottom: 2rem;
+        font-weight: 500;
+        max-width: 700px;
     }
 
-    .about-cta-buttons{
+    .hero-stats {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 20px;
+        margin-top: 50px;
+    }
+
+    .stat-box {
+        background: white;
+        border: none;
+        padding: 32px 25px;
+        border-radius: 14px;
+        text-align: center;
+        box-shadow: 0 4px 16px rgba(20, 24, 62, 0.06);
+        transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .stat-box::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(90deg, #F1A501 0%, #DF6951 100%);
+    }
+
+    .stat-box:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 12px 32px rgba(20, 24, 62, 0.1);
+    }
+
+    .stat-number {
+        font-size: clamp(1.8rem, 5vw, 2.4rem);
+        font-weight: 800;
+        margin-bottom: 10px;
+        background: linear-gradient(135deg, #F1A501 0%, #DF6951 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    .stat-label {
+        font-size: 0.85rem;
+        color: #5E6282;
+        font-weight: 600;
+        letter-spacing: 0.3px;
+        line-height: 1.4;
+    }
+
+    @media (max-width: 768px) {
+        .about-hero {
+            padding: 80px 20px 60px;
+        }
+        .about-hero h1 {
+            margin-bottom: 15px;
+            font-size: 1.8rem;
+        }
+        .about-hero .hero-badge {
+            display: inline-block;
+            margin-bottom: 18px;
+        }
+        .about-hero p {
+            margin-bottom: 40px;
+            font-size: 0.95rem;
+        }
+        .hero-stats {
+            grid-template-columns: 1fr;
+            gap: 15px;
+            margin-top: 40px;
+        }
+        .stat-box {
+            padding: 26px 20px;
+        }
+        .stat-number {
+            font-size: 2rem;
+        }
+    }
+
+    /* Journey Section */
+    .journey-section {
+        padding: 100px 20px;
+        background: #FFFEFE;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .journey-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 700px;
+        height: 700px;
+        transform: translateX(-60%);
+        background: radial-gradient(circle at center, rgba(241, 165, 1, 0.08) 0%, transparent 66%);
+        z-index: 0;
+    }
+
+    .journey-section::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 520px;
+        height: 520px;
+        background: radial-gradient(circle at center, rgba(223, 105, 81, 0.08) 0%, transparent 68%);
+        z-index: 0;
+    }
+
+    .section-header {
+        text-align: center;
+        margin-bottom: 70px;
+        max-width: 720px;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        z-index: 1;
+    }
+
+    .section-header h2 {
+        font-size: clamp(1.9rem, 6vw, 3rem);
+        margin-bottom: 18px;
+        color: #14183E;
+        font-weight: 800;
+        letter-spacing: -0.01em;
+    }
+
+    .section-header p {
+        font-size: clamp(1rem, 2vw, 1.15rem);
+        color: #5E6282;
+        line-height: 1.75;
+        font-weight: 500;
+    }
+
+    .journey-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 1;
+    }
+
+    .timeline-wrapper {
+        position: relative;
+        padding: 20px 0 40px;
+    }
+
+    .timeline-line {
+        position: absolute;
+        top: 120px;
+        bottom: 120px;
+        left: 50%;
+        width: 4px;
+        background: linear-gradient(180deg, #F1A501 0%, #DF6951 50%, #F1A501 100%);
+        transform: translateX(-50%);
+        z-index: 1;
+    }
+
+    .timeline-item {
+        display: grid;
+        grid-template-columns: 1fr 90px 1fr;
+        gap: 30px;
+        align-items: center;
+        margin-bottom: 90px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .timeline-item:last-child {
+        margin-bottom: 0;
+    }
+
+    .timeline-item:nth-child(odd) .timeline-card {
+        justify-self: end;
+        text-align: left;
+    }
+
+    .timeline-item:nth-child(odd) .timeline-image {
+        justify-self: start;
+    }
+
+    .timeline-item:nth-child(even) .timeline-card {
+        justify-self: start;
+        text-align: left;
+    }
+
+    .timeline-item:nth-child(even) .timeline-image {
+        justify-self: end;
+    }
+
+    .timeline-date {
+        width: 90px;
+        height: 90px;
+        min-width: 90px;
+        border-radius: 50%;
+        background: white;
+        border: 4px solid #F1A501;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-weight: 800;
+        color: #F1A501;
+        font-size: 0.88rem;
+        line-height: 1.2;
+        padding: 12px;
+        box-shadow: 0 14px 40px rgba(241, 165, 1, 0.18);
+        white-space: pre-line;
+    }
+
+    .timeline-card,
+    .timeline-image {
+        position: relative;
+    }
+
+    .timeline-card {
+        background: white;
+        padding: 34px;
+        border-radius: 24px;
+        border: 1px solid rgba(20, 24, 62, 0.08);
+        box-shadow: 0 18px 45px rgba(20, 24, 62, 0.08);
+        transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.4s ease;
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .timeline-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 26px 60px rgba(20, 24, 62, 0.12);
+    }
+
+    .timeline-card h3 {
+        font-size: clamp(1.35rem, 3vw, 1.9rem);
+        margin-bottom: 0;
+        color: #14183E;
+        font-weight: 800;
+        letter-spacing: -0.01em;
+    }
+
+    .timeline-card p {
+        color: #5E6282;
+        font-size: 0.99rem;
+        line-height: 1.75;
+        margin-bottom: 0;
+        font-weight: 500;
+    }
+
+    .timeline-card ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        gap: 10px;
+    }
+
+    .timeline-card li {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        color: #5E6282;
+        font-size: 0.95rem;
+        line-height: 1.7;
+        font-weight: 500;
+    }
+
+    .timeline-card li::before {
+        content: '•';
+        color: #F1A501;
+        font-size: 1.2rem;
+        line-height: 1;
+        margin-top: 4px;
+    }
+
+    .timeline-image {
+        width: 100%;
+        max-width: 440px;
+        border-radius: 24px;
+        overflow: hidden;
+        box-shadow: 0 18px 40px rgba(20, 24, 62, 0.08);
+    }
+
+    .timeline-image img {
+        width: 100%;
+        display: block;
+        object-fit: cover;
+        aspect-ratio: 4 / 3;
+        transition: transform 0.5s ease;
+    }
+
+    .timeline-image:hover img {
+        transform: scale(1.04);
+    }
+
+    .digital-highlight .timeline-card {
+        background: linear-gradient(135deg, #FFF8F0 0%, #FFF5E6 100%);
+        border-color: #F1A501;
+    }
+
+    .digital-highlight .timeline-card h3 {
+        color: #14183E;
+    }
+
+    .digital-highlight .timeline-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: linear-gradient(135deg, #F1A501, #DF6951);
+        color: white;
+        padding: 8px 16px;
+        border-radius: 999px;
+        font-size: 0.78rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    @media (max-width: 1024px) {
+        .timeline-wrapper {
+            padding-top: 20px;
+        }
+
+        .timeline-item {
+            grid-template-columns: 60px 1fr;
+            gap: 22px;
+            margin-bottom: 70px;
+        }
+
+        .timeline-line {
+            left: 30px;
+            transform: none;
+            top: 80px;
+            bottom: 80px;
+        }
+
+        .timeline-date {
+            justify-self: center;
+        }
+
+        .timeline-card,
+        .timeline-image {
+            width: auto;
+            max-width: 100%;
+            justify-self: stretch;
+            text-align: left;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-image,
+        .timeline-item:nth-child(even) .timeline-image {
+            order: 3;
+        }
+    }
+
+    @media (max-width: 680px) {
+        .journey-section {
+            padding: 60px 16px;
+        }
+
+        .timeline-line {
+            left: 20px;
+            width: 3px;
+        }
+
+        .timeline-item {
+            margin-bottom: 60px;
+        }
+
+        .timeline-date {
+            width: 70px;
+            height: 70px;
+            font-size: 1rem;
+        }
+
+        .timeline-card {
+            padding: 24px;
+            border-radius: 20px;
+        }
+
+        .timeline-card h3 {
+            font-size: 1.4rem;
+        }
+
+        .timeline-card p,
+        .timeline-card li {
+            font-size: 0.92rem;
+        }
+    }
+
+    /* Values Section */
+    .values-section {
+        padding: 100px 20px;
+        background: #F7F9FC;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .values-section::before {
+        content: '';
+        position: absolute;
+        top: -30px;
+        right: -8%;
+        width: 220px;
+        height: 220px;
+        background: radial-gradient(circle, rgba(241, 165, 1, 0.08) 0%, transparent 65%);
+        border-radius: 50%;
+        z-index: 0;
+    }
+
+    .values-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 28px;
+        max-width: 1300px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 1;
+    }
+
+    .value-card {
+        background: white;
+        padding: 34px 30px;
+        border-radius: 24px;
+        box-shadow: 0 20px 50px rgba(20, 24, 62, 0.08);
+        transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.35s ease;
+        text-align: center;
+        border: 1px solid rgba(20, 24, 62, 0.06);
+        position: relative;
+        overflow: hidden;
+        min-height: 280px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .value-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 6px;
+        background: linear-gradient(90deg, #F1A501 0%, #DF6951 100%);
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.35s ease;
+    }
+
+    .value-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 28px 70px rgba(20, 24, 62, 0.12);
+    }
+
+    .value-card:hover::before {
+        transform: scaleX(1);
+    }
+
+    .value-icon {
+        width: 62px;
+        height: 62px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #F1A501 0%, #DF6951 100%);
+        color: white;
+        font-size: 1.6rem;
+        line-height: 1;
+        margin: 0 auto 24px auto;
+        transition: transform 0.35s ease;
+        flex-shrink: 0;
+    }
+
+    .value-card:hover .value-icon {
+        transform: scale(1.05);
+    }
+
+    .value-card h4 {
+        font-size: 1.25rem;
+        margin-bottom: 14px;
+        color: #14183E;
+        font-weight: 800;
+        letter-spacing: -0.01em;
+    }
+
+    .value-card p {
+        color: #5E6282;
+        font-size: 0.96rem;
+        line-height: 1.75;
+        font-weight: 500;
+        margin-top: auto;
+    }
+
+    @media (max-width: 1024px) {
+        .values-grid {
+            gap: 24px;
+        }
+
+        .value-card {
+            min-height: auto;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .values-section {
+            padding: 70px 20px;
+        }
+        .values-grid {
+            gap: 22px;
+            grid-template-columns: 1fr;
+        }
+        .value-card {
+            padding: 28px 22px;
+        }
+        .value-icon {
+            width: 56px;
+            height: 56px;
+            font-size: 1.4rem;
+            margin-bottom: 18px;
+        }
+    }
+
+    /* Quality Showcase */
+    .quality-section {
+        padding: 100px 20px;
+        background: #F7F9FC;
+        color: #14183E;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .quality-section::after {
+        content: '';
+        position: absolute;
+        top: -20px;
+        right: 5%;
+        width: 240px;
+        height: 240px;
+        background: radial-gradient(circle, rgba(241, 165, 1, 0.08) 0%, transparent 70%);
+        border-radius: 50%;
+        z-index: 0;
+    }
+
+    .quality-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 1;
+    }
+
+    .quality-header {
+        text-align: center;
+        margin-bottom: 60px;
+    }
+
+    .quality-header h2 {
+        font-size: clamp(1.9rem, 5vw, 2.8rem);
+        margin-bottom: 18px;
+        color: #14183E;
+        font-weight: 800;
+        letter-spacing: -0.02em;
+    }
+
+    .quality-header p {
+        font-size: clamp(1rem, 2vw, 1.1rem);
+        color: #5E6282;
+        max-width: 640px;
+        margin: 0 auto;
+        line-height: 1.75;
+        font-weight: 500;
+    }
+
+    .quality-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 28px;
+    }
+
+    .quality-item {
+        background: white;
+        padding: 32px;
+        border-radius: 24px;
+        box-shadow: 0 18px 40px rgba(20, 24, 62, 0.08);
+        border: 1px solid rgba(20, 24, 62, 0.08);
+        overflow: hidden;
+        position: relative;
+        transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .quality-item::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: linear-gradient(90deg, #F1A501 0%, #DF6951 100%);
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.35s ease;
+    }
+
+    .quality-item:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 26px 60px rgba(20, 24, 62, 0.12);
+        border-color: rgba(20, 24, 62, 0.12);
+    }
+
+    .quality-item:hover::before {
+        transform: scaleX(1);
+    }
+
+    .quality-item h4 {
+        font-size: 1.15rem;
+        margin: 0;
+        color: #14183E;
+        font-weight: 800;
+        letter-spacing: -0.01em;
+    }
+
+    .quality-item p {
+        color: #5E6282;
+        font-size: 0.95rem;
+        line-height: 1.75;
+        margin: 0;
+        font-weight: 500;
+    }
+
+    @media (max-width: 1024px) {
+        .quality-grid {
+            gap: 24px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .quality-section {
+            padding: 70px 20px;
+        }
+        .quality-header {
+            margin-bottom: 50px;
+        }
+        .quality-grid {
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+        .quality-item {
+            padding: 26px;
+        }
+    }
+
+    /* Product Showcase */
+    .product-showcase {
+        padding: 100px 20px;
+        background: #FFFFFF;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .product-showcase::before {
+        content: '';
+        position: absolute;
+        top: 10%;
+        left: 5%;
+        width: 180px;
+        height: 180px;
+        background: radial-gradient(circle, rgba(241, 165, 1, 0.08) 0%, transparent 70%);
+        border-radius: 50%;
+        z-index: 0;
+    }
+
+    .product-showcase-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 1;
+    }
+
+    .product-showcase-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 28px;
+    }
+
+    .product-item {
+        background: #F9FAFB;
+        border-radius: 24px;
+        overflow: hidden;
+        box-shadow: 0 22px 50px rgba(20, 24, 62, 0.08);
+        transition: transform 0.35s ease, box-shadow 0.35s ease;
+        position: relative;
+        border: 1px solid rgba(20, 24, 62, 0.06);
+        display: flex;
         flex-direction: column;
     }
 
-    .about-cta-btn{
+    .product-item::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
         width: 100%;
+        height: 5px;
+        background: linear-gradient(90deg, #F1A501 0%, #DF6951 100%);
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.35s ease;
     }
 
-    .about-cta-info{
+    .product-item:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 28px 70px rgba(20, 24, 62, 0.14);
+    }
+
+    .product-item:hover::before {
+        transform: scaleX(1);
+    }
+
+    .product-image {
+        min-height: 250px;
+        overflow: hidden;
+        background: #F4F6F9;
+        position: relative;
+    }
+
+    .product-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+        display: block;
+    }
+
+    .product-item:hover .product-image img {
+        transform: scale(1.05);
+    }
+
+    .product-info {
+        padding: 28px 26px 30px;
+        display: flex;
         flex-direction: column;
+        gap: 14px;
+        flex-grow: 1;
     }
 
-    .about-cta-info-item{
-        width: 100%;
-        min-width: unset;
+    .product-info h4 {
+        font-size: 1.3rem;
+        margin: 0;
+        color: #14183E;
+        font-weight: 800;
+        letter-spacing: -0.02em;
     }
 
-}
+    .product-info p {
+        font-size: 1rem;
+        color: #5E6282;
+        line-height: 1.75;
+        margin: 0;
+        font-weight: 500;
+    }
 
+    @media (max-width: 1024px) {
+        .product-showcase-grid {
+            gap: 24px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .product-showcase {
+            padding: 70px 20px;
+        }
+        .product-showcase-grid {
+            gap: 22px;
+            grid-template-columns: 1fr;
+        }
+        .product-image {
+            min-height: 220px;
+        }
+        .product-info {
+            padding: 24px 22px 26px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .product-showcase {
+            padding: 55px 16px;
+        }
+        .product-image {
+            min-height: 200px;
+        }
+    }
+
+    /* CTA Section */
+    .about-cta {
+        padding: 100px 20px;
+        background: linear-gradient(135deg, #14183E 0%, #1F2937 50%, #2D3748 100%);
+        color: white;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .about-cta::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        right: -10%;
+        width: 500px;
+        height: 500px;
+        background: radial-gradient(circle, rgba(241, 165, 1, 0.08) 0%, transparent 70%);
+        border-radius: 50%;
+        z-index: 0;
+        animation: float 8s ease-in-out infinite;
+    }
+
+    .about-cta-content {
+        max-width: 750px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 1;
+    }
+
+    .about-cta h2 {
+        font-size: clamp(1.8rem, 6vw, 3rem);
+        margin-bottom: 30px;
+        color: white;
+        font-weight: 800;
+        letter-spacing: -0.01em;
+    }
+
+    .about-cta p {
+        font-size: clamp(1rem, 2vw, 1.15rem);
+        margin-bottom: 50px;
+        opacity: 0.95;
+        line-height: 1.8;
+        font-weight: 500;
+    }
+
+    .cta-buttons {
+        display: flex;
+        gap: 25px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .btn-primary {
+        background: linear-gradient(135deg, #F1A501 0%, #DF6951 100%);
+        color: white;
+        padding: 16px 45px;
+        border: none;
+        border-radius: 10px;
+        font-size: 1rem;
+        font-weight: 700;
+        cursor: pointer;
+        transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+        text-decoration: none;
+        display: inline-block;
+        letter-spacing: 0.5px;
+        box-shadow: 0 10px 30px rgba(241, 165, 1, 0.25);
+    }
+
+    .btn-primary:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 20px 50px rgba(241, 165, 1, 0.35);
+    }
+
+    .btn-secondary {
+        background: transparent;
+        color: white;
+        padding: 16px 45px;
+        border: 2px solid #F1A501;
+        border-radius: 10px;
+        font-size: 1rem;
+        font-weight: 700;
+        cursor: pointer;
+        transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+        text-decoration: none;
+        display: inline-block;
+        letter-spacing: 0.5px;
+    }
+
+    .btn-secondary:hover {
+        background: #F1A501;
+        color: #14183E;
+        transform: translateY(-4px);
+        box-shadow: 0 15px 40px rgba(241, 165, 1, 0.25);
+    }
+
+    @media (max-width: 768px) {
+        .about-cta {
+            padding: 70px 20px;
+        }
+        .about-cta h2 {
+            margin-bottom: 20px;
+        }
+        .about-cta p {
+            margin-bottom: 35px;
+        }
+        .cta-buttons {
+            flex-direction: column;
+            gap: 15px;
+        }
+        .btn-primary, .btn-secondary {
+            width: 100%;
+            padding: 14px 30px;
+            font-size: 0.95rem;
+        }
+    }
+
+    /* Global Responsive */
+    @media (max-width: 1024px) {
+        .journey-grid {
+            gap: 50px !important;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .section-header h2 {
+            font-size: 1.6rem;
+        }
+        .value-card {
+            padding: 28px 20px;
+        }
+        .quality-item {
+            padding: 25px;
+        }
+    }
 </style>
+
+<!-- Hero Section -->
+<section class="about-hero">
+    <div class="about-hero-content">
+        <div class="hero-badge">Tentang Kami</div>
+        <h1>Kepercayaan 30+ Tahun<br>dari Ribuan Pelanggan</h1>
+        <p>Sejak 1993, Tebu Mas Gresik berkomitmen menghadirkan songkok berkualitas premium dengan dedikasi penuh terhadap kepuasan pelanggan.</p>
+        <div class="hero-stats">
+            <div class="stat-box">
+                <div class="stat-number">30+</div>
+                <div class="stat-label">Tahun Berpengalaman</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">10K+</div>
+                <div class="stat-label">Pelanggan Setia</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">Kepuasan Terjamin</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Journey Section -->
+<section class="journey-section">
+    <div class="journey-container">
+        <div class="section-header">
+            <h2>Perjalanan Kami</h2>
+            <p>Dari usaha kecil hingga menjadi pilihan utama pelanggan, setiap langkah kami dibangun atas kualitas, kepercayaan, dan inovasi.</p>
+        </div>
+
+        <div class="timeline-wrapper">
+            <div class="timeline-line"></div>
+
+            <div class="timeline-item">
+                <div class="timeline-card">
+                    <h3>Dimulai dari Passion</h3>
+                    <p>Pada tahun 1993, Tebu Mas Gresik lahir dari hasrat sederhana: membuat songkok berkualitas dengan perhatian penuh pada detail dan kenyamanan.</p>
+                    <ul>
+                        <li>Bahan premium terpilih</li>
+                        <li>Kerajinan tangan rapi dan konsisten</li>
+                        <li>Layanan pelanggan hangat dan terpercaya</li>
+                    </ul>
+                </div>
+                <div class="timeline-date">1993</div>
+                <div class="timeline-image">
+                    <img src="{{ asset('img/category/Songkok.png') }}" alt="Songkok Tebu Mas Gresik awal berdiri">
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-image">
+                    <img src="{{ asset('img/category/fullac.png') }}" alt="Pengembangan produk Tebu Mas Gresik">
+                </div>
+                <div class="timeline-date">2015</div>
+                <div class="timeline-card">
+                    <h3>Berkembang & Berinovasi</h3>
+                    <p>Kami memperluas jangkauan pasar dan meningkatkan varian produk dengan dukungan proses produksi modern dan tim profesional.</p>
+                    <ul>
+                        <li>Distribusi ke banyak wilayah di Indonesia</li>
+                        <li>Desain baru yang elegan dan relevan</li>
+                        <li>Standar kualitas yang semakin tinggi</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="timeline-item digital-highlight">
+                <div class="timeline-card">
+                    <span class="timeline-badge">Era Digital</span>
+                    <h3>Transformasi Digital</h3>
+                    <p>Tahun 2026 menjadi titik balik digital kami, menghadirkan platform online dan pengalaman pembelian yang mudah untuk pelanggan di mana saja.</p>
+                    <ul>
+                        <li>Marketplace online yang user-friendly</li>
+                        <li>Pemasaran digital untuk menjangkau lebih luas</li>
+                        <li>Layanan pembelian dan pengiriman lebih cepat</li>
+                    </ul>
+                </div>
+                <div class="timeline-date">2026</div>
+                <div class="timeline-image">
+                    <img src="{{ asset('img/category/kirim.jpeg') }}" alt="Digital marketing dan pengiriman Tebu Mas Gresik">
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-image">
+                    <img src="{{ asset('img/category/ac.png') }}" alt="Visi masa depan Tebu Mas Gresik">
+                </div>
+                <div class="timeline-date">Masa<br>Depan</div>
+                <div class="timeline-card">
+                    <h3>Visi Masa Depan</h3>
+                    <p>Kami terus berinovasi untuk menjadikan Tebu Mas Gresik sebagai pilihan utama pelanggan di berbagai generasi, baik secara offline maupun online.</p>
+                    <ul>
+                        <li>Produk berkualitas dengan harga bersaing</li>
+                        <li>Pengiriman cepat dan andal</li>
+                        <li>Pelayanan pelanggan yang responsif</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Values Section -->
+<section class="values-section">
+    <div class="section-header">
+        <h2>Nilai-Nilai Kami</h2>
+        <p>Prinsip-prinsip yang membimbing setiap keputusan dan tindakan kami dalam melayani Anda.</p>
+    </div>
+
+    <div class="values-grid">
+        <div class="value-card">
+            <div class="value-icon">🎯</div>
+            <h4>Kualitas Pertama</h4>
+            <p>Kualitas bukan hanya janji, tapi komitmen kami. Setiap produk melalui kontrol kualitas ketat untuk memastikan kepuasan Anda.</p>
+        </div>
+        <div class="value-card">
+            <div class="value-icon">🤝</div>
+            <h4>Kepercayaan Pelanggan</h4>
+            <p>Kepercayaan Anda adalah aset paling berharga bagi kami. Kami selalu berusaha memberikan yang terbaik dalam setiap interaksi.</p>
+        </div>
+        <div class="value-card">
+            <div class="value-icon">⚡</div>
+            <h4>Inovasi Berkelanjutan</h4>
+            <p>Kami terus berinovasi untuk menghadirkan produk terbaru yang mengikuti tren global namun tetap mempertahankan nilai tradisional.</p>
+        </div>
+        <div class="value-card">
+            <div class="value-icon">💚</div>
+            <h4>Tanggung Jawab Sosial</h4>
+            <p>Kami percaya bisnis yang baik harus memberikan dampak positif bagi masyarakat dan lingkungan sekitar kami.</p>
+        </div>
+        <div class="value-card">
+            <div class="value-icon">⭐</div>
+            <h4>Profesionalisme</h4>
+            <p>Tim kami terdiri dari profesional berpengalaman yang siap memberikan solusi terbaik untuk kebutuhan Anda.</p>
+        </div>
+        <div class="value-card">
+            <div class="value-icon">🚀</div>
+            <h4>Pengembangan Berkelanjutan</h4>
+            <p>Kami tidak pernah berhenti belajar dan berkembang untuk memberikan layanan yang lebih baik setiap harinya.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Product Showcase -->
+<section class="product-showcase">
+    <div class="product-showcase-container">
+        <div class="section-header">
+            <h2>Koleksi Produk Unggulan Kami</h2>
+            <p>Ragam varian songkok berkualitas yang kami tawarkan untuk memenuhi setiap kesempatan dan gaya Anda.</p>
+        </div>
+
+        <div class="product-showcase-grid">
+            <div class="product-item">
+                <div class="product-image">
+                    <img src="{{ asset('img/category/Songkok.png') }}" alt="Songkok Elegan Tebu Mas Gresik">
+                </div>
+                <div class="product-info">
+                    <h4>Songkok Elegan</h4>
+                    <p>SKU khas kami dengan tampilan hitam klasik, diproduksi untuk acara formal dan tampil profesional dengan gaya tradisional yang modern.</p>
+                </div>
+            </div>
+            <div class="product-item">
+                <div class="product-image">
+                    <img src="{{ asset('img/category/fullac.png') }}" alt="Lini Songkok Nyaman Tebu Mas Gresik">
+                </div>
+                <div class="product-info">
+                    <h4>Songkok Nyaman</h4>
+                    <p>Dirancang untuk pemakaian harian, bahan lembut dan gaya ringkas memberikan kenyamanan optimal tanpa mengorbankan kualitas dan ketahanan.</p>
+                </div>
+            </div>
+            <div class="product-item">
+                <div class="product-image">
+                    <img src="{{ asset('img/category/ac.png') }}" alt="Songkok Premium Tebu Mas Gresik">
+                </div>
+                <div class="product-info">
+                    <h4>Songkok Premium</h4>
+                    <p>Varian unggulan dengan detail finishing halus dan kualitas premium untuk konsumen yang mengutamakan kesan mewah dan nilai craftsmanship tinggi.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="about-cta">
+    <div class="about-cta-content">
+        <h2>Siap Meningkatkan Penampilan Anda?</h2>
+        <p>Bergabunglah dengan ribuan pelanggan puas yang telah mempercayai Tebu Mas Gresik untuk kebutuhan songkok berkualitas premium mereka. Dapatkan produk terbaik dengan harga yang kompetitif dan layanan pelanggan terbaik.</p>
+        <div class="cta-buttons">
+            <a href="{{ route('products') }}" class="btn-primary">Lihat Koleksi Lengkap</a>
+            <a href="{{ route('contact') }}" class="btn-secondary">Hubungi Kami</a>
+        </div>
+    </div>
+</section>
 
 @endsection

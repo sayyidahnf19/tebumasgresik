@@ -1067,8 +1067,9 @@
                     <div class="contact-map-card">
 
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.8226545308803!2d112.64779!3d-7.16437"
-                            allowfullscreen=""
+                            src="https://www.google.com/maps?q=Jl.+Sindujoyo+2+A+No.+6+Kroman+Gresik&output=embed"
+                            title="Lokasi Tebu Mas Gresik"
+                            allowfullscreen
                             loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade">
                         </iframe>
