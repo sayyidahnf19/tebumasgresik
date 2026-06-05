@@ -1304,15 +1304,15 @@ function beliSekarang() {
     const harga = (tipe === 'kodi' ? produk.hargaKodi : produk.hargaEceran) * qty;
     
     // WhatsApp Template
-    const waNumber = '6281234567890'; // Ganti dengan no WA bisnis
-    const message = `Halo Tebu Mas Gresik 👋
+    const waNumber = '6287702885164'; // Ganti dengan no WA bisnis
+    const message = `Halo Tebu Mas Gresik
 
 Saya ingin memesan:
-📦 Produk: ${produk.name}
-📏 Tinggi: ${tinggi}
-📍 Nomor: ${nomor}
-📊 Jumlah: ${qty} ${satuan}
-💰 Total: ${formatCurrency(harga)}
+Produk: ${produk.name}
+Tinggi: ${tinggi}
+Nomor: ${nomor}
+Jumlah: ${qty} ${satuan}
+otal: ${formatCurrency(harga)}
 
 Tolong proses pesanan saya. Terima kasih!`;
     

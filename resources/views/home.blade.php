@@ -44,12 +44,20 @@
     }
 
     .hero-subtitle {
-        color: #F1A501;
+        color: #c65650;
         font-size: clamp(0.85rem, 2vw, 1rem);
         font-weight: 600;
         letter-spacing: 0.5px;
         text-transform: uppercase;
         margin: 0;
+    }
+
+    .service-header h5 {
+        color: #c65650;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        margin-bottom: 0.75rem;
     }
 
     .hero-title {
@@ -230,6 +238,22 @@
             min-height: 400px;
             gap: 1.5rem;
         }
+
+        /* Justify service card text on tablet */
+        .service-card p,
+        .service-content p {
+            text-align: justify;
+        }
+
+        /* Justify trust panel copy on tablet */
+        .trust-panel p,
+        .trust-panel-copy {
+            text-align: justify;
+        }
+        /* Justify trust feature card text on tablet */
+        .trust-feature-card p {
+            text-align: justify;
+        }
     }
 
     @media (max-width: 768px) {
@@ -260,6 +284,22 @@
             justify-content: center;
             margin-top: 1rem;
         }
+
+        /* Justify service card text on mobile */
+        .service-card p,
+        .service-content p {
+            text-align: justify;
+        }
+
+        /* Justify trust panel copy on mobile */
+        .trust-panel p,
+        .trust-panel-copy {
+            text-align: justify;
+        }
+        /* Justify trust feature card text on mobile */
+        .trust-feature-card p {
+            text-align: justify;
+        }
     }
 
     @media (max-width: 480px) {
@@ -281,12 +321,34 @@
         .hero-buttons .btn {
             width: 100%;
         }
+
+        /* Ensure service card text remains justified on extra small screens */
+        .service-card p,
+        .service-content p {
+            text-align: justify;
+        }
+
+        /* Justify trust panel copy on extra-small screens */
+        .trust-panel p,
+        .trust-panel-copy {
+            text-align: justify;
+        }
+        /* Justify trust feature card text on extra-small screens */
+        .trust-feature-card p {
+            text-align: justify;
+        }
     }
 
     /* About stats: make primary number (e.g. 30+) white */
     .about-stat-card.primary h3,
     .about-stat-card.primary strong {
         color: #ffffff !important;
+    }
+
+    /* Destination heading color */
+    #destination .text-secondary,
+    #destination h5 {
+        color: #c65650 !important;
     }
 </style>
 
@@ -637,7 +699,7 @@
         <div class="row g-4 trust-stat-grid">
             <div class="col-6 col-lg-3">
                 <article class="trust-stat-card">
-                    <strong style="color: white;">30+</strong>
+                    <strong>30+</strong>
                     <span>TAHUN BERPENGALAMAN</span>
                     <small>Handmade sejak 1993</small>
                 </article>

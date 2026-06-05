@@ -504,16 +504,16 @@
         }
 
         .timeline-item:nth-child(odd) {
-            padding-left: 95px;
+            padding-left: 105px;
         }
 
         .timeline-item:nth-child(even) {
-            padding-right: 95px;
+            padding-right: 105px;
             text-align: right;
         }
 
         .timeline-line {
-            left: 27px;
+            left: 35px;
             width: 3px;
             top: 75px;
             bottom: 75px;
@@ -529,11 +529,11 @@
         }
 
         .timeline-item:nth-child(odd) .timeline-date {
-            left: -55px;
+            left: 0;
         }
 
         .timeline-item:nth-child(even) .timeline-date {
-            right: -55px;
+            right: 0;
         }
 
         .timeline-card {
@@ -542,6 +542,12 @@
             gap: 14px;
             width: 100%;
             text-align: left;
+        }
+
+        /* Justify card text on tablet */
+        .timeline-card p,
+        .timeline-card li {
+            text-align: justify;
         }
 
         .timeline-item:nth-child(even) .timeline-card {
@@ -597,16 +603,16 @@
         }
 
         .timeline-item:nth-child(odd) {
-            padding-left: 85px;
+            padding-left: 95px;
         }
 
         .timeline-item:nth-child(even) {
-            padding-right: 85px;
+            padding-right: 95px;
             text-align: right;
         }
 
         .timeline-line {
-            left: 25px;
+            left: 32px;
             width: 2.5px;
             top: 65px;
             bottom: 65px;
@@ -623,11 +629,11 @@
         }
 
         .timeline-item:nth-child(odd) .timeline-date {
-            left: -55px;
+            left: 0;
         }
 
         .timeline-item:nth-child(even) .timeline-date {
-            right: -55px;
+            right: 0;
         }
 
         .timeline-card {
@@ -636,6 +642,12 @@
             gap: 12px;
             width: 100%;
             text-align: left;
+        }
+
+        /* Justify card text on small mobile */
+        .timeline-card p,
+        .timeline-card li {
+            text-align: justify;
         }
 
         .timeline-item:nth-child(even) .timeline-card {
@@ -707,16 +719,16 @@
         }
 
         .timeline-item:nth-child(odd) {
-            padding-left: 75px;
+            padding-left: 85px;
         }
 
         .timeline-item:nth-child(even) {
-            padding-right: 75px;
+            padding-right: 85px;
             text-align: right;
         }
 
         .timeline-line {
-            left: 22px;
+            left: 28px;
             width: 2px;
             top: 60px;
             bottom: 60px;
@@ -735,11 +747,11 @@
         }
 
         .timeline-item:nth-child(odd) .timeline-date {
-            left: -48px;
+            left: 0;
         }
 
         .timeline-item:nth-child(even) .timeline-date {
-            right: -48px;
+            right: 0;
         }
 
         .timeline-card {
@@ -748,6 +760,12 @@
             gap: 10px;
             width: 100%;
             text-align: left;
+        }
+
+        /* Justify card text on extra-small mobile */
+        .timeline-card p,
+        .timeline-card li {
+            text-align: justify;
         }
 
         .timeline-item:nth-child(even) .timeline-card {
