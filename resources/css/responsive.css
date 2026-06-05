@@ -102,7 +102,7 @@
   }
 
   section[style*="padding-top: 0"] .hero-img {
-    max-width: 55%;
+    max-width: 70%;
     width: auto;
     height: auto;
     margin: 0;
@@ -776,8 +776,8 @@
 }
 
 .service-image-wrapper img {
-  width: 85%;
-  height: 85%;
+  width: auto;
+  height: auto;
   object-fit: contain;
 
   transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);

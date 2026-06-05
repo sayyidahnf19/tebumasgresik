@@ -428,6 +428,31 @@
     0 15px 35px rgba(217,112,96,0.25);
 }
 
+.contact-main-icon svg,
+.contact-side-icon svg,
+.contact-info-icon svg,
+.contact-maps-btn svg,
+.contact-main-btn svg,
+.contact-cta-actions svg,
+.contact-cta-info-icon svg {
+  fill: currentColor;
+  opacity: 1;
+  color: inherit;
+}
+
+..contact-cta-actions svg {
+  color: inherit;
+}
+
+.contact-cta-icon {
+  vertical-align: middle;
+  margin-right: 0.5rem;
+}
+
+.contact-cta-info-icon svg {
+  color: #D97060;
+}
+
 /* CONTENT */
 
 .contact-main-card h3 {
@@ -1620,7 +1645,7 @@
                   target="_blank"
                   class="contact-cta-primary"
                 >
-                  <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" style="vertical-align:middle; margin-right:8px; color:#fff;">
+                  <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" class="contact-cta-icon">
                     <use href="#icon-phone" fill="currentColor"></use>
                   </svg>
                   Chat WhatsApp
@@ -1630,7 +1655,7 @@
                   href="mailto:info@tebumasgresik.com"
                   class="contact-cta-secondary"
                 >
-                  <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" style="vertical-align:middle; margin-right:8px; color: #D97060;">
+                  <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" class="contact-cta-icon">
                     <use href="#icon-envelope" fill="currentColor"></use>
                   </svg>
                   Kirim Email
@@ -1638,59 +1663,7 @@
 
             </div>
 
-            <!-- BOTTOM INFO -->
-            <div class="contact-cta-info">
 
-                <div class="contact-cta-info-item">
-
-                    <div class="contact-cta-info-icon">
-                        <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" style="color:#D97060;">
-                          <use href="#icon-clock" fill="currentColor"></use>
-                        </svg>
-                    </div>
-
-                    <div>
-                        <h6>Jam Operasional</h6>
-                        <p>Senin - Sabtu • 08:00 - 17:00</p>
-                    </div>
-
-                </div>
-
-                <div class="contact-cta-divider"></div>
-
-                <div class="contact-cta-info-item">
-
-                    <div class="contact-cta-info-icon">
-                        <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" style="color:#D97060;">
-                          <use href="#icon-phone" fill="currentColor"></use>
-                        </svg>
-                    </div>
-
-                    <div>
-                        <h6>Customer Service</h6>
-                        <p>Fast Response & Friendly Support</p>
-                    </div>
-
-                </div>
-
-                <div class="contact-cta-divider"></div>
-
-                <div class="contact-cta-info-item">
-
-                    <div class="contact-cta-info-icon">
-                        <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" style="color:#D97060;">
-                          <use href="#icon-shield" fill="currentColor"></use>
-                        </svg>
-                    </div>
-
-                    <div>
-                        <h6>Kualitas Premium</h6>
-                        <p>Produksi Rapi & Profesional</p>
-                    </div>
-
-                </div>
-
-            </div>
 
         </div>
 

@@ -18,13 +18,16 @@
         justify-content: space-between;
         gap: 3rem;
         min-height: 560px;
+        max-width: 1180px;
+        margin: 0 auto;
     }
 
     .hero-image-col {
         display: flex;
         align-items: center;
         justify-content: center;
-        flex: 1 1 60%;
+        flex: 1 1 55%;
+        min-width: 320px;
     }
 
     .hero-img {
@@ -39,8 +42,9 @@
         flex-direction: column;
         justify-content: center;
         gap: 1.5rem;
-        flex: 1 1 40%;
-        max-width: 500px;
+        flex: 1 1 42%;
+        max-width: 520px;
+        min-width: 320px;
     }
 
     .hero-subtitle {
@@ -118,6 +122,12 @@
     .destination-shape {
         position: absolute;
         top: 24px;
+        right: -60px;
+        width: 220px;
+        opacity: 0.16;
+        pointer-events: none;
+        transform: translateY(0);
+    }
 
     /* Service cards — reduce visual footprint to a professional size */
     .service-section .col-lg-4 {
@@ -145,17 +155,22 @@
     }
 
     .service-image-wrapper {
-        text-align: center;
-        padding-top: 0.25rem;
-        padding-bottom: 0.25rem;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1.25rem 0.75rem;
+        min-height: 180px;
+        background: #fafaf8;
+        border-bottom: 1px solid #f0ede9;
     }
 
     .service-image-wrapper img {
-        width: 120px;
+        width: 100%;
+        max-width: 360px;
         height: auto;
         object-fit: contain;
         display: block;
-        margin: 0 auto;
     }
 
     .service-content h4 {
@@ -196,12 +211,6 @@
         .service-content h4 { font-size: 1rem; }
         .service-content p  { font-size: 0.92rem; }
     }
-        right: -60px;
-        width: 220px;
-        opacity: 0.16;
-        pointer-events: none;
-        transform: translateY(0);
-    }
 
     .service-btn {
         display: inline-block;
@@ -239,6 +248,16 @@
             gap: 1.5rem;
         }
 
+        .service-image-wrapper {
+            padding: 1.5rem 1rem;
+            min-height: 220px;
+        }
+
+        .service-image-wrapper img {
+            width: 100%;
+            max-width: 260px;
+        }
+
         /* Justify service card text on tablet */
         .service-card p,
         .service-content p {
@@ -274,6 +293,16 @@
 
         .hero-content {
             align-items: center;
+        }
+
+        .service-image-wrapper {
+            padding: 1.25rem 0.85rem;
+            min-height: 200px;
+        }
+
+        .service-image-wrapper img {
+            width: 100%;
+            max-width: 220px;
         }
 
         .hero-title {
@@ -639,9 +668,6 @@
 <!-- <section> Destinations Section ============================-->
 <section class="pt-5" id="destination">
     <div class="container">
-        <div class="destination-shape d-none d-xl-block">
-            <img src="{{ asset('img/dest/shape.svg') }}" alt="destination" />
-        </div>
         <div class="mb-7 text-center">
             <h5 class="text-secondary">{{ $destinationLabel ?? 'Keunggulan Kami' }}</h5>
             <h3 class="fs-xl-10 fs-lg-8 fs-7 fw-bold font-cursive text-capitalize">{{ $destinationTitle ?? 'Kenapa Tebu Mas Gresik Jadi Pilihan' }}</h3>
